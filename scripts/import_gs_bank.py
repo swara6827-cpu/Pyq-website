@@ -653,7 +653,7 @@ def main() -> int:
                         if not isinstance(answer, int) or answer < 0 or answer > 3:
                             continue
                         similarity = max(
-                            (question_similarity(stem, str(r.get("question", "")) for r in year_records),
+                            (question_similarity(stem, str(r.get("question", ""))) for r in year_records),
                             default=0.0
                         )
                         if similarity >= 0.48:
