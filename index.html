@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>UPSC Prelims Practice</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#172033;--muted:#64708a;--line:#e2e7f0;--navy:#101827;--blue:#315ee8;--soft:#edf2ff;--green:#147d55;--red:#b42335}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{background:var(--navy);color:#fff;padding:22px max(18px,calc((100% - 1100px)/2));}.brand{font-size:21px;font-weight:800;letter-spacing:-.4px}.sub{color:#c3ccdd;margin-top:3px;font-size:13px}.wrap{max-width:1100px;margin:22px auto;padding:0 16px}.notice{background:#fff7df;border:1px solid #f0d991;color:#654d09;padding:12px 14px;border-radius:12px;margin-bottom:16px;font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px}.stat small{display:block;color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:3px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab,.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:10px;font-weight:650}.tab.active,.btn.primary{background:var(--blue);color:white;border-color:var(--blue)}.btn:disabled{opacity:.45;cursor:not-allowed}.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:16px}.panel h2{font-size:17px;margin:0 0 12px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.filters select,.filters input{min-width:140px;flex:1;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}.qmeta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.pill{background:var(--soft);color:#2949a9;padding:3px 8px;border-radius:30px}.question{font-size:18px;font-weight:720;line-height:1.45;margin:8px 0 18px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;cursor:pointer}.option:hover{border-color:#9badf7}.option.selected{background:var(--soft);border-color:var(--blue)}.option.correct{background:#e9f8f0;border-color:#5bb58b}.option.wrong{background:#fff0f1;border-color:#e29aa3}.letter{font-weight:800;min-width:22px}.explain{padding:12px;border-radius:10px;background:#f2f5fa;margin-top:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.side-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.muted{color:var(--muted);font-size:13px}.empty{padding:30px 10px;text-align:center;color:var(--muted)}.footer{color:var(--muted);font-size:12px;text-align:center;padding:26px 10px}.question-list button{margin:3px;width:37px;height:36px;border-radius:8px;border:1px solid var(--line);background:#fff}.question-list button.current{background:var(--blue);color:#fff}.question-list button.answered{border-color:#8bc6a7;background:#eefaf3}@media(max-width:760px){.layout{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.wrap{margin-top:14px}.top{padding:18px}.question{font-size:17px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">UPSC Prelims Practice</div><div class="sub">A focused workspace for Civil Services Prelims revision</div></header>
+<main class="wrap">
+<div class="notice"><strong>Starter version:</strong> The included questions are illustrative demo questions, not verified official UPSC PYQs. Replace them with checked question-bank data before using this for exam preparation.</div>
+<section class="stats">
+ <div class="stat"><small>Questions in bank</small><strong id="total">0</strong></div>
+ <div class="stat"><small>Attempted</small><strong id="attempted">0</strong></div>
+ <div class="stat"><small>Accuracy</small><strong id="accuracy">—</strong></div>
+</section>
+<div class="toolbar">
+ <button class="tab active" data-mode="practice">Practice mode</button>
+ <button class="tab" data-mode="test">Test mode</button>
+ <button class="tab" data-mode="bookmarks">Bookmarks</button>
+ <button class="tab" data-mode="mistakes">Mistake notebook</button>
+</div>
+<div class="layout">
+<section class="panel">
+ <div class="filters">
+  <select id="subject"><option value="all">All subjects</option></select>
+  <select id="year"><option value="all">All years</option></select>
+  <input id="search" placeholder="Search question or topic…" aria-label="Search questions">
+ </div>
+ <div id="questionArea"><div class="empty">Loading question bank…</div></div>
+</section>
+<aside class="panel">
+ <h2>Session overview</h2>
+ <div class="side-row"><span class="muted">Mode</span><strong id="modeLabel">Practice</strong></div>
+ <div class="side-row"><span class="muted">In this view</span><strong id="viewCount">0</strong></div>
+ <div class="side-row"><span class="muted">Answered</span><strong id="sessionCount">0</strong></div>
+ <h2 style="margin-top:20px">Question navigator</h2>
+ <div id="navigator" class="question-list"></div>
+ <p class="muted">Your bookmarks and progress are saved in this browser on this device.</p>
+ <button class="btn" id="reset">Reset local progress</button>
+</aside>
+</div>
+<div class="footer">Built for personal revision · Free static website · No account or API key required</div>
+</main>
+<script>
+const demoQuestions = [
+{id:"demo-001",year:"Demo",subject:"Polity",topic:"Constitution",question:"Which part of the Constitution of India contains the Directive Principles of State Policy?",options:["Part II","Part III","Part IV","Part IVA"],answer:2,explanation:"The Directive Principles of State Policy are contained in Part IV (Articles 36–51). This is an illustrative demo question, not an official PYQ."},
+{id:"demo-002",year:"Demo",subject:"Geography",topic:"Earth",question:"Which of the following best explains why the Coriolis effect is zero at the Equator?",options:["Wind speed is always zero there","The horizontal component of Earth's rotation effect is zero there","Gravity is absent there","Earth does not rotate at the Equator"],answer:1,explanation:"The Coriolis parameter is proportional to the sine of latitude, so it is zero at the Equator. Illustrative demo question."},
+{id:"demo-003",year:"Demo",subject:"Economy",topic:"National income",question:"GDP at market prices measures the value of final goods and services produced within a country during a period, before adjusting for which of the following?",options:["Geographical boundaries","Time period","Net factor income from abroad","Final-use classification"],answer:2,explanation:"Net factor income from abroad is used to move from domestic product to national product. Illustrative demo question."},
+{id:"demo-004",year:"Demo",subject:"Environment",topic:"Biodiversity",question:"In ecology, a keystone species is best described as a species that:",options:["Has the largest population in every ecosystem","Has a disproportionately large effect on its ecosystem relative to its abundance","Is always an apex predator","Can survive only in one habitat"],answer:1,explanation:"A keystone species has an ecological impact disproportionately large relative to its abundance. Illustrative demo question."},
+{id:"demo-005",year:"Demo",subject:"History",topic:"Ancient India",question:"Ashoka's major inscriptions were primarily issued to communicate his:",options:["Naval conquests","Dhamma and administrative messages","Treaties with European powers","Land revenue survey results"],answer:1,explanation:"Ashokan edicts communicated Dhamma and several administrative and ethical messages. Illustrative demo question."},
+{id:"demo-006",year:"Demo",subject:"Science & Technology",topic:"Space",question:"A geostationary satellite appears stationary relative to an observer on Earth because it:",options:["Orbits over the poles once a day","Has an orbital period equal to Earth's rotation and orbits above the equator in the same direction","Does not experience gravity","Remains outside Earth's gravitational field"],answer:1,explanation:"A geostationary satellite has a circular equatorial orbit with a period matching Earth's sidereal rotation. Illustrative demo question."}
+];
+let questions = demoQuestions, mode="practice", current=0, selected=null, revealed=false, testStarted=false;
+let progress = JSON.parse(localStorage.getItem("upscPracticeProgress")||'{"answers":{},"bookmarks":[],"mistakes":[]}');
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem("upscPracticeProgress",JSON.stringify(progress));}
+function viewQuestions(){
+ let arr=[...questions], s=$("subject").value, y=$("year").value, q=$("search").value.trim().toLowerCase();
+ if(s!=="all")arr=arr.filter(x=>x.subject===s);
+ if(y!=="all")arr=arr.filter(x=>x.year===y);
+ if(q)arr=arr.filter(x=>(x.question+" "+x.topic+" "+x.subject).toLowerCase().includes(q));
+ if(mode==="bookmarks")arr=arr.filter(x=>progress.bookmarks.includes(x.id));
+ if(mode==="mistakes")arr=arr.filter(x=>progress.mistakes.includes(x.id));
+ return arr;
+}
+function populateFilters(){
+ const subjects=[...new Set(questions.map(q=>q.subject))].sort(), years=[...new Set(questions.map(q=>q.year))].sort();
+ $("subject").innerHTML='<option value="all">All subjects</option>'+subjects.map(x=>'<option>'+x+'</option>').join("");
+ $("year").innerHTML='<option value="all">All years</option>'+years.map(x=>'<option>'+x+'</option>').join("");
+}
+function stats(){
+ const vals=Object.values(progress.answers), correct=vals.filter(x=>x.correct).length;
+ $("total").textContent=questions.length;$("attempted").textContent=vals.length;
+ $("accuracy").textContent=vals.length?Math.round(correct/vals.length*100)+"%":"—";
+ $("modeLabel").textContent=mode==="test"?"Test":mode==="bookmarks"?"Bookmarks":mode==="mistakes"?"Mistakes":"Practice";
+}
+function render(){
+ stats();const arr=viewQuestions();$("viewCount").textContent=arr.length;
+ $("sessionCount").textContent=arr.filter(q=>progress.answers[q.id]).length;
+ if(current>=arr.length)current=Math.max(0,arr.length-1);
+ const q=arr[current];const nav=$("navigator");
+ nav.innerHTML=arr.map((x,i)=>'<button class="'+(i===current?'current ':'')+(progress.answers[x.id]?'answered':'')+'" data-i="'+i+'" aria-label="Question '+(i+1)+'">'+(i+1)+'</button>').join("");
+ nav.querySelectorAll("button").forEach(b=>b.onclick=()=>{current=+b.dataset.i;selected=null;revealed=false;renderQuestion();renderNav();});
+ if(!q){$("questionArea").innerHTML='<div class="empty">No questions match this view.<br>Try another filter or add questions to the question bank.</div>';return;}
+ renderQuestion();
+}
+function renderNav(){const arr=viewQuestions();$("navigator").innerHTML=arr.map((x,i)=>'<button class="'+(i===current?'current ':'')+(progress.answers[x.id]?'answered':'')+'" data-i="'+i+'">'+(i+1)+'</button>').join("");$("navigator").querySelectorAll("button").forEach(b=>b.onclick=()=>{current=+b.dataset.i;selected=null;revealed=false;renderQuestion();renderNav();});}
+function renderQuestion(){
+ const arr=viewQuestions(),q=arr[current];if(!q)return;
+ const saved=progress.answers[q.id]; if(saved&&selected===null&&revealed===false&&mode!=="test"){selected=saved.choice;revealed=true;}
+ const letters=["A","B","C","D","E"];
+ $("questionArea").innerHTML='<div class="qmeta"><span class="pill">'+q.subject+'</span><span>'+q.year+'</span><span>'+q.topic+'</span><span>Question '+(current+1)+' of '+arr.length+'</span></div><div class="question">'+q.question+'</div><div id="options">'+q.options.map((o,i)=>'<div class="option '+(selected===i?'selected ':'')+(revealed&&i===q.answer?'correct ':'')+(revealed&&selected===i&&i!==q.answer?'wrong':'')+'" data-option="'+i+'"><span class="letter">'+letters[i]+'.</span><span>'+o+'</span></div>').join("")+'</div><div id="feedback"></div><div class="actions"><button class="btn primary" id="check">'+(mode==="test"?"Save answer":"Check answer")+'</button><button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button><button class="btn" id="prev" '+(current===0?'disabled':'')+'>← Previous</button><button class="btn" id="next" '+(current===arr.length-1?'disabled':'')+'>Next →</button></div>';
+ $("questionArea").querySelectorAll(".option").forEach(el=>el.onclick=()=>{if(revealed&&mode!=="test")return;selected=+el.dataset.option;renderQuestion();});
+ if(revealed&&mode!=="test")$("feedback").innerHTML='<div class="explain"><strong>'+(selected===q.answer?'Correct.':'Incorrect.')+'</strong> '+q.explanation+'</div>';
+ $("check").onclick=()=>{if(selected===null){$("feedback").innerHTML='<p class="muted">Select an option first.</p>';return;}progress.answers[q.id]={choice:selected,correct:selected===q.answer};if(selected!==q.answer&&!progress.mistakes.includes(q.id))progress.mistakes.push(q.id);else if(selected===q.answer)progress.mistakes=progress.mistakes.filter(id=>id!==q.id);save();revealed=true;if(mode==="test"){$("feedback").innerHTML='<div class="explain">Answer saved for this session. In test mode, review answers after completing the set.</div>'; }render();};
+ $("bookmark").onclick=()=>{if(progress.bookmarks.includes(q.id))progress.bookmarks=progress.bookmarks.filter(id=>id!==q.id);else progress.bookmarks.push(q.id);save();render();};
+ $("prev").onclick=()=>{if(current>0){current--;selected=null;revealed=false;render();}};
+ $("next").onclick=()=>{if(current<arr.length-1){current++;selected=null;revealed=false;render();}};
+}
+document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{mode=b.dataset.mode;current=0;selected=null;revealed=false;document.querySelectorAll("[data-mode]").forEach(x=>x.classList.toggle("active",x===b));render();});
+["subject","year","search"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",()=>{current=0;selected=null;revealed=false;render();}));
+$("reset").onclick=()=>{if(confirm("Delete all locally saved answers, bookmarks, and mistakes?")){progress={answers:{},bookmarks:[],mistakes:[]};save();current=0;selected=null;revealed=false;render();}};
+async function loadBank(){try{const res=await fetch("questions.json");if(res.ok){const data=await res.json();if(Array.isArray(data)&&data.length){questions=data;}}}catch(e){}populateFilters();render();}
+loadBank();
+</script>
+</body>
+</html>
