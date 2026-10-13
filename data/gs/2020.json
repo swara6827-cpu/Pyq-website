@@ -4945,5 +4945,119 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2020-supp-53",
+    "year": 2020,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-53",
+    "sourceQuestionNumber": "53",
+    "supplementalSource": true,
+    "subject": "GEOGRAPHY",
+    "topic": "GEOGRAPHY",
+    "question": "With reference to Ocean Mean Temperature (OMT), which of the following statements is/are correct? 1. OMT is measured up to a depth of 26°C isotherm which is 129 meters in the south-western Indian Ocean during January–March. 2. OMT collected during January–March can be used in assessing whether the amount of rainfall in monsoon will be less or more than a certain long-term mean. Select the correct using the code given below:",
+    "options": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Ocean heat content (OHC) and Ocean Mean Temperature (OMT) are important climatic parameters required for atmospheric and oceanic studies like cyclone and monsoon predictions and ocean heat transport estimations. Sea surface temperature (SST) is routinely used for predicting whether the total amount of rainfall that India receives during the monsoon season will be less or more than the long-term mean of 887.5 mm. Now, scientists from Pune’s Indian Institute of Tropical Meteorology (IITM) find that ocean mean temperature (OMT) that has better ability to predict this than the sea surface temperature. Compared with SST which has 60% success rate of predicting the Indian summer monsoon, OMT has 80% success rate. Hence statement 2 is correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "scientists Pune’s Indian of Tropical (IITM) that ocean temperature that has better to predict than the surface",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Both 1 and 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Neither 1 nor 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2020-supp-82",
+    "year": 2020,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-82",
+    "sourceQuestionNumber": "82",
+    "supplementalSource": true,
+    "subject": "ECONOMICS",
+    "topic": "ECONOMICS",
+    "question": "With reference to the international trade of India at present, which of the following statements is/are correct?",
+    "options": [
+      "Incorrect Option",
+      "Incorrect Option",
+      "Incorrect Option",
+      "Correct Answer (Placeholder)"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The source explanation did not pass the question-relevance check. Use the linked question source and official UPSC key to verify the concept before relying on a rationale.",
+    "explanationStatus": "Detailed explanation needs review",
+    "examInsight": "",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Correct Answer (Placeholder)",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

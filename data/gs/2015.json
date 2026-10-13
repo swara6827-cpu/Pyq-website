@@ -5047,5 +5047,62 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2015-supp-46",
+    "year": 2015,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-46",
+    "sourceQuestionNumber": "46",
+    "supplementalSource": true,
+    "subject": "Modern History",
+    "topic": "Modern History",
+    "question": "Who of the following organized a march on the Tanjore coast to break the Salt Law in April 1930?",
+    "options": [
+      "V.O. Chidambaram Pillai",
+      "C. Rajagopalachari",
+      "K. Kamaraj",
+      "Annie Besant"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "C. Rajagopalachari led Salt Disobedience march from Tiruchirapally to Vedaranniyam (off Tanjore coast).",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2015.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2015.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "V.O. Chidambaram Pillai",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "C. Rajagopalachari",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "K. Kamaraj",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Annie Besant",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

@@ -4996,5 +4996,119 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2023-supp-14",
+    "year": 2023,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-14",
+    "sourceQuestionNumber": "14",
+    "supplementalSource": true,
+    "subject": "Polity & Governance",
+    "topic": "Polity & Governance",
+    "question": "In India, which one of the following Constitutional Amendments was widely believed to be enacted to overcome the judicial interpretations of the Fundamental Rights?",
+    "options": [
+      "1st Amendment",
+      "42nd Amendment",
+      "44th Amendment",
+      "86thAmendment"
+    ],
+    "answer": 0,
+    "answerLabel": "A",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "have been several cases in which supremacy of Fundamental Rights (FR) have been questioned vis- other constitutional provisions e.g. the Directive of State Policy (DPSP). the initial fifteen months of the working of the certain difficulties were brought to light judicial decisions and pronouncements specially in to the chapter on fundamental rights. The right to freedom of speech and expression by article 19(1)(a) was held by some courts be so comprehensive as not to render a person even if he advocates murder and other crimes violence. The main objects of this First Amendment 1951 was, accordingly to amend article 19 for the indicated above. Constitution (First Amendment) Act, 1951, enacted 1951, made several changes to the Fundamental provisions of the Indian constitution. It provided to restrict freedom of speech and expression, of zamindari abolition laws, and clarified that right to equality does not bar the enactment of laws provide \"special consideration\" for weaker of society. Hence option (a) is the correct 43rd and 44th amendment Acts were believed to be to undo many changes introduced in the by the 42nd Amendment Act (1976). They not aim at overcoming the judicial interpretations of Fundamental Rights.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Static and important; in the context of the Basic Structure (laid down by the Supreme Court) which preceded the 42nd Amendmen t Also, the First Constitutio nal Amendmen t Act was in the news because of a petition filed against certain amendmen ts",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1st Amendment",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "B",
+        "text": "42nd Amendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "44th Amendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "86thAmendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2023-supp-24",
+    "year": 2023,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-24",
+    "sourceQuestionNumber": "24",
+    "supplementalSource": true,
+    "subject": "Environment",
+    "topic": "Environment",
+    "question": "Consider the following fauna: 1. Lion-tailed Macaque 2. Malabar Civet 3. Sambar Deer How many of the above are generally nocturnal or most active after sunset?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All three",
+      "None"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The lion-tailed macaque is a rainforest dweller, often found in the upper canopy of tropical moist forests or monsoon forests. It is diurnal, it is active exclusively in daylight hours. Hence 1 is not correct. The Malabar civet is considered nocturnal and so that little is known about its biology and ecology from habitat use. Hence option 2 is correct. Sambar deer are either crepuscular (active at dusk dawn) or nocturnal (active during the night) Hence option 3 is correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Behavioural aspects of species have been repeatedtly tested by UPSC.",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Only one",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Only two",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "All three",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "None",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

@@ -4996,5 +4996,119 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2025-supp-74",
+    "year": 2025,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-74",
+    "sourceQuestionNumber": "74",
+    "supplementalSource": true,
+    "subject": "Environment & Ecology",
+    "topic": "Environment & Ecology",
+    "question": "The World Bank warned that India could become one of the first places where wet-bulb temperatures routinely exceed 35°. Which of the following statements best reflect(s) the implication of the above-said report? I. Peninsular India will most likely suffer from flooding, tropical cyclones and droughts. II. The survival of animals including humans will be affected as shedding of their body heat through perspiration becomes difficult. Select the correct answer using the code given below.",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": 2,
+    "answerLabel": "C",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "a November 2022 report, the World Bank warned India could become one of the first places in the where wet-bulb temperatures could increase the survivability threshold of 35°C. World Bank report suggests that increased heat and difficulty in shedding body heat through will negatively impact the survival of including humans. This is due to the fact that a crucial mechanism for cooling the body, less effective in hot and humid conditions. the air is already saturated with moisture, sweat evaporate efficiently, and the body struggles to its temperature. impact will also be the increased rainfall during seasons, that could exacerbate flooding risks the Indian peninsula. Also, there is a rising risk of tropical cyclones in the region and droughts. option (c) is the correct answer.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "In a November 2022 report, the World Bank warned that India could become one of the first places in the world where wet-bulb temperature s could increase beyond the survivability threshold of 35°C.",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "I only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "II only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Both I and II",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "D",
+        "text": "Neither I nor II",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2025-supp-93",
+    "year": 2025,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-93",
+    "sourceQuestionNumber": "93",
+    "supplementalSource": true,
+    "subject": "Modern History",
+    "topic": "Modern History",
+    "question": "Who provided legal defence to the people arrested in the aftermath of Chauri Chaura incident?",
+    "options": [
+      "C. R. Das",
+      "Madan Mohan Malaviya and Krishna Kant",
+      "Dr. Saifuddin Kitchlew and Khwaja Hasan Nizami",
+      "M. A. Jinnah"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "1909, Malaviya, who was a lawyer, became the of the Congress party. In 1918, he was elected the Municipal Corporation of Allahabad, followed by election to the Provincial Legislative Council, where served for nearly three decades. was a champion of education for women and against the practice of dowry. When he founded BHU in 1916, Malaviya managed a difficult feat — a from the tight-fisted Nizam of Hyderabad. though he quit law practice when he joined he returned to it in 1922 to defend those accused in the Chauri Chaura incident of 1919. total of 225 people were brought to trial at Gorakhpur Court of Judge H. E. Holmes, on charges of and arson” in conjunction with the Chauri affair. Of these, six died while in police custody, were sentenced to 2 years’ imprisonment, while were sentenced to death by hanging and 47 were on 9 January 1923, following conviction in a which lasted eight months. After the 8 month-long 172 people were sentenced to death, he managed get 153 acquitted.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "C. R. Das",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Madan Mohan Malaviya and Krishna Kant",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Dr. Saifuddin Kitchlew and Khwaja Hasan Nizami",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "M. A. Jinnah",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

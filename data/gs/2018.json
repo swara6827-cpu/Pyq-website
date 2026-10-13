@@ -5047,5 +5047,62 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2018-supp-70",
+    "year": 2018,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-70",
+    "sourceQuestionNumber": "70",
+    "supplementalSource": true,
+    "subject": "Post-Independence",
+    "topic": "Post-Independence",
+    "question": "Who among the following were the founders of the \"Hind Mazdoor Sabha\" established in 1948?",
+    "options": [
+      "B. Krishna Pillai, E.M.S. Namboodiripad and K.C. George",
+      "Jayaprakash Narayan, DeenDayal Upadhyay and M.N. Roy",
+      "C.P. Ramaswamy Iyer, K. Kamaraj and Veeresalingam Pantulu",
+      "Ashok Mehta, T.S. Ramanujan and G.G. Mehta"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The Hind Mazdoor Sabha (HMS) was founded in Howrah on 24.12.1948. Its founders included Basawan Singh (Sinha), Ashok Mehta, R.S. Ruikar, Mani Benkara, Shibnath Banerji, T.S. Ramanujam, G.G. Mehta, and others. R.S. Ruikar was elected president and Ashok Mehta as General Secretary.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "D",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2018.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2018.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "B. Krishna Pillai, E.M.S. Namboodiripad and K.C. George",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Jayaprakash Narayan, DeenDayal Upadhyay and M.N. Roy",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "C.P. Ramaswamy Iyer, K. Kamaraj and Veeresalingam Pantulu",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Ashok Mehta, T.S. Ramanujan and G.G. Mehta",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

@@ -16,7 +16,7 @@
     {
       "year": 2015,
       "path": "data/gs/2015.json",
-      "count": 99
+      "count": 100
     },
     {
       "year": 2016,
@@ -31,7 +31,7 @@
     {
       "year": 2018,
       "path": "data/gs/2018.json",
-      "count": 99
+      "count": 100
     },
     {
       "year": 2019,
@@ -41,32 +41,32 @@
     {
       "year": 2020,
       "path": "data/gs/2020.json",
-      "count": 97
+      "count": 99
     },
     {
       "year": 2021,
       "path": "data/gs/2021.json",
-      "count": 97
+      "count": 100
     },
     {
       "year": 2022,
       "path": "data/gs/2022.json",
-      "count": 97
+      "count": 100
     },
     {
       "year": 2023,
       "path": "data/gs/2023.json",
-      "count": 98
+      "count": 100
     },
     {
       "year": 2024,
       "path": "data/gs/2024.json",
-      "count": 95
+      "count": 100
     },
     {
       "year": 2025,
       "path": "data/gs/2025.json",
-      "count": 98
+      "count": 100
     },
     {
       "year": 2026,
@@ -74,7 +74,7 @@
       "count": 98
     }
   ],
-  "totalQuestions": 1378,
+  "totalQuestions": 1397,
   "excludes": "CSAT / General Studies Paper II",
   "officialQuestionPaperArchive": "https://www.upsc.gov.in/examinations/previous-question-papers",
   "officialAnswerKeyArchive": "https://www.upsc.gov.in/examinations/answer-key/archives",

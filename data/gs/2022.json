@@ -4945,5 +4945,176 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-19",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-19",
+    "sourceQuestionNumber": "19",
+    "supplementalSource": true,
+    "subject": "Current Affairs",
+    "topic": "Current Affairs",
+    "question": "With reference to Ayushman Bharat Digital Mission, consider the following statements: 1. Private and public hospitals must adopt it. 2. As it aims to achieve universal health coverage, every citizen of India should be part of it ultimately. 3. It has seamless portability across the country. Which of the statements given above is/are correct?",
+    "options": [
+      "1 and 2 only",
+      "3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Statement 1 is incorrect: Participation in ABDM is voluntary for citizens and healthcare facilities alike. Statement 2 is incorrect: Participation is voluntary, not mandatory for every citizen. Statement 3 is correct: ABDM creates a seamless online platform providing portability of health services across the country. Under ABDM, citizens can create ABHA (Ayushman Bharat Health Account) numbers, enabling national portability of health services through digital health records.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "The scheme was recently launched.",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 and 2 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "3 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "1, 2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-43",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-43",
+    "sourceQuestionNumber": "43",
+    "supplementalSource": true,
+    "subject": "Environment",
+    "topic": "Environment",
+    "question": "\"If rainforests and tropical forests are the lungs of the Earth, then surely wetlands function as its kidneys.\" Which one of the following functions of wetlands best reflects the above statement?",
+    "options": [
+      "The water cycle in wetlands involves surface runoff, subsoil percolation and evaporation.",
+      "Algae form the nutrient base upon which fish, crustaceans, molluscs, birds, reptiles and mammals thrive.",
+      "Wetlands play a vital role in maintaining sedimentation balance and soil stabilization.",
+      "Aquatic plants absorb heavy metals and excess nutrients."
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Natural wetlands have often been referred to as 'earth's kidneys' because of their high and long-term capacity to filter pollutants from the water that flows through them. Aquatic plants can uptake large amounts of metals from water and/or sediment through active and passive absorption. This absorption capacity of metals through roots, stems, and leaves makes these plants suitable for heavy metal removal in the aquatic environment — best reflecting the kidney filtration analogy.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Wetlands and their functions is an important and fundamental topic.",
+    "difficulty": "Easy",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "The water cycle in wetlands involves surface runoff, subsoil percolation and evaporation.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Algae form the nutrient base upon which fish, crustaceans, molluscs, birds, reptiles and mammals thrive.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Wetlands play a vital role in maintaining sedimentation balance and soil stabilization.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Aquatic plants absorb heavy metals and excess nutrients.",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-61",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-61",
+    "sourceQuestionNumber": "61",
+    "supplementalSource": true,
+    "subject": "Economics",
+    "topic": "Economics",
+    "question": "Consider the following statements: 1. Tight monetary policy of US Federal Reserve could lead to capital flight. 2. Capital flight may increase the interest cost of firms with existing External Commercial Borrowings (ECBs). 3. Devaluation of domestic currency decreases the currency risk associated with ECBs. Which of the statements given above are correct?",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 0,
+    "answerLabel": "A",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Statement 1 is correct: Tight monetary policy (Fed rate hike) strengthens the US dollar, causing US-based FPIs/FIIs to pull money from emerging markets like India and invest in safe-haven US assets — leading to capital flight. Statement 2 is correct: Capital flight causes rupee depreciation, which increases debt-servicing costs (in local currencies) for firms with foreign currency ECBs. Statement 3 is incorrect: Devaluation of domestic currency INCREASES the currency risk associated with ECBs (not decreases), as the firm must pay back more rupees to meet the same dollar obligation.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Recent rate hikes by the Federal Reserve and announcement of Fed tapering leading FIIs/FPIs to sell financial assets in emerging economies like India.",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 and 2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "B",
+        "text": "2 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "1, 2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   }
 ]

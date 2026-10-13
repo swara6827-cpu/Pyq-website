@@ -15249,6 +15249,63 @@
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
   },
   {
+    "id": "upsc-gs1-2015-supp-46",
+    "year": 2015,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-46",
+    "sourceQuestionNumber": "46",
+    "supplementalSource": true,
+    "subject": "Modern History",
+    "topic": "Modern History",
+    "question": "Who of the following organized a march on the Tanjore coast to break the Salt Law in April 1930?",
+    "options": [
+      "V.O. Chidambaram Pillai",
+      "C. Rajagopalachari",
+      "K. Kamaraj",
+      "Annie Besant"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "C. Rajagopalachari led Salt Disobedience march from Tiruchirapally to Vedaranniyam (off Tanjore coast).",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2015.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2015.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "V.O. Chidambaram Pillai",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "C. Rajagopalachari",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "K. Kamaraj",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Annie Besant",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
     "id": "upsc-gs1-2016-001",
     "year": 2016,
     "paper": "GS Paper I",
@@ -30498,6 +30555,63 @@
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
   },
   {
+    "id": "upsc-gs1-2018-supp-70",
+    "year": 2018,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-70",
+    "sourceQuestionNumber": "70",
+    "supplementalSource": true,
+    "subject": "Post-Independence",
+    "topic": "Post-Independence",
+    "question": "Who among the following were the founders of the \"Hind Mazdoor Sabha\" established in 1948?",
+    "options": [
+      "B. Krishna Pillai, E.M.S. Namboodiripad and K.C. George",
+      "Jayaprakash Narayan, DeenDayal Upadhyay and M.N. Roy",
+      "C.P. Ramaswamy Iyer, K. Kamaraj and Veeresalingam Pantulu",
+      "Ashok Mehta, T.S. Ramanujan and G.G. Mehta"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The Hind Mazdoor Sabha (HMS) was founded in Howrah on 24.12.1948. Its founders included Basawan Singh (Sinha), Ashok Mehta, R.S. Ruikar, Mani Benkara, Shibnath Banerji, T.S. Ramanujam, G.G. Mehta, and others. R.S. Ruikar was elected president and Ashok Mehta as General Secretary.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "D",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2018.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2018.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "B. Krishna Pillai, E.M.S. Namboodiripad and K.C. George",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Jayaprakash Narayan, DeenDayal Upadhyay and M.N. Roy",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "C.P. Ramaswamy Iyer, K. Kamaraj and Veeresalingam Pantulu",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Ashok Mehta, T.S. Ramanujan and G.G. Mehta",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
     "id": "upsc-gs1-2019-001",
     "year": 2019,
     "paper": "GS Paper I",
@@ -40545,6 +40659,120 @@
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
   },
   {
+    "id": "upsc-gs1-2020-supp-53",
+    "year": 2020,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-53",
+    "sourceQuestionNumber": "53",
+    "supplementalSource": true,
+    "subject": "GEOGRAPHY",
+    "topic": "GEOGRAPHY",
+    "question": "With reference to Ocean Mean Temperature (OMT), which of the following statements is/are correct? 1. OMT is measured up to a depth of 26°C isotherm which is 129 meters in the south-western Indian Ocean during January–March. 2. OMT collected during January–March can be used in assessing whether the amount of rainfall in monsoon will be less or more than a certain long-term mean. Select the correct using the code given below:",
+    "options": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Ocean heat content (OHC) and Ocean Mean Temperature (OMT) are important climatic parameters required for atmospheric and oceanic studies like cyclone and monsoon predictions and ocean heat transport estimations. Sea surface temperature (SST) is routinely used for predicting whether the total amount of rainfall that India receives during the monsoon season will be less or more than the long-term mean of 887.5 mm. Now, scientists from Pune’s Indian Institute of Tropical Meteorology (IITM) find that ocean mean temperature (OMT) that has better ability to predict this than the sea surface temperature. Compared with SST which has 60% success rate of predicting the Indian summer monsoon, OMT has 80% success rate. Hence statement 2 is correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "scientists Pune’s Indian of Tropical (IITM) that ocean temperature that has better to predict than the surface",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Both 1 and 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Neither 1 nor 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2020-supp-82",
+    "year": 2020,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-82",
+    "sourceQuestionNumber": "82",
+    "supplementalSource": true,
+    "subject": "ECONOMICS",
+    "topic": "ECONOMICS",
+    "question": "With reference to the international trade of India at present, which of the following statements is/are correct?",
+    "options": [
+      "Incorrect Option",
+      "Incorrect Option",
+      "Incorrect Option",
+      "Correct Answer (Placeholder)"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The source explanation did not pass the question-relevance check. Use the linked question source and official UPSC key to verify the concept before relying on a rationale.",
+    "explanationStatus": "Detailed explanation needs review",
+    "examInsight": "",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2020_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Incorrect Option",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Correct Answer (Placeholder)",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
     "id": "upsc-gs1-2021-001",
     "year": 2021,
     "paper": "GS Paper I",
@@ -45492,6 +45720,177 @@
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
   },
   {
+    "id": "upsc-gs1-2021-supp-25",
+    "year": 2021,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-25",
+    "sourceQuestionNumber": "25",
+    "supplementalSource": true,
+    "subject": "Environment",
+    "topic": "Environment",
+    "question": "Magnetite particles, suspected to cause neurodegenerative problems, are generated as environmental pollutants from which of the following? 1. Brakes of motor vehicles 2. Engines of motor vehicles 3. Microwave stoves within homes 4. Power plants 5. Telephone lines Select the correct answer using the code given below.",
+    "options": [
+      "1, 2, 3 and 5 only",
+      "1, 2 and 4 only",
+      "3, 4 and 5 only",
+      "1, 2, 3, 4 and 5"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Magnetite can have potentially large impacts on the brain due to its unique combination of redox activity, surface charge and strongly magnetic behaviour. Airborne magnetite pollution particles < ~200 nm in size can access the brain directly via the olfactory and/or trigeminal nerves, bypassing the blood-brain barrier. These tiny particles, each less than a thousandth the width of a human hair, are generated by a wide variety of processes, both natural and fabricated, including forest fires and wood-burning stoves, road traffic pollution, and many high-temperature industrial processes. In addition to occupational settings (including, for example, exposure to printer toner",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1, 2, 3 and 5 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "1, 2 and 4 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "3, 4 and 5 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "1, 2, 3, 4 and 5",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2021-supp-68",
+    "year": 2021,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-68",
+    "sourceQuestionNumber": "68",
+    "supplementalSource": true,
+    "subject": "Basic Science",
+    "topic": "Basic Science",
+    "question": "In a pressure cooker, the temperature at which the food is cooked depends mainly upon which of the following? 1. Area of the hole in the lid 2. Temperature of the flame 3. Weight of the lid Select the correct answer using the code given below.",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 2,
+    "answerLabel": "C",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Inside a pressure cooker the boiling point is increased by increasing the pressure. Hence cooking is faster. Therefore the temperature at which food is cooked is affected by the pressure and not temperature of the flame. This can also be understood by understanding why cooking is difficult on hills. At high altitudes, atmospheric pressure is lower, reducing the boiling point of water as compared to that at sea level.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "the basic",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 and 2 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "D",
+        "text": "1, 2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2021-supp-80",
+    "year": 2021,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-80",
+    "sourceQuestionNumber": "80",
+    "supplementalSource": true,
+    "subject": "Polity & Governance",
+    "topic": "Polity & Governance",
+    "question": "Consider the following statements: 1. In India, there is no law restricting the candidates from contesting in one Lok Sabha election from three constituencies. 2. In 1991 Lok Sabha Election, Shri Devi Lal contested from three Lok Sabha constituencies. 3. As per the existing rules, if a candidate contests in one Lok Sabha election from many constituencies, his/her party should bear the cost of bye-elections to the constituencies vacated by him/her in the event of him/her winning in all the constituencies. Which of the statements given above is/are correct?",
+    "options": [
+      "1 only",
+      "2 only",
+      "1 and 3",
+      "2 and 3"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "According to Section 33 of Representation of People Act 1951, \"a person shall not be nominated as a candidate for election, in the case of a general election to the House of the People, from more than two Parliamentary constituencies.\" Hence statement 1 is not correct. In 1991 Lok Sabha Election, Shri Devi Lal contested from three Lok Sabha constituencies. Hence statement 2 is correct. There is no such provision in the rules like, \"if a candidate contests in one Lok Sabha election from many constituencies, his/her party should bear the cost of bye- elections to the constituencies vacated by him/her in the event of him/her winning in all the constituencies.\" Hence statement 3 is not correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "information on related",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2021_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
     "id": "upsc-gs1-2022-001",
     "year": 2022,
     "paper": "GS Paper I",
@@ -50437,6 +50836,177 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-19",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-19",
+    "sourceQuestionNumber": "19",
+    "supplementalSource": true,
+    "subject": "Current Affairs",
+    "topic": "Current Affairs",
+    "question": "With reference to Ayushman Bharat Digital Mission, consider the following statements: 1. Private and public hospitals must adopt it. 2. As it aims to achieve universal health coverage, every citizen of India should be part of it ultimately. 3. It has seamless portability across the country. Which of the statements given above is/are correct?",
+    "options": [
+      "1 and 2 only",
+      "3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Statement 1 is incorrect: Participation in ABDM is voluntary for citizens and healthcare facilities alike. Statement 2 is incorrect: Participation is voluntary, not mandatory for every citizen. Statement 3 is correct: ABDM creates a seamless online platform providing portability of health services across the country. Under ABDM, citizens can create ABHA (Ayushman Bharat Health Account) numbers, enabling national portability of health services through digital health records.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "The scheme was recently launched.",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 and 2 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "3 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "1, 2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-43",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-43",
+    "sourceQuestionNumber": "43",
+    "supplementalSource": true,
+    "subject": "Environment",
+    "topic": "Environment",
+    "question": "\"If rainforests and tropical forests are the lungs of the Earth, then surely wetlands function as its kidneys.\" Which one of the following functions of wetlands best reflects the above statement?",
+    "options": [
+      "The water cycle in wetlands involves surface runoff, subsoil percolation and evaporation.",
+      "Algae form the nutrient base upon which fish, crustaceans, molluscs, birds, reptiles and mammals thrive.",
+      "Wetlands play a vital role in maintaining sedimentation balance and soil stabilization.",
+      "Aquatic plants absorb heavy metals and excess nutrients."
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Natural wetlands have often been referred to as 'earth's kidneys' because of their high and long-term capacity to filter pollutants from the water that flows through them. Aquatic plants can uptake large amounts of metals from water and/or sediment through active and passive absorption. This absorption capacity of metals through roots, stems, and leaves makes these plants suitable for heavy metal removal in the aquatic environment — best reflecting the kidney filtration analogy.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Wetlands and their functions is an important and fundamental topic.",
+    "difficulty": "Easy",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "The water cycle in wetlands involves surface runoff, subsoil percolation and evaporation.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Algae form the nutrient base upon which fish, crustaceans, molluscs, birds, reptiles and mammals thrive.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Wetlands play a vital role in maintaining sedimentation balance and soil stabilization.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Aquatic plants absorb heavy metals and excess nutrients.",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2022-supp-61",
+    "year": 2022,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-61",
+    "sourceQuestionNumber": "61",
+    "supplementalSource": true,
+    "subject": "Economics",
+    "topic": "Economics",
+    "question": "Consider the following statements: 1. Tight monetary policy of US Federal Reserve could lead to capital flight. 2. Capital flight may increase the interest cost of firms with existing External Commercial Borrowings (ECBs). 3. Devaluation of domestic currency decreases the currency risk associated with ECBs. Which of the statements given above are correct?",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 0,
+    "answerLabel": "A",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Statement 1 is correct: Tight monetary policy (Fed rate hike) strengthens the US dollar, causing US-based FPIs/FIIs to pull money from emerging markets like India and invest in safe-haven US assets — leading to capital flight. Statement 2 is correct: Capital flight causes rupee depreciation, which increases debt-servicing costs (in local currencies) for firms with foreign currency ECBs. Statement 3 is incorrect: Devaluation of domestic currency INCREASES the currency risk associated with ECBs (not decreases), as the firm must pay back more rupees to meet the same dollar obligation.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Recent rate hikes by the Federal Reserve and announcement of Fed tapering leading FIIs/FPIs to sell financial assets in emerging economies like India.",
+    "difficulty": "Medium",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2022.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2022.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 and 2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "B",
+        "text": "2 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "1 and 3 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "1, 2 and 3",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   },
   {
     "id": "upsc-gs1-2023-001",
@@ -55437,6 +56007,120 @@
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
   },
   {
+    "id": "upsc-gs1-2023-supp-14",
+    "year": 2023,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-14",
+    "sourceQuestionNumber": "14",
+    "supplementalSource": true,
+    "subject": "Polity & Governance",
+    "topic": "Polity & Governance",
+    "question": "In India, which one of the following Constitutional Amendments was widely believed to be enacted to overcome the judicial interpretations of the Fundamental Rights?",
+    "options": [
+      "1st Amendment",
+      "42nd Amendment",
+      "44th Amendment",
+      "86thAmendment"
+    ],
+    "answer": 0,
+    "answerLabel": "A",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "have been several cases in which supremacy of Fundamental Rights (FR) have been questioned vis- other constitutional provisions e.g. the Directive of State Policy (DPSP). the initial fifteen months of the working of the certain difficulties were brought to light judicial decisions and pronouncements specially in to the chapter on fundamental rights. The right to freedom of speech and expression by article 19(1)(a) was held by some courts be so comprehensive as not to render a person even if he advocates murder and other crimes violence. The main objects of this First Amendment 1951 was, accordingly to amend article 19 for the indicated above. Constitution (First Amendment) Act, 1951, enacted 1951, made several changes to the Fundamental provisions of the Indian constitution. It provided to restrict freedom of speech and expression, of zamindari abolition laws, and clarified that right to equality does not bar the enactment of laws provide \"special consideration\" for weaker of society. Hence option (a) is the correct 43rd and 44th amendment Acts were believed to be to undo many changes introduced in the by the 42nd Amendment Act (1976). They not aim at overcoming the judicial interpretations of Fundamental Rights.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Static and important; in the context of the Basic Structure (laid down by the Supreme Court) which preceded the 42nd Amendmen t Also, the First Constitutio nal Amendmen t Act was in the news because of a petition filed against certain amendmen ts",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1st Amendment",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "B",
+        "text": "42nd Amendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "44th Amendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "86thAmendment",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2023-supp-24",
+    "year": 2023,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-24",
+    "sourceQuestionNumber": "24",
+    "supplementalSource": true,
+    "subject": "Environment",
+    "topic": "Environment",
+    "question": "Consider the following fauna: 1. Lion-tailed Macaque 2. Malabar Civet 3. Sambar Deer How many of the above are generally nocturnal or most active after sunset?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All three",
+      "None"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The lion-tailed macaque is a rainforest dweller, often found in the upper canopy of tropical moist forests or monsoon forests. It is diurnal, it is active exclusively in daylight hours. Hence 1 is not correct. The Malabar civet is considered nocturnal and so that little is known about its biology and ecology from habitat use. Hence option 2 is correct. Sambar deer are either crepuscular (active at dusk dawn) or nocturnal (active during the night) Hence option 3 is correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "Behavioural aspects of species have been repeatedtly tested by UPSC.",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2023_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Only one",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Only two",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "All three",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "None",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
     "id": "upsc-gs1-2024-001",
     "year": 2024,
     "paper": "GS Paper I",
@@ -60280,6 +60964,291 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2024-supp-11",
+    "year": 2024,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-11",
+    "sourceQuestionNumber": "11",
+    "supplementalSource": true,
+    "subject": "Polity & Governance",
+    "topic": "Polity & Governance",
+    "question": "Who was the Provisional President of the Constituent Assembly before Dr. Rajendra Prasad took over ?",
+    "options": [
+      "C. Rajagopalachari",
+      "Dr. B.R. Ambedkar",
+      "T.T. Krishnamachari",
+      "Dr. Sachchidananda Sinha"
+    ],
+    "answer": 3,
+    "answerLabel": "D",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "The Constituent Assembly held its first meeting on December 9, 1946. The Muslim League boycotted the meeting and insisted on a separate state of Pakistan. The meeting was, thus, attended by only 211 members. Dr. Sachchidananda Sinha, the oldest member, was elected as the temporary/provisional President of the Assembly, following the French practice. Later, Dr. Rajendra Prasad was elected as the President of the Assembly. Hence, option (d) is the correct answer.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "E",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2024.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2024.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "C. Rajagopalachari",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Dr. B.R. Ambedkar",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "T.T. Krishnamachari",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Dr. Sachchidananda Sinha",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2024-supp-25",
+    "year": 2024,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-25",
+    "sourceQuestionNumber": "25",
+    "supplementalSource": true,
+    "subject": "Polity & Governance",
+    "topic": "Polity & Governance",
+    "question": "With reference to Union Budget, consider the following statements : 1. The Union Finance Minister on behalf of the Prime Minister lays the Annual Financial Statement before both the Houses of Parliament. 2. At the Union level, no demand for a grant can be made except on the recommendation of the President of India. Which of the statements given above is/are correct ?",
+    "options": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Article 112 of the Indian Constitution says that every year “the President of India shall cause to be laid before both the houses of the parliament” the “Annual Financial Statement”. The Union Finance Minister presents the budget on behalf of the President and not the Prime Minister. Hence, statement 1 is not correct. Article 113 (3) prescribes that no demand for grants can be presented in the Lok Sabha without the President of India's prior approval. Hence, statement 2 is correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "E",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2024.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2024.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Both 1 and 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Neither 1 nor 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2024-supp-32",
+    "year": 2024,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-32",
+    "sourceQuestionNumber": "32",
+    "supplementalSource": true,
+    "subject": "Current Affairs (Economics)",
+    "topic": "Current Affairs (Economics)",
+    "question": "Consider the following statements : Statement-I : Syndicated lending spreads the risk of borrower default across multiple lenders. Statement-II : The syndicated loan can be a fixed amount/lump sum of funds, but cannot be a credit line. Which one of the following is correct in respect of the above statements ?",
+    "options": [
+      "Both Statement-I and Statement-II are correct and Statement- II explains Statement-I",
+      "Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I",
+      "Statement-I is correct, but Statement-II is incorrect",
+      "Statement-I is incorrect, but Statement-II is correct"
+    ],
+    "answer": 2,
+    "answerLabel": "C",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Recent Context: In 2023, Country’s largest lender State Bank of India (SBI) concluded a $1 billion syndicated social loan facility. Shriram Finance raised multi- currency loan of $468 million via ECB in January, 2024. This is the largest widely syndicated loan transaction for a private NBFC from India in recent years. A syndicated loan is a form of financing that is offered by a group of lenders. Syndicated loans arise when a project requires too large a loan for a single lender or when a project needs a specialized lender with expertise in a specific asset class. Syndicating allows lenders to spread risk and take part in financial opportunities that may be too large for their individual capital base. Syndicated loans involve large sums, which allows the risk to be spread out among several financial institutions to mitigate the risk in case the borrower defaults. Lenders are referred to as a syndicate, which works together to provide funds for a single borrower. Hence statement-I is correct. The borrower can be a corporation, a large project, or a sovereign government. The loan can involve a fixed amount of funds, a credit line, or a combination of the two. Hence statement-II is not correct.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "In 2023, State Bank of India (SBI) concluded a $1 billion syndicated social loan facility. Further, in 2024, Shriram Finance raised multi-",
+    "difficulty": "M",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2024.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2024.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Both Statement-I and Statement-II are correct and Statement- II explains Statement-I",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Statement-I is correct, but Statement-II is incorrect",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "D",
+        "text": "Statement-I is incorrect, but Statement-II is correct",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2024-supp-37",
+    "year": 2024,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-37",
+    "sourceQuestionNumber": "37",
+    "supplementalSource": true,
+    "subject": "Modern History",
+    "topic": "Modern History",
+    "question": "With reference to revenue collection by Cornwallis, consider the following statements : 1. Under the Ryotwari Settlement of revenue collection, the peasants were exempted from revenue payment in case of bad harvests or natural calamities. 2. Under the Permanent Settlement in Bengal, if the Zamindar failed to pay his revenues to the state, on or before the fixed date, he would be removed from his Zamindari. Which of the statements given above is/are correct ?",
+    "options": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "• Under the Ryotwari Settlement, peasants were directly responsible for paying land revenue to the British government. However, there was no general provision for exemption from revenue payment in case of bad harvests or natural calamities. Farmers were forced to pay the revenue even during famines. Hence, statement 1 is incorrect. • Under the Permanent Settlement in Bengal, introduced by Lord Cornwallis in 1793, if a Zamindar failed to pay his revenues to the state on or before the fixed date, their land would auctioned off. Hence statement 2 is correct. Hence option (b) is the correct answer.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "E",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2024.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2024.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "1 only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "2 only",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Both 1 and 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "Neither 1 nor 2",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2024-supp-80",
+    "year": 2024,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-80",
+    "sourceQuestionNumber": "80",
+    "supplementalSource": true,
+    "subject": "Current Affairs (Environment)",
+    "topic": "Current Affairs (Environment)",
+    "question": "Consider the following statements Statement-I: The Indian Flying Fox is placed under the “vermin” category in the Wild Life (Protection) Act, 1972. Statement-II: The Indian Flying Fox feeds on the blood of other animals. Which one of the following is correct in respect of the above statements ?",
+    "options": [
+      "Both Statement-I and Statement-II are correct and Statement- II explains Statement-I",
+      "Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I.",
+      "Statement-I is correct, but Statement-II is incorrect",
+      "Statement-l is incorrect, but Statement-II is correct."
+    ],
+    "answer": 2,
+    "answerLabel": "C",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "Statement I is correct: The nectar and fruit-eating flying fox (Pteropus giganteus) is generally considered a vermin as they raid orchards. It had a similar official status under Schedule V of the Wildlife (Protection) Act of 1972 until it was put on the Schedule II list entailing a higher degree of protection. Statement II is not correct: As a keystone species causing seed dispersals of many plants in tropical systems, the flying fox has fascinated zoologists over the years. The Indian flying fox is vermin because they believe that it \"poaches\" ripe fruit from orchards. A study in India found that of all orchard crops, Indian flying foxes did the most damage to mango and guava crops.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "M",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/upsc2024.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/upsc2024.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "Both Statement-I and Statement-II are correct and Statement- II explains Statement-I",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Statement-I is correct, but Statement-II is incorrect",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "D",
+        "text": "Statement-l is incorrect, but Statement-II is correct.",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   },
   {
     "id": "upsc-gs1-2025-001",
@@ -65278,6 +66247,120 @@
       }
     ],
     "attribution": "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+  },
+  {
+    "id": "upsc-gs1-2025-supp-74",
+    "year": 2025,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-74",
+    "sourceQuestionNumber": "74",
+    "supplementalSource": true,
+    "subject": "Environment & Ecology",
+    "topic": "Environment & Ecology",
+    "question": "The World Bank warned that India could become one of the first places where wet-bulb temperatures routinely exceed 35°. Which of the following statements best reflect(s) the implication of the above-said report? I. Peninsular India will most likely suffer from flooding, tropical cyclones and droughts. II. The survival of animals including humans will be affected as shedding of their body heat through perspiration becomes difficult. Select the correct answer using the code given below.",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": 2,
+    "answerLabel": "C",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "a November 2022 report, the World Bank warned India could become one of the first places in the where wet-bulb temperatures could increase the survivability threshold of 35°C. World Bank report suggests that increased heat and difficulty in shedding body heat through will negatively impact the survival of including humans. This is due to the fact that a crucial mechanism for cooling the body, less effective in hot and humid conditions. the air is already saturated with moisture, sweat evaporate efficiently, and the body struggles to its temperature. impact will also be the increased rainfall during seasons, that could exacerbate flooding risks the Indian peninsula. Also, there is a rising risk of tropical cyclones in the region and droughts. option (c) is the correct answer.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "In a November 2022 report, the World Bank warned that India could become one of the first places in the world where wet-bulb temperature s could increase beyond the survivability threshold of 35°C.",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "I only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "II only",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "C",
+        "text": "Both I and II",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "D",
+        "text": "Neither I nor II",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+  },
+  {
+    "id": "upsc-gs1-2025-supp-93",
+    "year": 2025,
+    "paper": "GS Paper I",
+    "questionNumber": "SUPP-93",
+    "sourceQuestionNumber": "93",
+    "supplementalSource": true,
+    "subject": "Modern History",
+    "topic": "Modern History",
+    "question": "Who provided legal defence to the people arrested in the aftermath of Chauri Chaura incident?",
+    "options": [
+      "C. R. Das",
+      "Madan Mohan Malaviya and Krishna Kant",
+      "Dr. Saifuddin Kitchlew and Khwaja Hasan Nizami",
+      "M. A. Jinnah"
+    ],
+    "answer": 1,
+    "answerLabel": "B",
+    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+    "explanation": "1909, Malaviya, who was a lawyer, became the of the Congress party. In 1918, he was elected the Municipal Corporation of Allahabad, followed by election to the Provincial Legislative Council, where served for nearly three decades. was a champion of education for women and against the practice of dowry. When he founded BHU in 1916, Malaviya managed a difficult feat — a from the tight-fisted Nizam of Hyderabad. though he quit law practice when he joined he returned to it in 1922 to defend those accused in the Chauri Chaura incident of 1919. total of 225 people were brought to trial at Gorakhpur Court of Judge H. E. Holmes, on charges of and arson” in conjunction with the Chauri affair. Of these, six died while in police custody, were sentenced to 2 years’ imprisonment, while were sentenced to death by hanging and 47 were on 9 January 1923, following conviction in a which lasted eight months. After the 8 month-long 172 people were sentenced to death, he managed get 153 acquitted.",
+    "explanationStatus": "Community explanation; relevance-screened but not independently fact-checked",
+    "examInsight": "",
+    "difficulty": "Difficult",
+    "sourceName": "UPSC—TestBook community dataset (supplement)",
+    "sourceProvider": "Community dataset supplement",
+    "sourceFileUrl": "https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "sourcePaperUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "sourceKeyUrl": "https://www.upsc.gov.in/examinations/answer-key/archives",
+    "transcriptionSourceUrl": "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/GS_Prelims_2025_Questions.json",
+    "optionReview": [
+      {
+        "label": "A",
+        "text": "C. R. Das",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "B",
+        "text": "Madan Mohan Malaviya and Krishna Kant",
+        "isCorrect": true,
+        "review": "Keyed answer. Read the explanation below for the governing concept."
+      },
+      {
+        "label": "C",
+        "text": "Dr. Saifuddin Kitchlew and Khwaja Hasan Nizami",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      },
+      {
+        "label": "D",
+        "text": "M. A. Jinnah",
+        "isCorrect": false,
+        "review": "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+      }
+    ],
+    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
   },
   {
     "id": "upsc-gs1-2026-001",
