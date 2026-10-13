@@ -1,39 +1,38 @@
-# UPSC Prelims Practice
+# UPSC Prelims GS Practice & PYQ Library
 
-A free, static UPSC CSE Prelims practice site deployed with GitHub Pages. It requires no backend, database service, login, or API key.
+A free static website hosted on GitHub Pages. **General Studies Paper I only—CSAT is excluded.**
 
 ## Live site
 
 https://swara6827-cpu.github.io/Pyq-website/
 
-## Current state
+## PYQ library: 2013–2026
 
-- **41 question records** from 2024 GS Paper I are currently loaded.
-- This is a curated first batch, **not a complete 2024 paper or full year-wise archive**.
-- Each record links to the official UPSC question paper, the UPSC answer-key archive, and a public transcription reference.
-- Topic labels and explanations are editorial aids. Cross-check disputed answers with the official answer key; paper-set numbering/order can differ.
-- CSAT and older/newer years have not been added yet.
+The **GS PYQ library** tab links year by year to existing question sets and answer explanations hosted by third-party sites, alongside the official UPSC question-paper and answer-key archives. The repo stores source metadata, not a copied full text of the papers.
 
-## Features
+- Question-page links: the relevant year-wise UPSC Answer Check page where available, with UPSCprep as an alternate source.
+- Official cross-checks: https://www.upsc.gov.in/examinations/previous-question-papers and https://www.upsc.gov.in/examinations/answer-key/archives
+- For recent exams, treat third-party keys as provisional until a matching official UPSC key is available.
 
-- Practice mode with answer checking and explanations
-- Filters for year, subject and topic, plus text search
-- Timed test mode with question navigator and hidden answers until submission
-- UPSC GS marking: +2 for correct, −2/3 for incorrect, 0 for unanswered
-- Duration scaled at 72 seconds per question (100 questions = 120 minutes)
-- Bookmarks, mistake notebook, accuracy by subject, and timed-test history
-- Progress stored in browser local storage; it does not sync across devices
-- JSON question bank so data can be updated independently of the interface
+## Built-in features
 
-## Source references
+- Year-wise links to General Studies Paper I sources from 2013 onward
+- A separate sample-practice mode with six illustrative questions (these are **not actual UPSC PYQs**)
+- Practice answer checking and explanations
+- Filters for subject, topic, and year in the sample bank
+- Timed tests with question navigation and UPSC GS-style marking (+2 / −2/3 / 0)
+- Bookmarks, mistake notebook, subject accuracy, and test history
+- Local browser storage; progress does not sync across devices
+- No backend, user account, or API key needed
 
-- Official UPSC previous question papers: https://www.upsc.gov.in/examinations/previous-question-papers
-- Official UPSC answer-key archive: https://www.upsc.gov.in/examinations/answer-key/archives
-- 2024 GS Paper I PDF: https://www.upsc.gov.in/sites/default/files/QP-CSP-24-GENERAL-STUDIES-PAPER-I-180624.pdf
-- Public answer transcription reference: https://upscanswercheck.com/prelims/pyq/2024/gs
+## Repository files
 
-## Updating the question bank
+- `index.html` — the UI and practice/test logic
+- `questions.json` — six clearly illustrative sample questions, not a PYQ dataset
+- `pyq-sources.json` — year-wise source links for GS Paper I, 2013–2026
+- `scripts/import_gs_pyqs.py` — rebuilds the source-link index only; it does not scrape question text
+- `QUESTION_BANK_GUIDE.md` — schema and quality checklist for adding appropriately sourced question items
 
-Edit `questions.json`; no application code change is needed when adding questions that use the same schema. See [QUESTION_BANK_GUIDE.md](QUESTION_BANK_GUIDE.md) for the field definitions and quality checks.
+## Hosting and maintenance
 
-The `deploy-pages.yml` GitHub Actions workflow publishes the repository root to GitHub Pages whenever changes are pushed to `main`.
+GitHub Pages deploys from the repository root through `.github/workflows/deploy-pages.yml`. A small GitHub Actions workflow refreshes the source-link catalog when its builder changes. The site is static and can be hosted free of charge.
