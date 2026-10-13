@@ -8,14 +8,15 @@
 <style>
 :root{--bg:#f4f6fa;--card:#fff;--ink:#182235;--muted:#66738a;--line:#e1e7f0;--navy:#111827;--blue:#3459df;--bluebg:#eef2ff;--green:#14764f;--greenbg:#eaf8f0;--red:#b42334;--redbg:#fff0f1;--amber:#73520a;--amberbg:#fff7df}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{background:linear-gradient(120deg,#111827,#202e4f);color:#fff;padding:22px max(18px,calc((100% - 1120px)/2))}.brand{font-size:22px;font-weight:800;letter-spacing:-.45px}.sub{font-size:13px;color:#cbd5e1;margin-top:3px}.wrap{max-width:1120px;margin:22px auto;padding:0 16px}.notice{background:var(--amberbg);border:1px solid #f0d990;color:#644d10;padding:13px 15px;border-radius:13px;margin-bottom:16px;font-size:13px}.sourcebar{display:flex;gap:9px;flex-wrap:wrap;margin-top:8px}.sourcebar a{color:#244bb9;font-weight:700;text-decoration:none}.sourcebar a:hover{text-decoration:underline}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-bottom:15px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px}.stat{padding:13px 15px}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;font-size:24px;letter-spacing:-.4px;margin-top:3px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab,.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:10px;font-weight:650}.tab.active,.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn.secondary{background:var(--bluebg);border-color:#d6defe;color:#2444af}.btn:disabled{opacity:.45;cursor:not-allowed}.layout{display:grid;grid-template-columns:minmax(0,1fr) 272px;gap:15px;align-items:start}.panel{padding:16px}.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:13px}.filters select,.filters input{min-width:0;width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}.muted{color:var(--muted);font-size:13px}.qmeta{font-size:12px;color:var(--muted);display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.pill{background:var(--bluebg);color:#2947b0;padding:3px 8px;border-radius:30px}.question{font-size:18px;font-weight:750;line-height:1.45;margin:8px 0 17px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:11px;margin:8px 0;background:#fff;cursor:pointer}.option:hover{border-color:#9baef8}.option.selected{background:var(--bluebg);border-color:var(--blue)}.option.correct{background:var(--greenbg);border-color:#79c99f}.option.wrong{background:var(--redbg);border-color:#e5a0aa}.option.locked{cursor:default}.letter{font-weight:800;min-width:23px}.explain{padding:12px;border-radius:10px;background:#f2f5fa;margin-top:12px;font-size:14px}.explain.good{background:var(--greenbg)}.explain.bad{background:var(--redbg)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.side h2,.panel h2{font-size:16px;margin:0 0 12px}.side-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.side-row strong{text-align:right}.question-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.question-list button{height:36px;border-radius:8px;border:1px solid var(--line);background:#fff}.question-list button.current{background:var(--blue);color:#fff;border-color:var(--blue)}.question-list button.answered{border-color:#8ccaa9;background:#effaf4}.question-list button.missed{border-color:#e2a2a9}.empty{padding:28px 10px;text-align:center;color:var(--muted)}.footer{color:var(--muted);font-size:12px;text-align:center;padding:25px 10px}.result-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.result-tile{padding:10px;background:#f5f7fb;border-radius:10px}.result-tile small{display:block;color:var(--muted);font-size:11px}.result-tile strong{font-size:19px}.barrow{display:grid;grid-template-columns:110px minmax(0,1fr) 75px;align-items:center;gap:8px;margin:10px 0;font-size:13px}.bar{height:9px;background:#edf0f6;border-radius:9px;overflow:hidden}.bar span{height:100%;display:block;background:var(--blue);border-radius:9px}.history-item{padding:12px 0;border-bottom:1px solid var(--line)}.small-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px}.small-links a{color:#2b4fc6;text-decoration:none}.small-links a:hover{text-decoration:underline}.badge{font-size:11px;padding:3px 7px;border-radius:7px;background:#eef1f6;color:#4b5669}
+.source-library{display:grid;gap:10px;margin-top:12px}.source-card{display:flex;gap:14px;border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff}.source-year{font-size:24px;font-weight:800;letter-spacing:-.5px;min-width:76px}.source-detail{min-width:0;flex:1}.source-detail strong{display:block;margin-bottom:4px}.source-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.source-links .btn{font-size:13px;padding:7px 9px}.source-detail .small-links{margin-top:8px}@media(max-width:480px){.source-card{gap:8px;padding:10px}.source-year{font-size:19px;min-width:54px}.source-links .btn{font-size:12px;padding:6px 7px}}
 @media(max-width:780px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.top{padding:18px}.wrap{margin-top:14px}.question{font-size:17px}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.barrow{grid-template-columns:95px minmax(0,1fr) 66px}}@media(max-width:390px){.toolbar{gap:6px}.tab{padding:8px 10px}.panel{padding:12px}.question-list{grid-template-columns:repeat(5,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <header class="top"><div class="brand">UPSC Prelims Practice</div><div class="sub">PYQ practice · timed tests · error analysis · local progress</div></header>
 <main class="wrap">
-<div class="notice"><strong>GS-only question bank:</strong> The importer is building the year-wise bank from 2013 onward using existing question-paper and answer-key pages. <strong>CSAT is excluded.</strong> Some questions may have no unambiguous answer-key entry; these remain available for practice but are excluded from scoring. Use the source links and official UPSC archive to resolve any discrepancy.
- <div class="sourcebar"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC question-paper archive ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Official UPSC answer-key archive ↗</a><a href="https://upscanswercheck.com/prelims/pyq?paper=gs" target="_blank" rel="noopener">Year-wise GS PYQs ↗</a></div>
+<div class="notice"><strong>GS Paper I PYQ Library · 2013–2026:</strong> Open existing year-wise question sets and answer explanations from the source websites below. This site links to those question banks rather than republishing entire third-party papers. <strong>CSAT is excluded.</strong> Answer keys from third-party pages should be cross-checked against the official UPSC archive, especially for recent exams.
+ <div class="sourcebar"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC question papers ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Official UPSC answer keys ↗</a></div>
 </div>
 <section class="stats">
  <div class="stat"><small>Questions loaded</small><strong id="total">—</strong></div>
@@ -24,7 +25,8 @@
  <div class="stat"><small>Bookmarks</small><strong id="bookmarkCount">0</strong></div>
 </section>
 <div class="toolbar">
- <button class="tab active" data-mode="practice">Practice</button>
+ <button class="tab active" data-mode="practice">Sample practice</button>
+ <button class="tab" data-mode="library">GS PYQ library</button>
  <button class="tab" data-mode="test">Timed test</button>
  <button class="tab" data-mode="bookmarks">Bookmarks</button>
  <button class="tab" data-mode="mistakes">Mistake notebook</button>
@@ -32,7 +34,7 @@
 </div>
 <div class="layout">
 <section class="panel">
- <div class="filters">
+ <div class="filters" id="filters">
   <select id="year" aria-label="Filter by year"><option value="all">All years</option></select>
   <select id="subject" aria-label="Filter by subject"><option value="all">All subjects</option></select>
   <select id="topic" aria-label="Filter by topic"><option value="all">All topics</option></select>
@@ -62,6 +64,7 @@ const emptyProgress = () => ({answers:{},bookmarks:[],mistakes:[],testHistory:[]
 function readProgress(){try{const p=JSON.parse(localStorage.getItem(STORE_KEY)||"null");return p&&typeof p==="object"?{...emptyProgress(),...p}:emptyProgress()}catch(e){return emptyProgress()}}
 let progress = readProgress();
 let questions = [];
+let sourceYears = [];
 let mode = "practice";
 let current = 0;
 let chosen = null;
@@ -103,7 +106,7 @@ function updateStats(arr){
  $("attempted").textContent=allAnswers.length;
  $("accuracy").textContent=vals.length?Math.round(correct/vals.length*100)+"%":"—";
  $("bookmarkCount").textContent=progress.bookmarks.length;
- $("modeLabel").textContent=({practice:"Practice",test:"Timed test",bookmarks:"Bookmarks",mistakes:"Mistake notebook",progress:"Progress"})[mode]||mode;
+ $("modeLabel").textContent=({practice:"Sample practice",test:"Timed test",bookmarks:"Bookmarks",mistakes:"Mistake notebook",progress:"Progress",library:"GS PYQ library"})[mode]||mode;
  $("viewCount").textContent=arr.length;
  $("sessionCount").textContent=arr.filter(q=>progress.answers[q.id]).length;
  const last=progress.testHistory[progress.testHistory.length-1];
@@ -230,12 +233,21 @@ function renderQuestion(q,arr){
  const prev=$("prev");if(prev)prev.onclick=()=>{if(current>0){current--;chosen=null;revealed=false;render()}};
  const next=$("next");if(next)next.onclick=()=>{if(current<arr.length-1){current++;chosen=null;revealed=false;render()}};
 }
+function renderLibrary(){
+ const cards=[...sourceYears].sort((a,b)=>a.year-b.year).map(item=>{
+  const links=item.sources.map(src=>'<a class="btn secondary" href="'+esc(src.url)+'" target="_blank" rel="noopener">'+esc(src.label)+' ↗</a>').join("");
+  return '<article class="source-card"><div class="source-year">'+esc(item.year)+'</div><div class="source-detail"><strong>'+esc(item.paper)+'</strong><div class="muted">'+esc(item.keyNote)+'</div><div class="source-links">'+links+'</div><div class="small-links"><a href="'+esc(item.officialQuestionPaperArchive)+'" target="_blank" rel="noopener">Official paper archive ↗</a><a href="'+esc(item.officialAnswerKeyArchive)+'" target="_blank" rel="noopener">Official answer-key archive ↗</a></div></div></article>';
+ }).join("");
+ $("questionArea").innerHTML='<div class="qmeta"><span class="pill">GS Paper I only</span><span>'+sourceYears.length+' exam years</span><span>2013–2026</span></div><h2>Year-wise Previous Year Questions</h2><p class="muted">Choose a year to open existing question sets and explanations. Recent answer keys may be provisional until UPSC publishes its official key; use the official archive to verify disputed answers.</p><div class="source-library">'+cards+'</div>';
+}
 function render(){
- const arr=activeQuestions();
+ $("filters").style.display=mode==="library"?"none":"grid";
+ const arr=mode==="library"?[]:activeQuestions();
  updateStats(arr);
  if(current>=arr.length)current=Math.max(0,arr.length-1);
  if(mode!=="test"){$("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false}
  if(mode==="test"&&test.started&&!test.submitted){$("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=true}
+ if(mode==="library"){renderLibrary();return}
  renderNavigator(arr);
  if(mode==="progress"){renderProgress(arr);return}
  if(mode==="test"&&!test.started){renderTestStart(arr);return}
@@ -244,14 +256,20 @@ function render(){
 }
 async function loadBank(){
  try{
-  const response=await fetch("./questions.json",{cache:"no-store"});
-  if(!response.ok)throw new Error("Question bank request failed: "+response.status);
-  const data=await response.json();
-  if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||q.options.length!==4||!(q.answer===null||(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4))))throw new Error("Question bank has an unexpected structure.");
-  questions=data;
+  const [questionResponse, sourceResponse]=await Promise.all([
+   fetch("./questions.json",{cache:"no-store"}),
+   fetch("./pyq-sources.json",{cache:"no-store"})
+  ]);
+  if(!questionResponse.ok)throw new Error("Sample question bank request failed: "+questionResponse.status);
+  if(!sourceResponse.ok)throw new Error("GS source directory request failed: "+sourceResponse.status);
+  const data=await questionResponse.json();
+  const sourceData=await sourceResponse.json();
+  if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||q.options.length!==4||!(q.answer===null||(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4))))throw new Error("Sample question bank has an unexpected structure.");
+  if(!Array.isArray(sourceData)||sourceData.some(x=>!x.year||!Array.isArray(x.sources)||!x.officialQuestionPaperArchive))throw new Error("GS source directory has an unexpected structure.");
+  questions=data;sourceYears=sourceData;
   populateFilters();render();
  }catch(e){
-  $("questionArea").innerHTML='<div class="empty"><strong>Could not load questions.json.</strong><p>'+esc(e.message)+'</p><p class="muted">Check that questions.json exists next to index.html in the GitHub repository.</p></div>';
+  $("questionArea").innerHTML='<div class="empty"><strong>Could not load site data.</strong><p>'+esc(e.message)+'</p><p class="muted">Check that questions.json and pyq-sources.json exist next to index.html in the GitHub repository.</p></div>';
  }
 }
 document.querySelectorAll("[data-mode]").forEach(button=>button.addEventListener("click",()=>{
