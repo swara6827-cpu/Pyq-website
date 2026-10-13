@@ -2,296 +2,473 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111827">
-<title>UPSC Prelims Practice — PYQ Workspace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070b16">
+<meta name="description" content="Practice UPSC Prelims General Studies Paper I previous-year questions from 2013 onward, review explanations, and keep a personal revision notebook. CSAT excluded.">
+<title>NEXUS | UPSC Prelims GS-I Practice Lab</title>
 <style>
-:root{--bg:#f4f6fa;--card:#fff;--ink:#182235;--muted:#66738a;--line:#e1e7f0;--navy:#111827;--blue:#3459df;--bluebg:#eef2ff;--green:#14764f;--greenbg:#eaf8f0;--red:#b42334;--redbg:#fff0f1;--amber:#73520a;--amberbg:#fff7df}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{background:linear-gradient(120deg,#111827,#202e4f);color:#fff;padding:22px max(18px,calc((100% - 1120px)/2))}.brand{font-size:22px;font-weight:800;letter-spacing:-.45px}.sub{font-size:13px;color:#cbd5e1;margin-top:3px}.wrap{max-width:1120px;margin:22px auto;padding:0 16px}.notice{background:var(--amberbg);border:1px solid #f0d990;color:#644d10;padding:13px 15px;border-radius:13px;margin-bottom:16px;font-size:13px}.sourcebar{display:flex;gap:9px;flex-wrap:wrap;margin-top:8px}.sourcebar a{color:#244bb9;font-weight:700;text-decoration:none}.sourcebar a:hover{text-decoration:underline}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-bottom:15px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px}.stat{padding:13px 15px}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;font-size:24px;letter-spacing:-.4px;margin-top:3px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab,.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:10px;font-weight:650}.tab.active,.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn.secondary{background:var(--bluebg);border-color:#d6defe;color:#2444af}.btn:disabled{opacity:.45;cursor:not-allowed}.layout{display:grid;grid-template-columns:minmax(0,1fr) 272px;gap:15px;align-items:start}.panel{padding:16px}.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:13px}.filters select,.filters input{min-width:0;width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}.muted{color:var(--muted);font-size:13px}.qmeta{font-size:12px;color:var(--muted);display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.pill{background:var(--bluebg);color:#2947b0;padding:3px 8px;border-radius:30px}.question{font-size:18px;font-weight:750;line-height:1.45;margin:8px 0 17px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:11px;margin:8px 0;background:#fff;cursor:pointer}.option:hover{border-color:#9baef8}.option.selected{background:var(--bluebg);border-color:var(--blue)}.option.correct{background:var(--greenbg);border-color:#79c99f}.option.wrong{background:var(--redbg);border-color:#e5a0aa}.option.locked{cursor:default}.letter{font-weight:800;min-width:23px}.explain{padding:12px;border-radius:10px;background:#f2f5fa;margin-top:12px;font-size:14px}.explain.good{background:var(--greenbg)}.explain.bad{background:var(--redbg)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.side h2,.panel h2{font-size:16px;margin:0 0 12px}.side-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.side-row strong{text-align:right}.question-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.question-list button{height:36px;border-radius:8px;border:1px solid var(--line);background:#fff}.question-list button.current{background:var(--blue);color:#fff;border-color:var(--blue)}.question-list button.answered{border-color:#8ccaa9;background:#effaf4}.question-list button.missed{border-color:#e2a2a9}.empty{padding:28px 10px;text-align:center;color:var(--muted)}.footer{color:var(--muted);font-size:12px;text-align:center;padding:25px 10px}.result-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.result-tile{padding:10px;background:#f5f7fb;border-radius:10px}.result-tile small{display:block;color:var(--muted);font-size:11px}.result-tile strong{font-size:19px}.barrow{display:grid;grid-template-columns:110px minmax(0,1fr) 75px;align-items:center;gap:8px;margin:10px 0;font-size:13px}.bar{height:9px;background:#edf0f6;border-radius:9px;overflow:hidden}.bar span{height:100%;display:block;background:var(--blue);border-radius:9px}.history-item{padding:12px 0;border-bottom:1px solid var(--line)}.small-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px}.small-links a{color:#2b4fc6;text-decoration:none}.small-links a:hover{text-decoration:underline}.badge{font-size:11px;padding:3px 7px;border-radius:7px;background:#eef1f6;color:#4b5669}
-.source-library{display:grid;gap:10px;margin-top:12px}.source-card{display:flex;gap:14px;border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff}.source-year{font-size:24px;font-weight:800;letter-spacing:-.5px;min-width:76px}.source-detail{min-width:0;flex:1}.source-detail strong{display:block;margin-bottom:4px}.source-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.source-links .btn{font-size:13px;padding:7px 9px}.source-detail .small-links{margin-top:8px}@media(max-width:480px){.source-card{gap:8px;padding:10px}.source-year{font-size:19px;min-width:54px}.source-links .btn{font-size:12px;padding:6px 7px}}
-@media(max-width:780px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.top{padding:18px}.wrap{margin-top:14px}.question{font-size:17px}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.barrow{grid-template-columns:95px minmax(0,1fr) 66px}}@media(max-width:390px){.toolbar{gap:6px}.tab{padding:8px 10px}.panel{padding:12px}.question-list{grid-template-columns:repeat(5,minmax(0,1fr))}}
+:root{
+ --bg:#060a14;--bg2:#0a1120;--panel:rgba(15,24,43,.84);--panel2:#101b30;
+ --line:rgba(128,164,220,.18);--line2:rgba(99,222,255,.25);--ink:#edf5ff;--muted:#91a5c4;
+ --cyan:#62e7ff;--blue:#6686ff;--purple:#b09bff;--green:#65f0b0;--red:#ff718c;--amber:#ffca76;
+ --shadow:0 22px 65px rgba(0,0,0,.34);--radius:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 15% 4%,rgba(69,124,255,.15),transparent 34%),radial-gradient(ellipse at 90% 15%,rgba(75,238,255,.11),transparent 32%),radial-gradient(ellipse at 65% 105%,rgba(150,92,255,.1),transparent 38%),linear-gradient(180deg,#060a14 0%,#080e1b 60%,#070b16 100%)}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.17;background-image:linear-gradient(rgba(83,132,202,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(83,132,202,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}button,input,select,textarea{font:inherit}button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.shell{max-width:1440px;margin:auto;padding:0 22px}
+.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(144,184,245,.13);position:relative}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-icon{width:41px;height:41px;display:grid;place-items:center;border-radius:13px;border:1px solid rgba(98,231,255,.45);background:linear-gradient(145deg,rgba(98,231,255,.16),rgba(102,134,255,.1));box-shadow:0 0 32px rgba(98,231,255,.12);position:relative;overflow:hidden}.brand-icon:after{content:"";position:absolute;width:50px;height:2px;background:var(--cyan);transform:rotate(-40deg);opacity:.75}
+.brand-text{min-width:0}.brand-name{font-size:16px;font-weight:900;letter-spacing:.19em;color:#f5fbff}.brand-sub{color:#7e96bc;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:1px}
+.top-actions{display:flex;align-items:center;gap:10px}.status-pill{display:flex;align-items:center;gap:7px;color:#a8bad5;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:rgba(11,21,38,.72);border-radius:99px;padding:7px 10px}.pulse{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 13px var(--green)}
+.icon-btn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:11px;background:rgba(18,31,54,.82);color:var(--ink);padding:10px 13px;font-weight:700;transition:transform .18s,border-color .18s,background .18s;white-space:nowrap}.icon-btn{width:39px;height:39px;padding:0}.btn:hover,.icon-btn:hover{transform:translateY(-1px);border-color:var(--line2);background:rgba(29,50,80,.96)}.btn.primary{color:#05111c;background:linear-gradient(105deg,var(--cyan),#99f0ff);border-color:transparent;box-shadow:0 0 28px rgba(98,231,255,.13)}.btn.primary:hover{background:#a4f2ff}.btn.violet{background:linear-gradient(110deg,rgba(102,134,255,.28),rgba(176,155,255,.14));border-color:rgba(176,155,255,.36)}.btn.ghost{background:transparent}.btn.danger{color:#ffb2bf;border-color:rgba(255,113,140,.24);background:rgba(255,113,140,.07)}.btn.small{font-size:12px;padding:7px 10px;border-radius:9px}.btn:disabled{opacity:.42;cursor:not-allowed;transform:none}
+.hero{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(280px,.72fr);gap:20px;padding:30px 0 24px;align-items:stretch}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--cyan);font:700 10px/1.2 ui-monospace,SFMono-Regular,monospace;letter-spacing:.22em;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:1px;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.hero h1{font-size:clamp(32px,4.1vw,58px);line-height:1.02;letter-spacing:-.055em;margin:13px 0 13px;max-width:780px}.hero h1 span{color:transparent;background:linear-gradient(95deg,var(--cyan),#8da9ff 58%,var(--purple));background-clip:text;-webkit-background-clip:text}.hero-copy>p{color:#9eb0ca;font-size:15px;max-width:630px;margin:0 0 18px}.hero-ctas{display:flex;gap:9px;flex-wrap:wrap}.hero-card{border:1px solid rgba(107,168,244,.2);background:linear-gradient(150deg,rgba(18,34,58,.88),rgba(10,17,31,.72));border-radius:22px;padding:19px;position:relative;overflow:hidden;box-shadow:var(--shadow);min-height:220px}.hero-card:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-70px;top:-105px;border:1px solid rgba(98,231,255,.18);box-shadow:0 0 0 22px rgba(98,231,255,.025),0 0 0 48px rgba(98,231,255,.018)}
+.hero-card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#90a8cb;text-transform:uppercase;font:700 10px ui-monospace,monospace;letter-spacing:.16em}.status-tag{border:1px solid rgba(101,240,176,.25);color:var(--green);background:rgba(101,240,176,.07);border-radius:6px;padding:4px 7px;font-size:9px}
+.orbit{height:102px;display:flex;align-items:center;justify-content:center;position:relative;margin:4px 0}.orbit-ring{position:absolute;width:90px;height:90px;border:1px solid rgba(98,231,255,.3);border-radius:50%;transform:rotate(-30deg) scaleY(.36);box-shadow:0 0 20px rgba(98,231,255,.04)}.orbit-ring.two{width:112px;height:112px;border-color:rgba(176,155,255,.32);transform:rotate(46deg) scaleY(.36)}.orbit-center{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(140deg,rgba(98,231,255,.18),rgba(102,134,255,.18));border:1px solid rgba(98,231,255,.42);font:900 12px ui-monospace,monospace;letter-spacing:.1em;color:#e9fcff;box-shadow:0 0 36px rgba(98,231,255,.12)}
+.hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.hero-metric{border-top:1px solid var(--line);padding-top:9px}.hero-metric strong{font:800 20px ui-monospace,monospace;display:block}.hero-metric span{color:#7e95b8;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:0 0 22px}.metric{border:1px solid var(--line);background:linear-gradient(135deg,rgba(16,28,49,.78),rgba(9,17,31,.75));padding:13px 15px;border-radius:15px;position:relative;overflow:hidden}.metric:after{content:"";position:absolute;right:-18px;bottom:-29px;width:70px;height:70px;border:1px solid rgba(98,231,255,.12);border-radius:50%}.metric-label{color:#8299bc;font-size:10px;text-transform:uppercase;letter-spacing:.14em}.metric-value{font:800 25px/1.3 ui-monospace,SFMono-Regular,monospace;margin-top:4px}.metric-value.cyan{color:var(--cyan)}.metric-value.green{color:var(--green)}.metric-value.purple{color:var(--purple)}
+.tabs-wrap{position:sticky;top:0;z-index:15;padding-top:4px;margin-bottom:16px;background:linear-gradient(180deg,rgba(6,10,20,.96),rgba(6,10,20,.8));backdrop-filter:blur(16px)}.tabs{display:flex;gap:7px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{display:inline-flex;align-items:center;gap:9px;border:0;border-bottom:2px solid transparent;padding:13px 15px;margin-bottom:-1px;color:#879dbd;background:transparent;font-weight:750;white-space:nowrap}.tab:hover{color:#dff9ff}.tab.active{color:var(--cyan);border-bottom-color:var(--cyan)}.tab-count{font:700 10px ui-monospace,monospace;border-radius:5px;padding:3px 5px;color:#97afce;background:rgba(90,125,180,.1)}
+.main-grid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:16px;align-items:start;margin-bottom:35px}.panel{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px);min-width:0}.filter-panel{padding:17px;position:sticky;top:67px}.section-kicker{color:var(--cyan);font:700 10px ui-monospace,monospace;letter-spacing:.17em;text-transform:uppercase;margin-bottom:10px}.panel-title{font-size:15px;font-weight:850;letter-spacing:-.025em;margin:0}.panel-desc{font-size:12px;color:var(--muted);margin:5px 0 0}.field{display:flex;flex-direction:column;gap:6px;margin-top:15px}.field label{font-size:10px;color:#91a8ca;text-transform:uppercase;letter-spacing:.12em;font-weight:750}.field input,.field select,.field textarea,.note-input{width:100%;border:1px solid rgba(124,159,216,.2);background:rgba(5,12,24,.85);color:var(--ink);border-radius:10px;padding:10px 11px;outline:none;min-width:0}.field input::placeholder,.field textarea::placeholder,.note-input::placeholder{color:#526887}.field input:focus,.field select:focus,.field textarea:focus,.note-input:focus{border-color:rgba(98,231,255,.6);box-shadow:0 0 0 3px rgba(98,231,255,.06)}.field select option{background:#101b30;color:var(--ink)}.field textarea{min-height:90px;resize:vertical}.filter-actions{display:flex;gap:8px;margin-top:15px}.filter-actions .btn{flex:1}.filter-line{height:1px;background:var(--line);margin:18px 0}.filter-tip{font-size:11px;color:#758cad;line-height:1.55}
+.content-col{min-width:0}.content-head{display:flex;justify-content:space-between;align-items:flex-start;gap:13px;margin:2px 0 13px}.content-head h2{margin:0;font-size:19px;letter-spacing:-.035em}.content-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.content-head-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.question-panel{padding:clamp(16px,2.2vw,27px);position:relative;overflow:hidden}.question-panel:before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent);opacity:.8}.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:16px}.q-tags{display:flex;gap:6px;flex-wrap:wrap}.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border:1px solid rgba(108,157,223,.2);background:rgba(90,125,180,.09);border-radius:6px;color:#a6bbd9;font-size:10px;letter-spacing:.03em;font-weight:750}.chip.primary-chip{color:var(--cyan);border-color:rgba(98,231,255,.25);background:rgba(98,231,255,.06)}.chip.warn{color:var(--amber);border-color:rgba(255,202,118,.23);background:rgba(255,202,118,.06)}.q-counter{flex-shrink:0;color:#7f96b9;font:700 11px ui-monospace,monospace;text-align:right}.q-counter strong{color:#d7e6fb;font-size:12px}
+.question-stem{font-size:clamp(17px,1.6vw,21px);line-height:1.55;font-weight:650;letter-spacing:-.02em;margin:0 0 21px;white-space:pre-wrap}.options-list{display:grid;gap:9px}.option{display:flex;align-items:flex-start;gap:12px;text-align:left;border:1px solid rgba(125,161,222,.18);background:rgba(7,14,27,.72);border-radius:13px;padding:13px 14px;color:#cedbf0;transition:background .15s,border .15s,transform .15s;min-width:0;width:100%}.option:hover:not(:disabled){border-color:rgba(98,231,255,.48);background:rgba(24,45,72,.62);transform:translateX(2px)}.option-letter{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;border-radius:8px;border:1px solid rgba(121,157,214,.24);color:#9bb4d6;background:rgba(101,139,206,.08);font:800 11px ui-monospace,monospace}.option-text{flex:1;min-width:0;white-space:pre-wrap;line-height:1.5}.option-right{margin-left:auto;color:var(--cyan);font-size:10px;font-weight:800;white-space:nowrap}.option.selected{border-color:rgba(98,231,255,.7);background:rgba(37,120,150,.15)}.option.selected .option-letter{color:var(--cyan);border-color:var(--cyan)}.option.correct{border-color:rgba(101,240,176,.5);background:rgba(34,159,105,.1)}.option.correct .option-letter{color:var(--green);border-color:rgba(101,240,176,.6)}.option.incorrect{border-color:rgba(255,113,140,.45);background:rgba(255,113,140,.075)}.option.incorrect .option-letter{color:var(--red);border-color:rgba(255,113,140,.55)}.option:disabled{cursor:default}
+.question-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:19px;align-items:center}.question-actions .spacer{flex:1}.btn.subtle{color:#b3c8e3;background:rgba(89,123,179,.08)}.btn.saved{color:var(--green);border-color:rgba(101,240,176,.36);background:rgba(101,240,176,.08)}
+.explanation-card{margin-top:19px;border:1px solid rgba(101,240,176,.23);border-radius:15px;padding:16px;background:linear-gradient(130deg,rgba(27,97,77,.14),rgba(9,20,31,.62))}.explain-header{display:flex;align-items:center;gap:9px;color:var(--green);font-size:11px;text-transform:uppercase;font-weight:850;letter-spacing:.13em}.explain-title{font-size:14px;font-weight:850;margin:12px 0 6px}.explanation-text{color:#d7e7f5;font-size:13px;line-height:1.75;white-space:pre-wrap}.exam-insight{margin-top:12px;border-left:2px solid var(--purple);padding:9px 0 9px 12px;color:#c2b8fa;font-size:12px;line-height:1.6}.option-review{margin-top:15px}.option-review-title{color:#91a8ca;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:8px}.option-review-row{display:grid;grid-template-columns:31px minmax(0,1fr) auto;gap:9px;align-items:start;padding:9px 0;border-top:1px solid rgba(128,164,220,.1)}.review-letter{font:800 11px ui-monospace,monospace;color:#91a8ca}.review-body{font-size:12px;color:#a9bdd9;line-height:1.5;min-width:0}.review-body strong{color:#dce9f8}.review-status{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.09em}.review-status.correct{color:var(--green)}.review-status.wrong{color:var(--red)}.explain-warning{margin-top:10px;color:var(--amber);font-size:11px;line-height:1.6}.source-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;color:#7f9bc1;font-size:11px}.source-links a{color:#83dff0}
+.q-navigation{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:15px}.q-navigation .muted{font-size:11px}
+.empty-state{border:1px dashed rgba(115,158,222,.28);background:rgba(10,18,32,.5);border-radius:16px;padding:36px 20px;text-align:center}.empty-icon{font-size:26px;color:var(--cyan);margin-bottom:7px}.empty-state h3{margin:0 0 7px;font-size:17px}.empty-state p{margin:0;color:var(--muted);font-size:12px}
+.year-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.year-card{padding:16px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(17,31,53,.88),rgba(9,16,29,.85));position:relative;overflow:hidden}.year-card:after{content:"";position:absolute;top:-40px;right:-35px;width:95px;height:95px;border:1px solid rgba(98,231,255,.13);border-radius:50%;box-shadow:0 0 0 16px rgba(98,231,255,.02)}.year-num{font:900 29px ui-monospace,monospace;letter-spacing:-.06em}.year-card p{color:var(--muted);font-size:11px;margin:4px 0 14px}.year-actions{display:flex;gap:7px;flex-wrap:wrap}.year-note{color:#748db2;font-size:10px;margin-top:10px}
+.notebook-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}.notebook-list{display:grid;gap:10px}.notebook-entry{border:1px solid var(--line);border-radius:15px;padding:15px;background:rgba(12,21,38,.72)}.notebook-entry-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.notebook-entry h3{font-size:14px;line-height:1.5;margin:9px 0 12px}.notebook-entry textarea{width:100%;min-height:58px;background:rgba(4,11,22,.85);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:9px;resize:vertical}.entry-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.custom-form{padding:18px}.custom-form h3{margin:0 0 6px;font-size:17px}.custom-form p{color:var(--muted);font-size:11px;margin:0 0 12px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px}.custom-form .field{margin-top:10px}.custom-form textarea{min-height:86px}
+.progress-list{display:grid;gap:10px}.progress-row{display:grid;grid-template-columns:130px minmax(0,1fr) 94px;gap:12px;align-items:center;padding:11px;border:1px solid rgba(128,164,220,.12);border-radius:11px;background:rgba(7,14,27,.46)}.progress-name{font-size:12px;font-weight:800}.progress-small{display:block;font-size:10px;color:var(--muted);font-weight:500}.progress-track{height:7px;background:rgba(107,137,188,.13);border-radius:99px;overflow:hidden}.progress-track span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple));box-shadow:0 0 12px rgba(98,231,255,.22)}.progress-num{text-align:right;font:700 11px ui-monospace,monospace;color:#bad0ec}
+.result-summary{border:1px solid rgba(98,231,255,.23);background:linear-gradient(140deg,rgba(98,231,255,.07),rgba(176,155,255,.05));border-radius:15px;padding:15px;margin-bottom:15px}.result-summary h3{margin:0 0 10px;font-size:16px}.result-cells{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.result-cell{padding:9px;border:1px solid var(--line);background:rgba(2,9,18,.35);border-radius:9px}.result-cell strong{font:800 19px ui-monospace,monospace;display:block}.result-cell span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.toast{position:fixed;bottom:22px;right:22px;z-index:30;border:1px solid rgba(98,231,255,.3);background:#102038;color:#e9f7ff;border-radius:12px;padding:12px 15px;box-shadow:var(--shadow);max-width:min(390px,calc(100vw - 44px));display:none;font-size:12px}.toast.show{display:block;animation:toastin .18s ease-out}@keyframes toastin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.footer{padding:20px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#677d9e;font-size:10px;letter-spacing:.05em}.loading{padding:35px;text-align:center;color:#8aa5c8}.loader{width:25px;height:25px;border:2px solid rgba(98,231,255,.18);border-top-color:var(--cyan);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:1100px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(250px,.8fr)}.main-grid{grid-template-columns:220px minmax(0,1fr)}.notebook-layout{grid-template-columns:minmax(0,1fr) 300px}.year-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.shell{padding:0 14px}.topbar{height:66px}.hero{grid-template-columns:1fr;padding-top:23px}.hero-card{display:none}.hero h1{font-size:clamp(33px,8vw,49px)}.hero-copy>p{font-size:14px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.metric{padding:11px 12px}.metric-value{font-size:22px}.main-grid{grid-template-columns:1fr;gap:12px}.filter-panel{position:static;padding:13px}.filter-panel .filters-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.filter-panel .field{margin-top:0}.filter-panel .filter-line,.filter-panel .filter-tip{display:none}.filter-panel .field:first-of-type{grid-column:span 3}.filter-panel .filter-actions{grid-column:span 3;margin-top:0}.notebook-layout{grid-template-columns:1fr}.custom-form{order:-1}.content-head{align-items:center}.q-top{margin-bottom:12px}.question-panel{padding:16px}.question-stem{font-size:17px}.tabs-wrap{top:0}.tabs{margin-left:-2px;margin-right:-2px}.tab{padding:12px 11px;font-size:12px}.status-pill{display:none}}
+@media(max-width:520px){.brand-name{font-size:14px;letter-spacing:.13em}.brand-sub{font-size:8px}.brand-icon{width:36px;height:36px}.top-actions{gap:5px}.hero{padding-top:19px}.hero h1{font-size:34px}.hero-copy>p{font-size:13px}.hero-ctas .btn{flex:1}.metrics{margin-bottom:15px}.metric-label{font-size:9px}.metric-value{font-size:20px}.filter-panel .filters-fields{grid-template-columns:1fr 1fr}.filter-panel .field:first-of-type,.filter-panel .filter-actions{grid-column:span 2}.content-head{align-items:flex-start;flex-direction:column}.content-head-actions{justify-content:flex-start}.content-head h2{font-size:17px}.q-top{flex-direction:column}.q-counter{text-align:left}.option{padding:11px 10px;gap:8px}.option-letter{width:25px;height:25px;flex-basis:25px}.option-right{display:none}.question-actions .spacer{display:none}.question-actions .btn{flex:1}.q-navigation .btn{padding:9px}.year-grid{grid-template-columns:1fr 1fr;gap:8px}.year-card{padding:11px}.year-num{font-size:24px}.year-card p{font-size:10px}.year-actions .btn{width:100%}.progress-row{grid-template-columns:100px minmax(0,1fr) 67px;gap:7px;padding:9px}.progress-name{font-size:10px}.progress-num{font-size:10px}.result-cells{grid-template-columns:repeat(2,minmax(0,1fr))}.option-review-row{grid-template-columns:23px minmax(0,1fr) auto}.review-status{font-size:8px}.source-links{gap:8px}.footer{font-size:9px}.notebook-entry{padding:12px}.topbar .btn.small{font-size:10px;padding:7px 8px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="brand">UPSC Prelims Practice</div><div class="sub">PYQ practice · timed tests · error analysis · local progress</div></header>
-<main class="wrap">
-<div class="notice"><strong>GS Paper I PYQ Library · 2013–2026:</strong> Open existing year-wise question sets and answer explanations from the source websites below. This site links to those question banks rather than republishing entire third-party papers. <strong>CSAT is excluded.</strong> Answer keys from third-party pages should be cross-checked against the official UPSC archive, especially for recent exams.
- <div class="sourcebar"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC question papers ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Official UPSC answer keys ↗</a></div>
-</div>
-<section class="stats" id="stats">
- <div class="stat"><small>Sample questions</small><strong id="total">—</strong></div>
- <div class="stat"><small>Practice attempted</small><strong id="attempted">0</strong></div>
- <div class="stat"><small>Practice accuracy</small><strong id="accuracy">—</strong></div>
- <div class="stat"><small>Bookmarks</small><strong id="bookmarkCount">0</strong></div>
-</section>
-<div class="toolbar">
- <button class="tab active" data-mode="practice">Sample practice</button>
- <button class="tab" data-mode="library">GS PYQ library</button>
- <button class="tab" data-mode="test">Timed test</button>
- <button class="tab" data-mode="bookmarks">Bookmarks</button>
- <button class="tab" data-mode="mistakes">Mistake notebook</button>
- <button class="tab" data-mode="progress">Progress</button>
-</div>
-<div class="layout">
-<section class="panel">
- <div class="filters" id="filters">
-  <select id="year" aria-label="Filter by year"><option value="all">All years</option></select>
-  <select id="subject" aria-label="Filter by subject"><option value="all">All subjects</option></select>
-  <select id="topic" aria-label="Filter by topic"><option value="all">All topics</option></select>
-  <input id="search" placeholder="Search question, topic or concept…" aria-label="Search questions">
+<div class="shell">
+<header class="topbar">
+ <div class="brand">
+  <div class="brand-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 2.8 20.3 7v10L12 21.2 3.7 17V7L12 2.8Z" stroke="#62e7ff" stroke-width="1.3"/><path d="m8 9 4-2 4 2v6l-4 2-4-2V9Z" stroke="#b09bff" stroke-width="1.3"/><path d="m8 9 4 3 4-3M12 12v5" stroke="#62e7ff" stroke-width="1.3"/></svg></div>
+  <div class="brand-text"><div class="brand-name">NEXUS <span style="color:#62e7ff">/</span> PRELIMS</div><div class="brand-sub">General Studies · Paper I</div></div>
  </div>
- <div id="questionArea"><div class="empty">Loading the question bank…</div></div>
+ <div class="top-actions"><div class="status-pill"><span class="pulse"></span> Practice workspace</div><button class="btn small ghost" id="exportNotebook">Export notebook ↗</button><button class="icon-btn" id="importButton" title="Import notebook backup" aria-label="Import notebook backup">↧</button><input type="file" id="importFile" accept="application/json" hidden></div>
+</header>
+<section class="hero">
+ <div class="hero-copy">
+  <div class="eyebrow">Question intelligence system · 2013 onward</div>
+  <h1>Study the pattern.<br><span>Own the paper.</span></h1>
+  <p>A focused lab for UPSC Civil Services Prelims <strong>GS Paper I</strong>. Practise year-wise questions, inspect answer explanations, capture weak areas in your own notebook, and return to them later. CSAT is deliberately excluded.</p>
+  <div class="hero-ctas"><button class="btn primary" id="heroPractice">Launch practice <span>↗</span></button><button class="btn violet" id="heroNotebook">Open my notebook <span>↗</span></button></div>
+ </div>
+ <aside class="hero-card">
+  <div class="hero-card-top"><span>Revision cockpit</span><span class="status-tag">LOCAL-FIRST</span></div>
+  <div class="orbit"><div class="orbit-ring"></div><div class="orbit-ring two"></div><div class="orbit-center">GS / I</div></div>
+  <div class="hero-metrics"><div class="hero-metric"><strong id="heroYears">—</strong><span>Years</span></div><div class="hero-metric"><strong id="heroQuestions">—</strong><span>Questions</span></div><div class="hero-metric"><strong id="heroSaved">0</strong><span>Saved for later</span></div></div>
+ </aside>
 </section>
-<aside class="panel side" id="sidebar">
- <h2>Session overview</h2>
- <div class="side-row"><span class="muted">Mode</span><strong id="modeLabel">Practice</strong></div>
- <div class="side-row"><span class="muted">Visible questions</span><strong id="viewCount">0</strong></div>
- <div class="side-row"><span class="muted">Saved answers</span><strong id="sessionCount">0</strong></div>
- <div class="side-row"><span class="muted">Recent test score</span><strong id="lastScore">—</strong></div>
- <h2 style="margin-top:20px">Question navigator</h2>
- <div id="navigator" class="question-list"></div>
- <p class="muted">Bookmarks, practice answers and test history are stored in this browser on this device. They do not sync automatically across devices.</p>
- <button class="btn" id="reset">Reset local progress</button>
-</aside>
+<section class="metrics">
+ <div class="metric"><div class="metric-label">Question bank</div><div class="metric-value cyan" id="metricTotal">—</div></div>
+ <div class="metric"><div class="metric-label">Attempted</div><div class="metric-value" id="metricAttempted">0</div></div>
+ <div class="metric"><div class="metric-label">Accuracy</div><div class="metric-value green" id="metricAccuracy">—</div></div>
+ <div class="metric"><div class="metric-label">Notebook queue</div><div class="metric-value purple" id="metricNotebook">0</div></div>
+</section>
+<div class="tabs-wrap">
+ <nav class="tabs" aria-label="Main navigation">
+  <button class="tab active" data-view="practice">Practice <span class="tab-count" id="countPractice">GS-I</span></button>
+  <button class="tab" data-view="years">Year-wise papers</button>
+  <button class="tab" data-view="test">Timed test</button>
+  <button class="tab" data-view="notebook">My notebook <span class="tab-count" id="countNotebook">0</span></button>
+  <button class="tab" data-view="progress">Analytics</button>
+ </nav>
 </div>
-<div class="footer">Free static site · No login or API key · Question-bank expansion is managed through questions.json</div>
-</main>
+<div class="main-grid" id="mainGrid">
+ <aside class="panel filter-panel" id="filterPanel">
+  <div class="section-kicker">01 / Filter desk</div><h2 class="panel-title">Find a question</h2><p class="panel-desc">Narrow the bank by year, subject or topic.</p>
+  <div class="filters-fields">
+   <div class="field"><label for="search">Search</label><input id="search" placeholder="Concept, phrase, keyword…" autocomplete="off"></div>
+   <div class="field"><label for="yearFilter">Exam year</label><select id="yearFilter"><option value="all">All years</option></select></div>
+   <div class="field"><label for="subjectFilter">Subject</label><select id="subjectFilter"><option value="all">All subjects</option></select></div>
+   <div class="field"><label for="topicFilter">Topic</label><select id="topicFilter"><option value="all">All topics</option></select></div>
+   <div class="filter-actions"><button class="btn small" id="resetFilters">Reset filters</button><button class="btn small primary" id="randomQuestion">Random ↗</button></div>
+  </div>
+  <div class="filter-line"></div>
+  <div class="section-kicker">02 / Source protocol</div>
+  <p class="filter-tip">Questions and answer keys come from linked public PYQ sources. Explanations are community-sourced or screened for relevance; they are not official UPSC commentary. Verify disputed answers against the official paper and key.</p>
+  <div class="source-links"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official papers ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Answer keys ↗</a></div>
+ </aside>
+ <section class="content-col">
+  <div class="content-head"><div><div class="section-kicker" id="viewKicker">PRACTICE MODE / GS-I</div><h2 id="viewTitle">Question stream</h2><p id="viewDescription">Select an option, check the reasoning, and save questions you want to revisit.</p></div><div class="content-head-actions" id="headActions"></div></div>
+  <div id="appContent"><div class="loading"><div class="loader"></div>Loading question bank…</div></div>
+ </section>
+</div>
+<footer class="footer"><span>NEXUS PRELIMS · GS PAPER I ONLY · CSAT EXCLUDED</span><span>Progress and notebook are stored in this browser on this device.</span><span><a href="https://github.com/swara6827-cpu/Pyq-website" target="_blank" rel="noopener">Open project repository ↗</a></span></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 "use strict";
 const $ = id => document.getElementById(id);
-const STORE_KEY = "upscPracticeProgressV2";
-const emptyProgress = () => ({answers:{},bookmarks:[],mistakes:[],testHistory:[]});
-function readProgress(){try{const p=JSON.parse(localStorage.getItem(STORE_KEY)||"null");return p&&typeof p==="object"?{...emptyProgress(),...p}:emptyProgress()}catch(e){return emptyProgress()}}
-let progress = readProgress();
-let questions = [];
-let sourceYears = [];
-let mode = "practice";
-let current = 0;
-let chosen = null;
-let revealed = false;
-let test = {started:false,submitted:false,answers:{},ids:[],endsAt:null,summary:null};
-let timerHandle = null;
-
-function esc(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function saveProgress(){try{localStorage.setItem(STORE_KEY,JSON.stringify(progress))}catch(e){}}
-function activeQuestions(){
- let arr=[...questions];
- const inTest = mode==="test" && test.started && test.ids.length;
- if(inTest) arr=test.ids.map(id=>questions.find(q=>q.id===id)).filter(Boolean);
- const s=$("subject").value, y=$("year").value, t=$("topic").value, search=$("search").value.trim().toLowerCase();
- if(!inTest){
-  if(s!=="all")arr=arr.filter(q=>q.subject===s);
-  if(y!=="all")arr=arr.filter(q=>String(q.year)===y);
-  if(t!=="all")arr=arr.filter(q=>q.topic===t);
-  if(search)arr=arr.filter(q=>(q.question+" "+q.topic+" "+q.subject+" "+(q.explanation||"")).toLowerCase().includes(search));
- }
- if(mode==="bookmarks")arr=arr.filter(q=>progress.bookmarks.includes(q.id));
- if(mode==="mistakes")arr=arr.filter(q=>progress.mistakes.includes(q.id));
- return arr;
+const STORE_KEY = "nexusPrelimsStudyState_v1";
+const emptyStore = () => ({answers:{},notebook:{},customQuestions:[],testHistory:[]});
+function readStore(){try{const x=JSON.parse(localStorage.getItem(STORE_KEY)||"null");return x&&typeof x==="object"?Object.assign(emptyStore(),x):emptyStore()}catch(e){return emptyStore()}}
+let store=readStore();
+let bank=[];
+let manifest={years:[],totalQuestions:0};
+let view="practice";
+let currentIndex=0;
+let selectedChoice=null;
+let answerRevealed=false;
+let practiceSetIds=null;
+let testState={active:false,submitted:false,ids:[],answers:{},endsAt:null,summary:null};
+let timerId=null;
+let toastId=null;
+const letters=["A","B","C","D"];
+const byId=()=>new Map(allQuestions().map(q=>[q.id,q]));
+function allQuestions(){return bank.concat(store.customQuestions||[])}
+function saveStore(){try{localStorage.setItem(STORE_KEY,JSON.stringify(store));updateMetrics()}catch(e){showToast("Could not save locally. Export your notebook backup or free browser storage.")}}
+function showToast(text){const el=$("toast");el.textContent=text;el.classList.add("show");if(toastId)clearTimeout(toastId);toastId=setTimeout(()=>el.classList.remove("show"),2800)}
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function normText(v){return String(v??"").trim()}
+function isKeyed(q){return Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4}
+function sourceStatus(q){return String(q.explanationStatus||q.sourceStatus||"")}
+function hasReviewFlag(q){return /needs review|not available|not independently|verify disputed/i.test(sourceStatus(q))}
+function savedEntry(q){return store.notebook[q.id]||null}
+function isSaved(q){return !!savedEntry(q)}
+function makeOptionReview(q,index){
+ const provided=Array.isArray(q.optionReview)?q.optionReview[index]:null;
+ const correct=isKeyed(q)&&index===q.answer;
+ return {label:letters[index],text:q.options[index],correct,review:provided&&provided.review?provided.review:(correct?"This is the answer recorded in the sourced key. Read the rationale below.":"This choice is not marked correct by the source key. Compare it with the question conditions and the explanation below.")};
+}
+function answerRecord(q){return store.answers[q.id]||null}
+function currentBaseQuestions(){
+ let list=allQuestions();
+ if(view==="review"&&Array.isArray(practiceSetIds))return practiceSetIds.map(id=>list.find(q=>q.id===id)).filter(Boolean);
+ if(view==="test"&&testState.active)return testState.ids.map(id=>list.find(q=>q.id===id)).filter(Boolean);
+ const year=$("yearFilter").value,subject=$("subjectFilter").value,topic=$("topicFilter").value,query=$("search").value.trim().toLowerCase();
+ if(year!=="all")list=list.filter(q=>String(q.year)===year);
+ if(subject!=="all")list=list.filter(q=>q.subject===subject);
+ if(topic!=="all")list=list.filter(q=>q.topic===topic);
+ if(query)list=list.filter(q=>(q.question+" "+q.subject+" "+q.topic+" "+(q.explanation||"")+" "+(q.examInsight||"")).toLowerCase().includes(query));
+ if(view==="notebook")list=list.filter(q=>isSaved(q));
+ return list;
+}
+function formatNum(n){return new Intl.NumberFormat("en-IN").format(n||0)}
+function updateMetrics(){
+ const real=bank.length,all=allQuestions().length,answers=Object.values(store.answers||{}),keyedAnswers=answers.filter(a=>typeof a.correct==="boolean");
+ const correct=keyedAnswers.filter(a=>a.correct).length;
+ $("metricTotal").textContent=formatNum(real);
+ $("metricAttempted").textContent=formatNum(answers.length);
+ $("metricAccuracy").textContent=keyedAnswers.length?Math.round(correct/keyedAnswers.length*100)+"%":"—";
+ $("metricNotebook").textContent=formatNum(Object.keys(store.notebook||{}).length);
+ $("countNotebook").textContent=formatNum(Object.keys(store.notebook||{}).length);
+ $("heroYears").textContent=(manifest.years||[]).length;
+ $("heroQuestions").textContent=formatNum(real);
+ $("heroSaved").textContent=formatNum(Object.keys(store.notebook||{}).length);
+}
+function setHeader(title,description,kicker,actionsHtml){
+ $("viewTitle").textContent=title;$("viewDescription").textContent=description;$("viewKicker").textContent=kicker;$("headActions").innerHTML=actionsHtml||"";
 }
 function populateFilters(){
- const subjects=[...new Set(questions.map(q=>q.subject))].sort();
- const years=[...new Set(questions.map(q=>String(q.year)))].sort((a,b)=>Number(b)-Number(a));
- const topics=[...new Set(questions.map(q=>q.topic))].sort();
- $("subject").innerHTML='<option value="all">All subjects</option>'+subjects.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
- $("year").innerHTML='<option value="all">All years</option>'+years.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
- $("topic").innerHTML='<option value="all">All topics</option>'+topics.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
- $("bankNoticeCount").textContent=questions.length;
+ const years=[...new Set(bank.map(q=>String(q.year)))].sort((a,b)=>Number(b)-Number(a));
+ const subjects=[...new Set(bank.map(q=>q.subject).filter(Boolean))].sort();
+ const topics=[...new Set(bank.map(q=>q.topic).filter(Boolean))].sort();
+ $("yearFilter").innerHTML='<option value="all">All years</option>'+years.map(y=>'<option value="'+esc(y)+'">'+esc(y)+'</option>').join("");
+ $("subjectFilter").innerHTML='<option value="all">All subjects</option>'+subjects.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
+ $("topicFilter").innerHTML='<option value="all">All topics</option>'+topics.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
 }
-function updateStats(arr){
- const allAnswers=Object.values(progress.answers);
- const vals=allAnswers.filter(a=>typeof a.correct==="boolean");
- const correct=vals.filter(a=>a.correct).length;
- $("total").textContent=questions.length;
- $("attempted").textContent=allAnswers.length;
- $("accuracy").textContent=vals.length?Math.round(correct/vals.length*100)+"%":"—";
- $("bookmarkCount").textContent=progress.bookmarks.length;
- $("modeLabel").textContent=({practice:"Sample practice",test:"Timed test",bookmarks:"Bookmarks",mistakes:"Mistake notebook",progress:"Progress",library:"GS PYQ library"})[mode]||mode;
- $("viewCount").textContent=arr.length;
- $("sessionCount").textContent=arr.filter(q=>progress.answers[q.id]).length;
- const last=progress.testHistory[progress.testHistory.length-1];
- $("lastScore").textContent=last?(Number(last.score).toFixed(1)+"/"+Number(last.maxScore).toFixed(0)):"—";
-}
-function linksFor(q){
- return '<div class="small-links"><a href="'+esc(q.sourcePaperUrl||"https://www.upsc.gov.in/examinations/previous-question-papers")+'" target="_blank" rel="noopener">Official question paper ↗</a><a href="'+esc(q.sourceKeyUrl||"https://www.upsc.gov.in/examinations/answer-key/archives")+'" target="_blank" rel="noopener">UPSC answer-key archive ↗</a><a href="'+esc(q.transcriptionSourceUrl||"#")+'" target="_blank" rel="noopener">Transcription reference ↗</a></div>';
-}
-function renderNavigator(arr){
- const nav=$("navigator");
- nav.innerHTML=arr.map((q,i)=>{
-  const answered=mode==="test"&&test.started?Object.prototype.hasOwnProperty.call(test.answers,q.id):!!progress.answers[q.id];
-  const selected=i===current?"current ":"";
-  return '<button type="button" class="'+selected+(answered?"answered":"")+'" data-index="'+i+'" aria-label="Question '+(i+1)+'">'+(i+1)+'</button>';
- }).join("");
- nav.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{current=Number(b.dataset.index);chosen=null;revealed=false;render();}));
-}
-function renderProgress(arr){
- const subjectRows=[...new Set(questions.map(q=>q.subject))].sort().map(subject=>{
-  const subset=questions.filter(q=>q.subject===subject);
-  const attempted=subset.filter(q=>Number.isInteger(q.answer)&&typeof progress.answers[q.id]?.correct==="boolean").length;
-  const correct=subset.filter(q=>Number.isInteger(q.answer)&&progress.answers[q.id]?.correct===true).length;
-  const accuracy=attempted?Math.round(correct/attempted*100):0;
-  return '<div class="barrow"><span>'+esc(subject)+'</span><div class="bar"><span style="width:'+accuracy+'%"></span></div><strong>'+correct+'/'+attempted+'</strong></div>';
- }).join("");
- const hist=[...progress.testHistory].reverse().slice(0,8).map(h=>'<div class="history-item"><strong>'+esc(h.date)+'</strong><div class="muted">'+h.total+' questions · '+h.correct+' correct · '+h.incorrect+' wrong · '+h.unanswered+' blank</div><strong>'+Number(h.score).toFixed(2)+' / '+Number(h.maxScore).toFixed(0)+'</strong></div>').join("");
- $("questionArea").innerHTML='<h2>Progress by subject</h2><p class="muted">Bars show accuracy among attempted practice questions in each subject.</p>'+(subjectRows||'<p class="muted">No subject data yet.</p>')+'<h2 style="margin-top:22px">Timed-test history</h2>'+(hist||'<div class="empty">No completed timed tests yet.</div>');
-}
-function renderTestStart(arr){
- const count=arr.length;
- $("questionArea").innerHTML=count?'<div class="qmeta"><span class="pill">Timed test</span><span>'+count+' questions in this selection</span></div><h2>Start a timed practice test</h2><p>This session includes the currently filtered question set. Timing is scaled at 72 seconds per question (100 questions = 120 minutes). Since the present question bank is incomplete, this is a <strong>partial PYQ test</strong>, not a complete UPSC paper.</p><div class="result-grid"><div class="result-tile"><small>Questions</small><strong>'+count+'</strong></div><div class="result-tile"><small>Scoreable</small><strong>'+arr.filter(q=>Number.isInteger(q.answer)).length+'</strong></div><div class="result-tile"><small>Time limit</small><strong>'+formatTime(count*72)+'</strong></div><div class="result-tile"><small>Incorrect</small><strong>−0.667</strong></div></div><p class="muted">Answers and explanations remain hidden until you submit. You can move between questions. Incorrect keyed answers lose ⅓ of the marks allotted to a question. Items without an unambiguous answer key are included for practice but excluded from scoring.</p><div class="actions"><button class="btn primary" id="startTest">Start test</button></div>':'<div class="empty">No questions match these filters. Clear a filter to begin a test.</div>';
- const start=$("startTest");if(start)start.onclick=startTest;
-}
-function formatTime(total){
- total=Math.max(0,Math.floor(total));
- const h=Math.floor(total/3600),m=Math.floor(total%3600/60),s=total%60;
- return h?String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"):String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-}
-function timerTick(){
- if(!test.started||test.submitted||!test.endsAt)return;
- const remaining=Math.ceil((test.endsAt-Date.now())/1000);
- const el=$("timerValue");
- if(el)el.textContent=formatTime(remaining);
- if(remaining<=0)submitTest(true);
-}
-function startTest(){
- const arr=activeQuestions();
- if(!arr.length)return;
- if(timerHandle)clearInterval(timerHandle);
- test={started:true,submitted:false,answers:{},ids:arr.map(q=>q.id),endsAt:Date.now()+arr.length*72*1000,summary:null};
- current=0;chosen=null;revealed=false;
- $("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=true;
- render();timerHandle=setInterval(timerTick,1000);timerTick();
-}
-function submitTest(auto=false){
- if(!test.started||test.submitted)return;
- if(!auto&&!confirm("Submit this test and reveal the answer key?"))return;
- if(timerHandle){clearInterval(timerHandle);timerHandle=null;}
- const set=test.ids.map(id=>questions.find(q=>q.id===id)).filter(Boolean);
- let correct=0,incorrect=0,unanswered=0,unkeyed=0;
- for(const q of set){
-  if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length){unkeyed++;continue;}
-  if(!Object.prototype.hasOwnProperty.call(test.answers,q.id))unanswered++;
-  else if(test.answers[q.id]===q.answer)correct++;
-  else incorrect++;
- }
- const score=correct*2-incorrect*(2/3),maxScore=(set.length-unkeyed)*2,attempted=correct+incorrect;
- const summary={date:new Date().toLocaleString(),total:set.length,scoredTotal:set.length-unkeyed,unkeyed,correct,incorrect,unanswered,attempted,score,maxScore,accuracy:attempted?correct/attempted*100:0};
- test.submitted=true;test.summary=summary;
- progress.testHistory.push(summary);progress.testHistory=progress.testHistory.slice(-30);saveProgress();
- $("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false;
+function setView(newView){
+ if(view==="test"&&testState.active&&!testState.submitted&&newView!=="test"&&!confirm("Leave this active test? Unsubmitted test answers will be lost."))return;
+ if(timerId){clearInterval(timerId);timerId=null}
+ view=newView;currentIndex=0;selectedChoice=null;answerRevealed=false;
+ document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===newView||(newView==="review"&&b.dataset.view==="notebook")));
+ $("filterPanel").style.display=["years","notebook","progress"].includes(view)?"none":"block";
+ $("mainGrid").style.gridTemplateColumns=["years","notebook","progress"].includes(view)?"1fr":"";
+ if(view!=="test"&&view!=="review")practiceSetIds=null;
+ if(newView!=="test"||testState.submitted)testState={active:false,submitted:false,ids:[],answers:{},endsAt:null,summary:null};
  render();
 }
-function renderQuestion(q,arr){
- let selected, isRevealed, inTest=mode==="test"&&test.started, submitted=inTest&&test.submitted;
- if(inTest){selected=Object.prototype.hasOwnProperty.call(test.answers,q.id)?test.answers[q.id]:null;isRevealed=submitted}
- else {const saved=progress.answers[q.id];selected=chosen!==null?chosen:(saved?saved.choice:null);isRevealed=revealed||(!!saved&&chosen===null)}
- const opts=["A","B","C","D","E"];
- const hasKey=Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length;
- const testBanner=inTest?'<div class="explain"><strong>'+ (submitted?"Test submitted":'Time remaining: <span id="timerValue">'+formatTime(Math.ceil((test.endsAt-Date.now())/1000))+'</span>')+'</strong>'+(submitted&&test.summary?'<div class="result-grid"><div class="result-tile"><small>Score</small><strong>'+test.summary.score.toFixed(2)+'/'+test.summary.maxScore+'</strong></div><div class="result-tile"><small>Correct</small><strong>'+test.summary.correct+'</strong></div><div class="result-tile"><small>Incorrect</small><strong>'+test.summary.incorrect+'</strong></div><div class="result-tile"><small>Unanswered</small><strong>'+test.summary.unanswered+'</strong></div></div><p class="muted">Accuracy among attempted: '+test.summary.accuracy.toFixed(1)+'%. Review the questions below to inspect correct answers and explanations.</p>':'')+'</div>':'';
- const optionHtml=q.options.map((o,i)=>{
-  let cls="";
-  if(selected===i)cls+=" selected";
-  if(isRevealed&&hasKey&&i===q.answer)cls+=" correct";
-  if(isRevealed&&hasKey&&selected===i&&i!==q.answer)cls+=" wrong";
-  if(submitted)cls+=" locked";
-  return '<div class="option'+cls+'" data-option="'+i+'"><span class="letter">'+opts[i]+'.</span><span>'+esc(o)+'</span></div>';
- }).join("");
- let feedback="";
- if(isRevealed){
-  if(!hasKey){
-   const reported=Array.isArray(q.reportedAnswerLetters)&&q.reportedAnswerLetters.length?(" The source listed: "+q.reportedAnswerLetters.join("/ ")+"."):"";
-   feedback='<div class="explain"><strong>Not scored: no unambiguous answer key.</strong> Your selection is saved, but this item does not affect accuracy or the timed-test score.'+esc(reported)+'</div>'+linksFor(q);
-  } else {
-   const correct=selected===q.answer;
-   feedback='<div class="explain '+(correct?"good":"bad")+'"><strong>'+(correct?"Correct.":"Incorrect.")+'</strong> Correct answer: '+opts[q.answer]+'. '+esc(q.explanation||"No explanation has been added yet.") +'</div>'+linksFor(q);
-  }
- }
- const practiceActions='<button class="btn primary" id="checkAnswer">Check answer</button><button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button>';
- const testActions=submitted?'<button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button>':(inTest?'<button class="btn" id="clearChoice">Clear answer</button><button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button><button class="btn primary" id="submitTest">Submit test</button>':'');
- $("questionArea").innerHTML=testBanner+'<div class="qmeta"><span class="pill">'+esc(q.subject)+'</span><span>'+esc(q.year)+' · '+esc(q.paper||"GS Paper I")+' · Ref. Q'+esc(q.questionNumber)+'</span><span>'+esc(q.topic)+'</span><span>Item '+(current+1)+' of '+arr.length+'</span></div><div class="question">'+esc(q.question)+'</div><div id="options">'+optionHtml+'</div><div id="feedback">'+feedback+'</div><div class="actions">'+(inTest?testActions:practiceActions)+'<button class="btn" id="prev" '+(current===0?'disabled':'')+'>← Previous</button><button class="btn" id="next" '+(current===arr.length-1?'disabled':'')+'>Next →</button></div>';
- if(!submitted){
-  $("questionArea").querySelectorAll(".option").forEach(el=>el.addEventListener("click",()=>{
-   const index=Number(el.dataset.option);
-   if(inTest){test.answers[q.id]=index;renderQuestion(q,arr);renderNavigator(arr)}
-   else {chosen=index;revealed=false;renderQuestion(q,arr)}
-  }));
- }
- const check=$("checkAnswer");
- if(check)check.onclick=()=>{
-  if(chosen===null){const saved=progress.answers[q.id];if(!saved){$("feedback").innerHTML='<div class="explain">Select an answer first.</div>';return;}chosen=saved.choice;}
-  if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length){
-   progress.answers[q.id]={choice:chosen,correct:null,keyStatus:q.answerStatus||"Unkeyed",updatedAt:new Date().toISOString()};
-   progress.mistakes=progress.mistakes.filter(id=>id!==q.id);
-   saveProgress();revealed=true;render();return;
-  }
-  progress.answers[q.id]={choice:chosen,correct:chosen===q.answer,updatedAt:new Date().toISOString()};
-  if(chosen!==q.answer){if(!progress.mistakes.includes(q.id))progress.mistakes.push(q.id)}else progress.mistakes=progress.mistakes.filter(id=>id!==q.id);
-  saveProgress();revealed=true;render();
- };
- const bookmark=$("bookmark");if(bookmark)bookmark.onclick=()=>{progress.bookmarks=progress.bookmarks.includes(q.id)?progress.bookmarks.filter(id=>id!==q.id):[...progress.bookmarks,q.id];saveProgress();render()};
- const clear=$("clearChoice");if(clear)clear.onclick=()=>{delete test.answers[q.id];renderQuestion(q,arr);renderNavigator(arr)};
- const submit=$("submitTest");if(submit)submit.onclick=()=>submitTest(false);
- const prev=$("prev");if(prev)prev.onclick=()=>{if(current>0){current--;chosen=null;revealed=false;render()}};
- const next=$("next");if(next)next.onclick=()=>{if(current<arr.length-1){current++;chosen=null;revealed=false;render()}};
+function startNotebookPractice(){
+ const ids=Object.keys(store.notebook).filter(id=>allQuestions().some(q=>q.id===id));
+ if(!ids.length){showToast("Your notebook is empty. Save a question or add your own first.");return}
+ if(timerId){clearInterval(timerId);timerId=null}
+ practiceSetIds=ids;view="review";currentIndex=0;selectedChoice=null;answerRevealed=false;
+ document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view==="notebook"));
+ $("filterPanel").style.display="none";$("mainGrid").style.gridTemplateColumns="1fr";
+ render();
 }
-function renderLibrary(){
- const cards=[...sourceYears].sort((a,b)=>a.year-b.year).map(item=>{
-  const links=item.sources.map(src=>'<a class="btn secondary" href="'+esc(src.url)+'" target="_blank" rel="noopener">'+esc(src.label)+' ↗</a>').join("");
-  return '<article class="source-card"><div class="source-year">'+esc(item.year)+'</div><div class="source-detail"><strong>'+esc(item.paper)+'</strong><div class="muted">'+esc(item.keyNote)+'</div><div class="source-links">'+links+'</div><div class="small-links"><a href="'+esc(item.officialQuestionPaperArchive)+'" target="_blank" rel="noopener">Official paper archive ↗</a><a href="'+esc(item.officialAnswerKeyArchive)+'" target="_blank" rel="noopener">Official answer-key archive ↗</a></div></div></article>';
+function addToNotebook(q,reason){
+ const old=store.notebook[q.id]||{};
+ store.notebook[q.id]=Object.assign({},old,{id:q.id,addedAt:old.addedAt||new Date().toISOString(),reason:reason||old.reason||"Saved for revision",note:old.note||"",lastResult:old.lastResult||null});
+ saveStore();showToast("Added to your revision notebook.");
+}
+function removeFromNotebook(qid){
+ delete store.notebook[qid];saveStore();showToast("Removed from notebook.");render();
+}
+function toggleNotebook(q){
+ if(isSaved(q)){if(confirm("Remove this question from your notebook?"))removeFromNotebook(q.id)}
+ else addToNotebook(q,"Saved manually");
+ render();
+}
+function saveAnswer(q,choice){
+ if(!isKeyed(q)){
+  store.answers[q.id]={choice,correct:null,updatedAt:new Date().toISOString(),unkeyed:true};
+  saveStore();answerRevealed=true;render();return;
+ }
+ const correct=choice===q.answer;
+ store.answers[q.id]={choice,correct,updatedAt:new Date().toISOString()};
+ if(!correct){
+  const old=store.notebook[q.id]||{};
+  store.notebook[q.id]=Object.assign({},old,{id:q.id,addedAt:old.addedAt||new Date().toISOString(),reason:old.reason||"Auto-saved after incorrect answer",note:old.note||"",lastResult:"incorrect"});
+  store.notebook[q.id].lastResult="incorrect";
+ }else if(store.notebook[q.id])store.notebook[q.id].lastResult="correct";
+ saveStore();answerRevealed=true;render();
+ if(!correct)showToast("Incorrect answer. Saved automatically to your notebook.");
+}
+function optionRows(q,chosen,show){
+ return q.options.map((text,i)=>{
+  const review=makeOptionReview(q,i),cls=["option",chosen===i?"selected":"",show&&review.correct?"correct":"",show&&chosen===i&&!review.correct?"incorrect":""].filter(Boolean).join(" ");
+  let right="";
+  if(show)right=review.correct?'<span class="option-right">✓ ANSWER</span>':(chosen===i?'<span class="option-right" style="color:var(--red)">YOUR PICK</span>':'');
+  return '<button class="'+cls+'" type="button" data-option="'+i+'" '+(show&&view!=="test"?"":"")+'><span class="option-letter">'+letters[i]+'</span><span class="option-text">'+esc(text)+'</span>'+right+'</button>';
  }).join("");
- $("questionArea").innerHTML='<div class="qmeta"><span class="pill">GS Paper I only</span><span>'+sourceYears.length+' exam years</span><span>2013–2026</span></div><h2>Year-wise Previous Year Questions</h2><p class="muted">Choose a year to open existing question sets and explanations. Recent answer keys may be provisional until UPSC publishes its official key; use the official archive to verify disputed answers.</p><div class="source-library">'+cards+'</div>';
+}
+function renderExplanation(q,chosen){
+ if(!answerRevealed)return "";
+ if(!isKeyed(q))return '<div class="explanation-card"><div class="explain-header">◈ Answer key unavailable</div><div class="explain-title">This item is not scored</div><div class="explanation-text">Your selection has been saved, but this record does not contain an unambiguous answer key. Verify it against the official question paper and answer key before treating it as correct or incorrect.</div>'+sourceLinks(q)+'</div>';
+ const correct=chosen===q.answer;
+ const optionAnalysis=q.options.map((o,i)=>{
+  const r=makeOptionReview(q,i);
+  return '<div class="option-review-row"><span class="review-letter">'+letters[i]+'</span><div class="review-body"><strong>'+esc(o)+'</strong><div style="margin-top:3px">'+esc(r.review)+'</div></div><span class="review-status '+(r.correct?"correct":"wrong")+'">'+(r.correct?"Correct":"Distractor")+'</span></div>';
+ }).join("");
+ const rationale=q.explanation?esc(q.explanation):"A detailed explanation was not available in the source record. Use the official question-paper and answer-key links below to verify the key.";
+ const insight=q.examInsight?'<div class="exam-insight"><strong>Revision cue:</strong> '+esc(q.examInsight)+'</div>':"";
+ const warning=hasReviewFlag(q)?'<div class="explain-warning">⚠ Source note: this explanation was flagged for review or is not independently fact-checked. Cross-check it before memorising.</div>':"";
+ return '<div class="explanation-card"><div class="explain-header">'+(correct?"✓ You got it right":"↯ Review this concept")+'</div><div class="explain-title">Why '+letters[q.answer]+' is the keyed answer</div><div class="explanation-text">'+rationale+'</div>'+insight+'<div class="option-review"><div class="option-review-title">Option-by-option review</div>'+optionAnalysis+'</div>'+warning+sourceLinks(q)+'</div>';
+}
+function sourceLinks(q){
+ const links=[];
+ if(q.officialPaperUrl||q.sourcePaperUrl)links.push('<a href="'+esc(q.officialPaperUrl||q.sourcePaperUrl)+'" target="_blank" rel="noopener">Official paper archive ↗</a>');
+ if(q.officialKeyUrl||q.sourceKeyUrl)links.push('<a href="'+esc(q.officialKeyUrl||q.sourceKeyUrl)+'" target="_blank" rel="noopener">Official answer-key archive ↗</a>');
+ if(q.transcriptionSourceUrl)links.push('<a href="'+esc(q.transcriptionSourceUrl)+'" target="_blank" rel="noopener">Question source ↗</a>');
+ if(q.explanationSourceUrl)links.push('<a href="'+esc(q.explanationSourceUrl)+'" target="_blank" rel="noopener">Explanation source ↗</a>');
+ if(q.sourceFileUrl)links.push('<a href="'+esc(q.sourceFileUrl)+'" target="_blank" rel="noopener">Dataset source ↗</a>');
+ return '<div class="source-links">'+links.join("")+'</div>';
+}
+function currentModeName(){return view==="review"?"Notebook drill":view==="test"?"Timed test":"Practice"}
+function renderQuestion(q,arr){
+ const inTest=view==="test"&&testState.active;
+ let chosen=inTest?(Object.prototype.hasOwnProperty.call(testState.answers,q.id)?testState.answers[q.id]:null):selectedChoice;
+ if(!inTest&&selectedChoice===null){const saved=answerRecord(q);if(saved&&Number.isInteger(saved.choice)){chosen=saved.choice;if(saved.correct!==undefined&&saved.correct!==null)answerRevealed=true}}
+ if(inTest&&testState.submitted){chosen=Object.prototype.hasOwnProperty.call(testState.answers,q.id)?testState.answers[q.id]:null;answerRevealed=true}
+ const isCustom=String(q.id).startsWith("custom-");
+ const statusChip=hasReviewFlag(q)?'<span class="chip warn">Needs review</span>':'';
+ const keyChip=isKeyed(q)?'<span class="chip">Key '+letters[q.answer]+'</span>':'<span class="chip warn">Unkeyed</span>';
+ let resultBar="";
+ if(inTest&&testState.submitted&&testState.summary){
+  const sum=testState.summary;
+  resultBar='<div class="result-summary"><h3>Test result / '+sum.score.toFixed(2)+' marks</h3><div class="result-cells"><div class="result-cell"><strong>'+sum.correct+'</strong><span>Correct</span></div><div class="result-cell"><strong>'+sum.incorrect+'</strong><span>Incorrect</span></div><div class="result-cell"><strong>'+sum.unanswered+'</strong><span>Blank</span></div><div class="result-cell"><strong>'+sum.unkeyed+'</strong><span>Unkeyed</span></div></div></div>';
+ }
+ const qnum=String(q.questionNumber||currentIndex+1).padStart(2,"0");
+ const actions=inTest?(
+  testState.submitted?
+  '<button class="btn '+(isSaved(q)?"saved":"")+'" id="saveNotebook">'+(isSaved(q)?"✓ In notebook":"＋ Add to notebook")+'</button><button class="btn subtle" id="prevBtn" '+(currentIndex===0?"disabled":"")+'>← Previous</button><button class="btn subtle" id="nextBtn" '+(currentIndex===arr.length-1?"disabled":"")+'>Next →</button>':
+  '<button class="btn '+(isSaved(q)?"saved":"")+'" id="saveNotebook">'+(isSaved(q)?"✓ In notebook":"＋ Add to notebook")+'</button><span class="spacer"></span><button class="btn subtle" id="prevBtn" '+(currentIndex===0?"disabled":"")+'>← Previous</button><button class="btn subtle" id="nextBtn" '+(currentIndex===arr.length-1?"disabled":"")+'>Next →</button><button class="btn primary" id="submitTest">Submit test</button>'
+ ):(
+  '<button class="btn primary" id="checkAnswer">'+(answerRevealed?"Checked":"Check answer")+'</button><button class="btn '+(isSaved(q)?"saved":"")+'" id="saveNotebook">'+(isSaved(q)?"✓ In notebook":"＋ Add to notebook")+'</button><span class="spacer"></span><button class="btn subtle" id="prevBtn" '+(currentIndex===0?"disabled":"")+'>← Previous</button><button class="btn subtle" id="nextBtn" '+(currentIndex===arr.length-1?"disabled":"")+'>Next →</button>'
+ );
+ const stateBadge=inTest?'<span class="chip primary-chip">'+(testState.submitted?"TEST REVIEW":'TIME LEFT · <span id="timerText">'+formatTime(Math.ceil((testState.endsAt-Date.now())/1000))+'</span>')+'</span>':(view==="review"?'<span class="chip primary-chip">NOTEBOOK DRILL</span>':'<span class="chip primary-chip">PRACTICE MODE</span>');
+ const y=esc(q.year||"Custom");
+ $("appContent").innerHTML=resultBar+'<article class="panel question-panel"><div class="q-top"><div><div class="q-tags">'+stateBadge+'<span class="chip">'+y+'</span><span class="chip">'+esc(q.paper||"GS Paper I")+'</span><span class="chip">'+esc(q.subject||"Unclassified")+'</span><span class="chip">'+esc(q.topic||q.subject||"General")+'</span>'+keyChip+statusChip+'</div></div><div class="q-counter"><strong>Q'+qnum+'</strong><br>ITEM '+(currentIndex+1)+' / '+arr.length+'</div></div><p class="question-stem">'+esc(q.question)+'</p><div class="options-list">'+optionRows(q,chosen,answerRevealed||testState.submitted)+'</div><div id="feedbackPanel">'+renderExplanation(q,chosen)+'</div><div class="question-actions">'+actions+'</div><div class="q-navigation"><span class="muted">'+(isCustom?"PERSONAL QUESTION":(q.difficulty?"DIFFICULTY · "+esc(q.difficulty):"GS-I PREVIOUS-YEAR QUESTION"))+'</span><span class="muted">'+(inTest?"Answers reveal after submission":"Incorrect answers are auto-saved for later revision")+'</span></div></article>';
+ if(!answerRevealed&&!testState.submitted)document.querySelectorAll("[data-option]").forEach(b=>b.addEventListener("click",()=>{const index=Number(b.dataset.option);if(inTest){testState.answers[q.id]=index;renderQuestion(q,arr);renderNavigator(arr)}else{selectedChoice=index;renderQuestion(q,arr)}}));
+ const check=$("checkAnswer");
+ if(check)check.onclick=()=>{if(selectedChoice===null){const a=answerRecord(q);if(a&&Number.isInteger(a.choice))selectedChoice=a.choice;else{showToast("Select an option first.");return}}saveAnswer(q,selectedChoice)};
+ const saveBtn=$("saveNotebook");if(saveBtn)saveBtn.onclick=()=>toggleNotebook(q);
+ const prev=$("prevBtn");if(prev)prev.onclick=()=>{if(currentIndex>0){currentIndex--;selectedChoice=null;answerRevealed=false;render()}};
+ const next=$("nextBtn");if(next)next.onclick=()=>{if(currentIndex<arr.length-1){currentIndex++;selectedChoice=null;answerRevealed=false;render()}};
+ const submit=$("submitTest");if(submit)submit.onclick=()=>submitTest(false);
+}
+function renderNavigator(arr){
+ const buttons=arr.map((q,i)=>{
+  const answered=view==="test"&&testState.active?Object.prototype.hasOwnProperty.call(testState.answers,q.id):!!answerRecord(q);
+  return '<button type="button" class="btn small '+(i===currentIndex?"primary ":"")+(answered?"saved":"")+'" data-jump="'+i+'">'+(i+1)+'</button>';
+ }).join("");
+ const old=$("qNav");
+ if(old)old.innerHTML=buttons;
+ if(old)old.querySelectorAll("[data-jump]").forEach(b=>b.addEventListener("click",()=>{currentIndex=Number(b.dataset.jump);selectedChoice=null;answerRevealed=false;render()}));
+}
+function formatTime(secs){secs=Math.max(0,Math.floor(secs));const h=Math.floor(secs/3600),m=Math.floor((secs%3600)/60),s=secs%60;return h?String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"):String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
+function startTest(){
+ const arr=currentBaseQuestions().filter(q=>!String(q.id).startsWith("custom-"));
+ if(!arr.length){showToast("No questions match these filters.");return}
+ if(timerId)clearInterval(timerId);
+ testState={active:true,submitted:false,ids:arr.map(q=>q.id),answers:{},endsAt:Date.now()+arr.length*72*1000,summary:null};
+ view="test";currentIndex=0;selectedChoice=null;answerRevealed=false;
+ document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view==="test"));
+ $("filterPanel").style.display="none";$("mainGrid").style.gridTemplateColumns="1fr";
+ render();timerId=setInterval(tickTimer,1000);tickTimer();
+}
+function tickTimer(){if(!testState.active||testState.submitted||!testState.endsAt)return;const rem=Math.ceil((testState.endsAt-Date.now())/1000);const text=$("timerText");if(text)text.textContent=formatTime(rem);if(rem<=0)submitTest(true)}
+function submitTest(auto){
+ if(!testState.active||testState.submitted)return;
+ if(!auto&&!confirm("Submit this timed test and reveal all answers?"))return;
+ if(timerId){clearInterval(timerId);timerId=null}
+ const list=testState.ids.map(id=>allQuestions().find(q=>q.id===id)).filter(Boolean);
+ let correct=0,incorrect=0,unanswered=0,unkeyed=0;
+ for(const q of list){
+  if(!isKeyed(q)){unkeyed++;continue}
+  if(!Object.prototype.hasOwnProperty.call(testState.answers,q.id))unanswered++;
+  else if(testState.answers[q.id]===q.answer)correct++;else incorrect++;
+ }
+ const score=correct*2-incorrect*(2/3),maxScore=(list.length-unkeyed)*2,attempted=correct+incorrect;
+ const summary={date:new Date().toLocaleString(),total:list.length,correct,incorrect,unanswered,unkeyed,attempted,score,maxScore,accuracy:attempted?correct/attempted*100:0};
+ testState.submitted=true;testState.summary=summary;store.testHistory.push(summary);store.testHistory=store.testHistory.slice(-30);
+ list.forEach(q=>{const c=testState.answers[q.id];if(c===undefined)return;if(!isKeyed(q))return;const ok=c===q.answer;store.answers[q.id]={choice:c,correct:ok,updatedAt:new Date().toISOString()};if(!ok&&!store.notebook[q.id])store.notebook[q.id]={id:q.id,addedAt:new Date().toISOString(),reason:"Wrong in timed test",note:"",lastResult:"incorrect"}});
+ saveStore();render();showToast(auto?"Time expired. Your test was submitted.":"Test submitted. Review the explanations below.");
+}
+function renderTestLauncher(){
+ setHeader("Timed test","Build a mock from the current filters, then submit to see your score and explanations.","TEST SIMULATOR / GS-I",'<button class="btn small" id="toPractice">← Back to practice</button>');
+ const arr=currentBaseQuestions().filter(q=>!String(q.id).startsWith("custom-"));
+ $("appContent").innerHTML='<div class="panel question-panel"><div class="q-tags"><span class="chip primary-chip">EXAM SIMULATION</span><span class="chip">'+formatNum(arr.length)+' questions selected</span><span class="chip">72 sec / question</span></div><h2 style="font-size:22px;margin:17px 0 8px">Run a focused mock</h2><p class="panel-desc" style="max-width:620px;line-height:1.8">This test uses the active year, subject and topic filters. General Studies Paper I scoring: <strong style="color:var(--green)">+2</strong> correct, <strong style="color:var(--red)">−⅔</strong> incorrect, and 0 unattempted. Unkeyed questions are not included in scoring. The bank includes source-transcribed questions; verify disputed keys against UPSC.</p><div class="result-cells" style="margin:20px 0"><div class="result-cell"><strong>'+arr.length+'</strong><span>Questions</span></div><div class="result-cell"><strong>'+formatTime(arr.length*72)+'</strong><span>Time limit</span></div><div class="result-cell"><strong>'+arr.filter(isKeyed).length+'</strong><span>Scorable</span></div><div class="result-cell"><strong>−0.667</strong><span>Penalty</span></div></div><button class="btn primary" id="startTestBtn" '+(!arr.length?"disabled":"")+'>Start test ↗</button><div style="margin-top:16px;color:var(--muted);font-size:11px">Answers and explanations remain hidden while the test is active. You can navigate freely and submit early.</div></div>';
+ $("startTestBtn")?.addEventListener("click",startTest);$("toPractice")?.addEventListener("click",()=>setView("practice"));
+}
+function renderYears(){
+ setHeader("Year-wise papers","Choose a year and practise the full available GS-I question set. CSAT does not appear in this library.","YEAR INDEX / GS-I",'<a class="btn small" href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official papers ↗</a>');
+ const years=(manifest.years||[]).slice().sort((a,b)=>Number(b.year)-Number(a.year));
+ const cards=years.map(entry=>{
+  const y=String(entry.year),count=entry.count||bank.filter(q=>String(q.year)===y).length;
+  const latest=Number(y)>=2025;
+  return '<article class="year-card"><div class="section-kicker">PAPER / GS-I</div><div class="year-num">'+esc(y)+'</div><p>'+formatNum(count)+' question records · four-option MCQ</p><div class="year-actions"><button class="btn small primary" data-practice-year="'+esc(y)+'">Practise year ↗</button><button class="btn small violet" data-test-year="'+esc(y)+'">Mock test</button></div><div class="year-note">'+(latest?"Recent-year answers may need final-key verification.":"Cross-check disputed answers with the official UPSC key.")+'</div></article>';
+ }).join("");
+ $("appContent").innerHTML='<div class="year-grid">'+cards+'</div><div class="source-links" style="margin-top:15px"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">UPSC official paper archive ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">UPSC official answer-key archive ↗</a></div>';
+ $("appContent").querySelectorAll("[data-practice-year]").forEach(b=>b.addEventListener("click",()=>{$("yearFilter").value=b.dataset.practiceYear;setView("practice")}));
+ $("appContent").querySelectorAll("[data-test-year]").forEach(b=>b.addEventListener("click",()=>{$("yearFilter").value=b.dataset.testYear;startTest()}));
+}
+function renderNotebook(){
+ setHeader("My revision notebook","Save incorrect answers, keep your own notes, or add a question you want to practise later.","PERSONAL MEMORY / LOCAL",'<button class="btn small violet" id="practiceNotebook">Practise saved questions ↗</button>');
+ const ids=Object.keys(store.notebook||{});const map=byId();
+ const entries=ids.map(id=>({entry:store.notebook[id],q:map.get(id)})).filter(x=>x.q);
+ const entriesHtml=entries.length?entries.map(({entry,q})=>{
+  return '<article class="notebook-entry"><div class="notebook-entry-head"><div><div class="q-tags"><span class="chip primary-chip">'+esc(q.year||"Personal")+'</span><span class="chip">'+esc(q.subject||"Unclassified")+'</span><span class="chip">'+esc(entry.reason||"Saved for revision")+'</span></div><h3>'+esc(q.question)+'</h3></div><button class="icon-btn" data-remove="'+esc(q.id)+'" title="Remove from notebook" aria-label="Remove from notebook">×</button></div><div class="field" style="margin-top:0"><label for="note_'+esc(q.id)+'">Your revision note</label><textarea class="notebook-note" id="note_'+esc(q.id)+'" data-note="'+esc(q.id)+'" placeholder="What did you get wrong? Write a concept, fact, or memory hook…">'+esc(entry.note||"")+'</textarea></div><div class="entry-actions"><button class="btn small primary" data-review-one="'+esc(q.id)+'">Practise this ↗</button><button class="btn small" data-source-one="'+esc(q.id)+'">Open source ↗</button>'+(String(q.id).startsWith("custom-")?'<button class="btn small danger" data-delete-custom="'+esc(q.id)+'">Delete question</button>':'')+'</div></article>';
+ }).join(""):'<div class="empty-state"><div class="empty-icon">⌁</div><h3>Your notebook starts here</h3><p>Save any question from practice, answer incorrectly to add it automatically, or write your own question in the form.</p></div>';
+ $("appContent").innerHTML='<div class="notebook-layout"><div><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px"><div><div class="section-kicker">Saved for later</div><h2 style="margin:0;font-size:17px">'+entries.length+' question'+(entries.length===1?"":"s")+' in your notebook</h2></div><button class="btn small" id="exportNotebookInline">Export backup ↓</button></div><div class="notebook-list">'+entriesHtml+'</div></div><form class="panel custom-form" id="customForm"><div class="section-kicker">Add your own</div><h3>Capture a question</h3><p>Add any question, a question you got wrong elsewhere, or a concept you want to test later. This stays on this device.</p><div class="field"><label for="customQuestion">Question</label><textarea id="customQuestion" required placeholder="Write the question or stem…"></textarea></div><div class="field"><label for="customSubject">Subject / topic</label><input id="customSubject" placeholder="e.g. Polity · Parliament" value="Personal revision"></div><div class="two-col">'+letters.map((letter,i)=>'<div class="field"><label for="customOpt'+letter+'">Option '+letter+'</label><input id="customOpt'+letter+'" required placeholder="Option '+letter+'"></div>').join("")+'</div><div class="field"><label for="customAnswer">Correct answer (optional)</label><select id="customAnswer"><option value="">Not set yet</option><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></div><div class="field"><label for="customExplanation">Explanation / source note (optional)</label><textarea id="customExplanation" placeholder="Add your own explanation, citation, or fact to verify…"></textarea></div><button class="btn primary" type="submit" style="margin-top:15px;width:100%">Save to notebook ＋</button><div class="filter-tip" style="margin-top:10px">Custom questions and notes are stored in local browser storage. Export a backup before clearing browser data.</div></form></div>';
+ $("practiceNotebook")?.addEventListener("click",startNotebookPractice);
+ $("exportNotebookInline")?.addEventListener("click",exportNotebook);
+ $("appContent").querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>removeFromNotebook(b.dataset.remove));
+ $("appContent").querySelectorAll("[data-note]").forEach(t=>t.addEventListener("input",()=>{if(store.notebook[t.dataset.note]){store.notebook[t.dataset.note].note=t.value;saveStore()}}));
+ $("appContent").querySelectorAll("[data-review-one]").forEach(b=>b.onclick=()=>{practiceSetIds=[b.dataset.reviewOne];view="review";currentIndex=0;selectedChoice=null;answerRevealed=false;$("filterPanel").style.display="none";$("mainGrid").style.gridTemplateColumns="1fr";render()});
+ $("appContent").querySelectorAll("[data-source-one]").forEach(b=>b.onclick=()=>{const q=map.get(b.dataset.sourceOne);if(q){const url=q.transcriptionSourceUrl||q.sourceFileUrl||q.officialPaperUrl||"https://www.upsc.gov.in/examinations/previous-question-papers";window.open(url,"_blank","noopener") }});
+ $("appContent").querySelectorAll("[data-delete-custom]").forEach(b=>b.onclick=()=>{if(confirm("Delete this personal question permanently?")){store.customQuestions=store.customQuestions.filter(q=>q.id!==b.dataset.deleteCustom);delete store.notebook[b.dataset.deleteCustom];saveStore();render()}});
+ $("customForm")?.addEventListener("submit",e=>{
+  e.preventDefault();
+  const qtext=normText($("customQuestion").value),options=letters.map(l=>normText($("customOpt"+l).value));
+  if(!qtext||options.some(x=>!x)){showToast("Enter a question and all four options.");return}
+  const id="custom-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7);
+  const ans=$("customAnswer").value;
+  const q={id,year:"Personal",paper:"Notebook",questionNumber:"—",subject:normText($("customSubject").value)||"Personal revision",topic:normText($("customSubject").value)||"Personal revision",question:qtext,options,answer:ans===""?null:Number(ans),answerLabel:ans===""?"":letters[Number(ans)],explanation:normText($("customExplanation").value),examInsight:"",sourceName:"Personal notebook",createdAt:new Date().toISOString(),sourcePaperUrl:"",sourceKeyUrl:"",transcriptionSourceUrl:""};
+  store.customQuestions.push(q);store.notebook[id]={id,addedAt:new Date().toISOString(),reason:"Personal question",note:"",lastResult:null};saveStore();showToast("Your question is saved for later practice.");renderNotebook();
+ });
+}
+function renderProgress(){
+ setHeader("Performance analytics","Track your accuracy, revisit weak subjects and inspect timed-test history. All statistics are private to this browser.","ANALYTICS / LOCAL");
+ const attempted=Object.values(store.answers||{}).filter(a=>typeof a.correct==="boolean").length;
+ const correct=Object.values(store.answers||{}).filter(a=>a.correct===true).length;
+ const subjectSet=[...new Set(bank.map(q=>q.subject||"Unclassified"))].sort();
+ const rows=subjectSet.map(subject=>{
+  const qset=bank.filter(q=>q.subject===subject&&isKeyed(q));
+  const answered=qset.filter(q=>typeof store.answers[q.id]?.correct==="boolean");
+  const right=answered.filter(q=>store.answers[q.id].correct).length;
+  const acc=answered.length?Math.round(right/answered.length*100):0;
+  return '<div class="progress-row"><div class="progress-name">'+esc(subject)+'<span class="progress-small">'+answered.length+' / '+qset.length+' attempted</span></div><div class="progress-track"><span style="width:'+acc+'%"></span></div><div class="progress-num">'+(answered.length?acc+"%":"—")+' · '+right+'</div></div>';
+ }).join("");
+ const history=(store.testHistory||[]).slice().reverse().map((t,i)=>'<article class="notebook-entry"><div class="notebook-entry-head"><div><span class="chip">'+esc(t.date||"Saved test")+'</span><h3 style="margin:8px 0">'+Number(t.score||0).toFixed(2)+' / '+Number(t.maxScore||0).toFixed(0)+' marks</h3><p class="panel-desc">'+t.total+' questions · '+t.correct+' correct · '+t.incorrect+' incorrect · '+t.unanswered+' blank · '+t.unkeyed+' unkeyed</p></div></div></article>').join("");
+ $("appContent").innerHTML='<div class="metrics" style="margin-bottom:17px"><div class="metric"><div class="metric-label">Scored answers</div><div class="metric-value cyan">'+attempted+'</div></div><div class="metric"><div class="metric-label">Correct</div><div class="metric-value green">'+correct+'</div></div><div class="metric"><div class="metric-label">Overall accuracy</div><div class="metric-value">'+(attempted?Math.round(correct/attempted*100)+"%":"—")+'</div></div><div class="metric"><div class="metric-label">Notebook items</div><div class="metric-value purple">'+Object.keys(store.notebook).length+'</div></div></div><div class="panel" style="padding:17px"><div class="section-kicker">Subject telemetry</div><h2 style="margin:0 0 14px;font-size:17px">Accuracy by subject</h2><div class="progress-list">'+rows+'</div></div><div style="margin-top:17px"><div class="section-kicker">Test log</div><h2 style="font-size:17px;margin:0 0 12px">Timed-test history</h2>'+(history||'<div class="empty-state"><div class="empty-icon">⌁</div><h3>No completed tests</h3><p>Run a timed test to see your scores here.</p></div>')+'</div><div class="actions" style="margin-top:17px"><button class="btn danger" id="clearProgress">Clear practice answers and test history</button></div>';
+ $("clearProgress")?.addEventListener("click",()=>{if(confirm("Clear practice answers and test history? Your notebook and custom questions will remain.")){store.answers={};store.testHistory=[];saveStore();renderProgress()}});
 }
 function render(){
- const isLibrary=mode==="library";
- $("filters").style.display=isLibrary?"none":"grid";
- $("stats").style.display=isLibrary?"none":"grid";
- $("sidebar").style.display=isLibrary?"none":"block";
- document.querySelector(".layout").style.gridTemplateColumns=isLibrary?"1fr":"";
- const arr=isLibrary?[]:activeQuestions();
- updateStats(arr);
- if(current>=arr.length)current=Math.max(0,arr.length-1);
- if(mode!=="test"){$("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false}
- if(mode==="test"&&test.started&&!test.submitted){$("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=true}
- if(mode==="library"){renderLibrary();return}
- renderNavigator(arr);
- if(mode==="progress"){renderProgress(arr);return}
- if(mode==="test"&&!test.started){renderTestStart(arr);return}
- if(!arr.length){$("questionArea").innerHTML='<div class="empty">No questions match this view. Clear a filter or add matching questions to the question bank.</div>';return}
- renderQuestion(arr[current],arr);
+ updateMetrics();
+ if(view==="years"){renderYears();return}
+ if(view==="notebook"){renderNotebook();return}
+ if(view==="progress"){renderProgress();return}
+ if(view==="test"&&!testState.active){renderTestLauncher();return}
+ const arr=currentBaseQuestions();
+ const kicker=view==="review"?"NOTEBOOK DRILL / PERSONAL REVISION":view==="test"?"TIMED TEST / GS-I":"PRACTICE MODE / GS-I";
+ setHeader(view==="review"?"Notebook drill":view==="test"?(testState.submitted?"Test review":"Timed test"):"Question stream",
+ view==="review"?"Practise the questions you saved, including custom questions.":view==="test"?"Answers are hidden until you submit. Incorrect answers use UPSC GS-I negative marking.":"Select an option, check the reasoning, and save questions you want to revisit.",kicker,
+ '<span class="chip">'+formatNum(arr.length)+' items in this view</span>'+(view==="review"?'<button class="btn small" id="exitReview">Exit drill</button>':""));
+ if(!arr.length){
+  $("appContent").innerHTML='<div class="empty-state"><div class="empty-icon">⌁</div><h3>No questions match this view</h3><p>Clear a filter, choose another year or subject, or add a personal question in your notebook.</p><button class="btn small primary" id="clearToAll" style="margin-top:14px">Clear filters</button></div>';
+  $("clearToAll")?.addEventListener("click",resetFilters);return;
+ }
+ if(currentIndex>=arr.length)currentIndex=arr.length-1;
+ renderQuestion(arr[currentIndex],arr);
+ if(view==="test"&&testState.active&&!testState.submitted){
+  $("appContent").insertAdjacentHTML("beforeend",'<div class="panel" style="padding:13px;margin-top:12px"><div class="section-kicker">Question navigator</div><div id="qNav" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:9px">'+arr.map((q,i)=>'<button class="btn small '+(i===currentIndex?"primary ":"")+(Object.prototype.hasOwnProperty.call(testState.answers,q.id)?"saved":"")+'" data-jump="'+i+'">'+(i+1)+'</button>').join("")+'</div><div class="filter-tip" style="margin-top:8px">Green buttons are answered. Submit to reveal the answer key and explanations.</div></div>');
+  renderNavigator(arr);
+ }
+ $("exitReview")?.addEventListener("click",()=>{practiceSetIds=null;setView("notebook")});
+}
+function resetFilters(){$("search").value="";$("yearFilter").value="all";$("subjectFilter").value="all";$("topicFilter").value="all";currentIndex=0;selectedChoice=null;answerRevealed=false;render()}
+function randomQuestion(){const arr=currentBaseQuestions();if(!arr.length)return;currentIndex=Math.floor(Math.random()*arr.length);selectedChoice=null;answerRevealed=false;render()}
+function exportNotebook(){
+ const payload={schemaVersion:1,exportedAt:new Date().toISOString(),notebook:store.notebook,customQuestions:store.customQuestions,answers:store.answers,testHistory:store.testHistory};
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+ const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="nexus-upsc-notebook-backup.json";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);showToast("Notebook backup exported.");
+}
+function importNotebook(file){
+ const reader=new FileReader();
+ reader.onload=()=>{
+  try{
+   const d=JSON.parse(String(reader.result||""));
+   if(!d||typeof d!=="object"||!d.notebook||!Array.isArray(d.customQuestions))throw new Error("This file is not a NEXUS notebook backup.");
+   if(!confirm("Import this backup? It will merge saved questions and custom questions with this device."))return;
+   store.notebook=Object.assign({},store.notebook,d.notebook);
+   const seen=new Set(store.customQuestions.map(q=>q.id));
+   store.customQuestions=store.customQuestions.concat(d.customQuestions.filter(q=>q&&q.id&&!seen.has(q.id)));
+   store.answers=Object.assign({},store.answers,d.answers||{});
+   store.testHistory=(store.testHistory||[]).concat(d.testHistory||[]).slice(-50);
+   saveStore();showToast("Notebook backup imported.");render();
+  }catch(e){showToast(e.message||"Could not import this file.")}
+ };
+ reader.readAsText(file);
 }
 async function loadBank(){
  try{
-  const [questionResponse, sourceResponse]=await Promise.all([
-   fetch("./questions.json",{cache:"no-store"}),
-   fetch("./pyq-sources.json",{cache:"no-store"})
-  ]);
-  if(!questionResponse.ok)throw new Error("Sample question bank request failed: "+questionResponse.status);
-  if(!sourceResponse.ok)throw new Error("GS source directory request failed: "+sourceResponse.status);
-  const data=await questionResponse.json();
-  const sourceData=await sourceResponse.json();
-  if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||q.options.length!==4||!(q.answer===null||(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4))))throw new Error("Sample question bank has an unexpected structure.");
-  if(!Array.isArray(sourceData)||sourceData.some(x=>!x.year||!Array.isArray(x.sources)||!x.officialQuestionPaperArchive))throw new Error("GS source directory has an unexpected structure.");
-  questions=data;sourceYears=sourceData;
-  populateFilters();render();
+  const response=await fetch("./data/gs/manifest.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("Question-bank manifest is not available yet ("+response.status+").");
+  manifest=await response.json();
+  const yearEntries=Array.isArray(manifest.years)?manifest.years:[];
+  const loaded=await Promise.all(yearEntries.map(async entry=>{
+   const url=entry.path.startsWith("/")?entry.path:"./"+entry.path;
+   const res=await fetch(url,{cache:"no-store"});
+   if(!res.ok)throw new Error("Could not load GS questions for "+entry.year);
+   const rows=await res.json();
+   if(!Array.isArray(rows)||rows.some(q=>!q.id||!q.question||!Array.isArray(q.options)||q.options.length!==4))throw new Error("Invalid GS question data for "+entry.year);
+   return rows;
+  }));
+  bank=loaded.flat();
+  if(!bank.length)throw new Error("No GS-I questions were found.");
+  populateFilters();updateMetrics();render();
  }catch(e){
-  $("questionArea").innerHTML='<div class="empty"><strong>Could not load site data.</strong><p>'+esc(e.message)+'</p><p class="muted">Check that questions.json and pyq-sources.json exist next to index.html in the GitHub repository.</p></div>';
+  $("appContent").innerHTML='<div class="empty-state"><div class="empty-icon">!</div><h3>Question bank is being prepared</h3><p>'+esc(e.message)+'</p><p style="margin-top:9px">Open the GitHub Actions page to check the data-import workflow. Existing year-wise sources remain available in the repository README.</p><a href="https://github.com/swara6827-cpu/Pyq-website/actions" target="_blank" rel="noopener" class="btn small primary" style="margin-top:12px">Check import status ↗</a></div>';
  }
 }
-document.querySelectorAll("[data-mode]").forEach(button=>button.addEventListener("click",()=>{
- if(mode==="test"&&test.started&&!test.submitted&&!confirm("Leave this active test? Your unsubmitted answers will be lost."))return;
- if(timerHandle){clearInterval(timerHandle);timerHandle=null}
- mode=button.dataset.mode;current=0;chosen=null;revealed=false;
- if(mode!=="test" || (mode==="test" && test.submitted))test={started:false,submitted:false,answers:{},ids:[],endsAt:null,summary:null};
- document.querySelectorAll("[data-mode]").forEach(b=>b.classList.toggle("active",b===button));
- $("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false;
- render();
-}));
-["year","subject","topic"].forEach(id=>$(id).addEventListener("change",()=>{if(mode==="test"&&test.started)return;current=0;chosen=null;revealed=false;render()}));
-$("search").addEventListener("input",()=>{if(mode==="test"&&test.started)return;current=0;chosen=null;revealed=false;render()});
-$("reset").onclick=()=>{
- if(confirm("Delete saved practice answers, bookmarks, mistakes and test history from this browser?")){
-  progress=emptyProgress();saveProgress();test={started:false,submitted:false,answers:{},ids:[],endsAt:null,summary:null};current=0;chosen=null;revealed=false;if(timerHandle){clearInterval(timerHandle);timerHandle=null}render();
- }
-};
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>setView(b.dataset.view)));
+$("heroPractice").addEventListener("click",()=>setView("practice"));
+$("heroNotebook").addEventListener("click",()=>setView("notebook"));
+$("resetFilters").addEventListener("click",resetFilters);
+$("randomQuestion").addEventListener("click",randomQuestion);
+["yearFilter","subjectFilter","topicFilter"].forEach(id=>$(id).addEventListener("change",()=>{if(view==="test"&&testState.active)return;currentIndex=0;selectedChoice=null;answerRevealed=false;render()}));
+$("search").addEventListener("input",()=>{if(view==="test"&&testState.active)return;currentIndex=0;selectedChoice=null;answerRevealed=false;render()});
+$("exportNotebook").addEventListener("click",exportNotebook);
+$("importButton").addEventListener("click",()=>$("importFile").click());
+$("importFile").addEventListener("change",e=>{const f=e.target.files&&e.target.files[0];if(f)importNotebook(f);e.target.value=""});
+$("appContent").addEventListener("click",()=>{});
 loadBank();
 </script>
-</body></html>
+</body>
+</html>
