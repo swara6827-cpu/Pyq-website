@@ -26,6 +26,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install importer dependencies
+        run: python -m pip install --upgrade requests beautifulsoup4
       - name: Import full GS Paper I question bank
         run: python scripts/import_gs_bank.py
       - name: Commit source directory if changed
