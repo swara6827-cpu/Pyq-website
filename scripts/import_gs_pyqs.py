@@ -119,6 +119,11 @@ def clean_question_header(lines: list[str], index: int) -> tuple[int, str] | Non
     match = Q_PREFIX_RE.match(line)
     if match:
         return int(match.group(1)), match.group(2).strip()
+    # Used only by the separator-based fallback parser, where each segment is
+    # expected to begin at a question boundary (e.g. "1. How many...").
+    match = GENERIC_HEADER_RE.match(line)
+    if match:
+        return int(match.group(1)), match.group(2).strip()
     return None
 
 def parse_answer_letters(answer_text: str) -> list[str]:
