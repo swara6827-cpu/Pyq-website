@@ -632,6 +632,82 @@ def main() -> int:
                 added += 1
             if added:
                 print(f"  Added {added} complete unmatched supplemental questions", flush=True)
+            # If a year still has gaps, check the alternate published solution page.
+            # Only append complete questions that do not substantially overlap existing stems.
+            if len(year_records) < 100 and year in FALLBACKS and FALLBACKS[year] != used_url:
+                fallback_url = FALLBACKS[year]
+                try:
+                    fallback_lines = article_lines(fetch_html(fallback_url))
+                    fallback_records = parse_upscprep(fallback_lines, year, fallback_url)
+                    if len(fallback_records) < 70:
+                        fallback_records = parse_fallback_blocks(fallback_lines, year, fallback_url)
+                    fallback_added = 0
+                    for fb in fallback_records:
+                        if len(year_records) >= 100:
+                            break
+                        stem = str(fb.get("question", "")).strip()
+                        options = fb.get("options", [])
+                        answer = fb.get("answer")
+                        if len(stem) < 18 or len(options) != 4 or any(not str(o).strip() for o in options):
+                            continue
+                        if not isinstance(answer, int) or answer < 0 or answer > 3:
+                            continue
+                        similarity = max(
+                            (question_similarity(stem, str(r.get("question", "")) for r in year_records),
+                            default=0.0
+                        )
+                        if similarity >= 0.48:
+                            continue
+                        number = int(fb.get("questionNumber") or fallback_added + 1)
+                        fb_explanation = str(fb.get("explanation", "")).strip()
+                        fb_explanation_ok = explanation_is_relevant(fb_explanation, stem, options)
+                        if not fb_explanation_ok:
+                            fb_explanation = (
+                                "A detailed rationale was not available or did not pass the source relevance check. "
+                                "Use the linked question source and official UPSC answer key to verify the concept."
+                            )
+                        fb_record = dict(fb)
+                        fb_record.update({
+                            "id": f"upsc-gs1-{year}-fallback-{number}",
+                            "year": year,
+                            "paper": "GS Paper I",
+                            "questionNumber": f"SUPP-F{number}",
+                            "sourceQuestionNumber": number,
+                            "supplementalSource": True,
+                            "options": [str(x).strip() for x in options],
+                            "answer": answer,
+                            "answerLabel": chr(65 + answer),
+                            "sourceName": "UPSCprep alternate question-source page",
+                            "sourceProvider": "UPSCprep fallback supplement",
+                            "sourcePaperUrl": OFFICIAL_PAPERS,
+                            "sourceKeyUrl": OFFICIAL_KEYS,
+                            "transcriptionSourceUrl": fallback_url,
+                            "explanation": fb_explanation,
+                            "explanationStatus": (
+                                "Source explanation; cross-check against official key"
+                                if fb_explanation_ok else "Detailed explanation needs review"
+                            ),
+                            "attribution": "Supplemental GS question transcribed from an alternate public PYQ page. Verify answer and rationale against official UPSC material."
+                        })
+                        fb_record["optionReview"] = [
+                            {
+                                "label": chr(65 + idx),
+                                "text": option,
+                                "isCorrect": idx == answer,
+                                "review": (
+                                    "Keyed answer. Read the explanation below for the governing concept."
+                                    if idx == answer else
+                                    "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+                                )
+                            }
+                            for idx, option in enumerate(fb_record["options"])
+                        ]
+                        year_records.append(fb_record)
+                        fallback_added += 1
+                    if fallback_added:
+                        print(f"  Added {fallback_added} complete unmatched questions from alternate source", flush=True)
+                except Exception as exc:
+                    print(f"  Note: alternate source could not supplement {year}: {exc}", flush=True)
             parsed_by_year[year] = year_records
             report.append((year, len(year_records), used_provider))
             print(f"  Parsed {len(year_records)} complete GS questions ({used_provider})", flush=True)
