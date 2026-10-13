@@ -226,7 +226,7 @@ function render(){
 }
 async function loadBank(){
  try{
-  const response=await fetch("./questions.json?version=2");
+  const response=await fetch("./questions.json",{cache:"no-store"});
   if(!response.ok)throw new Error("Question bank request failed: "+response.status);
   const data=await response.json();
   if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||!Number.isInteger(q.answer)))throw new Error("Question bank has an unexpected structure.");
@@ -240,7 +240,7 @@ document.querySelectorAll("[data-mode]").forEach(button=>button.addEventListener
  if(mode==="test"&&test.started&&!test.submitted&&!confirm("Leave this active test? Your unsubmitted answers will be lost."))return;
  if(timerHandle){clearInterval(timerHandle);timerHandle=null}
  mode=button.dataset.mode;current=0;chosen=null;revealed=false;
- if(mode!=="test")test={started:false,submitted:false,answers:{},ids:[],endsAt:null,summary:null};
+ if(mode!=="test" || (mode==="test" && test.submitted))test={started:false,submitted:false,answers:{},ids:[],endsAt:null,summary:null};
  document.querySelectorAll("[data-mode]").forEach(b=>b.classList.toggle("active",b===button));
  $("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false;
  render();
