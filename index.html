@@ -14,8 +14,8 @@
 <body>
 <header class="top"><div class="brand">UPSC Prelims Practice</div><div class="sub">PYQ practice · timed tests · error analysis · local progress</div></header>
 <main class="wrap">
-<div class="notice"><strong>Question-bank status:</strong> The current first batch contains <span id="bankNoticeCount">41</span> transcribed questions from 2024 GS Paper I. This is <strong>not the complete paper or a complete year-wise archive</strong>. Questions and answers are linked to the official UPSC paper and answer-key archive, with a public transcription reference for cross-checking. Check source PDFs when adjudicating disputed answers.
- <div class="sourcebar"><a id="paperSource" href="https://www.upsc.gov.in/sites/default/files/QP-CSP-24-GENERAL-STUDIES-PAPER-I-180624.pdf" target="_blank" rel="noopener">Official 2024 GS Paper I PDF ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">UPSC answer-key archive ↗</a><a href="https://upscanswercheck.com/prelims/pyq/2024/gs" target="_blank" rel="noopener">Answer transcription reference ↗</a></div>
+<div class="notice"><strong>GS-only question bank:</strong> The importer is building the year-wise bank from 2013 onward using existing question-paper and answer-key pages. <strong>CSAT is excluded.</strong> Some questions may have no unambiguous answer-key entry; these remain available for practice but are excluded from scoring. Use the source links and official UPSC archive to resolve any discrepancy.
+ <div class="sourcebar"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC question-paper archive ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Official UPSC answer-key archive ↗</a><a href="https://upscanswercheck.com/prelims/pyq?paper=gs" target="_blank" rel="noopener">Year-wise GS PYQs ↗</a></div>
 </div>
 <section class="stats">
  <div class="stat"><small>Questions loaded</small><strong id="total">—</strong></div>
@@ -73,9 +73,10 @@ function esc(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;"
 function saveProgress(){try{localStorage.setItem(STORE_KEY,JSON.stringify(progress))}catch(e){}}
 function activeQuestions(){
  let arr=[...questions];
- if(mode==="test" && test.started && test.ids.length) arr=test.ids.map(id=>questions.find(q=>q.id===id)).filter(Boolean);
+ const inTest = mode==="test" && test.started && test.ids.length;
+ if(inTest) arr=test.ids.map(id=>questions.find(q=>q.id===id)).filter(Boolean);
  const s=$("subject").value, y=$("year").value, t=$("topic").value, search=$("search").value.trim().toLowerCase();
- if(!(mode==="test"&&test.started&&!test.submitted)){
+ if(!inTest){
   if(s!=="all")arr=arr.filter(q=>q.subject===s);
   if(y!=="all")arr=arr.filter(q=>String(q.year)===y);
   if(t!=="all")arr=arr.filter(q=>q.topic===t);
@@ -95,10 +96,11 @@ function populateFilters(){
  $("bankNoticeCount").textContent=questions.length;
 }
 function updateStats(arr){
- const vals=Object.values(progress.answers);
+ const allAnswers=Object.values(progress.answers);
+ const vals=allAnswers.filter(a=>typeof a.correct==="boolean");
  const correct=vals.filter(a=>a.correct).length;
  $("total").textContent=questions.length;
- $("attempted").textContent=vals.length;
+ $("attempted").textContent=allAnswers.length;
  $("accuracy").textContent=vals.length?Math.round(correct/vals.length*100)+"%":"—";
  $("bookmarkCount").textContent=progress.bookmarks.length;
  $("modeLabel").textContent=({practice:"Practice",test:"Timed test",bookmarks:"Bookmarks",mistakes:"Mistake notebook",progress:"Progress"})[mode]||mode;
@@ -122,8 +124,8 @@ function renderNavigator(arr){
 function renderProgress(arr){
  const subjectRows=[...new Set(questions.map(q=>q.subject))].sort().map(subject=>{
   const subset=questions.filter(q=>q.subject===subject);
-  const attempted=subset.filter(q=>progress.answers[q.id]).length;
-  const correct=subset.filter(q=>progress.answers[q.id]?.correct).length;
+  const attempted=subset.filter(q=>Number.isInteger(q.answer)&&typeof progress.answers[q.id]?.correct==="boolean").length;
+  const correct=subset.filter(q=>Number.isInteger(q.answer)&&progress.answers[q.id]?.correct===true).length;
   const accuracy=attempted?Math.round(correct/attempted*100):0;
   return '<div class="barrow"><span>'+esc(subject)+'</span><div class="bar"><span style="width:'+accuracy+'%"></span></div><strong>'+correct+'/'+attempted+'</strong></div>';
  }).join("");
@@ -132,7 +134,7 @@ function renderProgress(arr){
 }
 function renderTestStart(arr){
  const count=arr.length;
- $("questionArea").innerHTML=count?'<div class="qmeta"><span class="pill">Timed test</span><span>'+count+' questions in this selection</span></div><h2>Start a timed practice test</h2><p>This session includes the currently filtered question set. Timing is scaled at 72 seconds per question (100 questions = 120 minutes). Since the present question bank is incomplete, this is a <strong>partial PYQ test</strong>, not a complete UPSC paper.</p><div class="result-grid"><div class="result-tile"><small>Questions</small><strong>'+count+'</strong></div><div class="result-tile"><small>Time limit</small><strong>'+formatTime(count*72)+'</strong></div><div class="result-tile"><small>Correct</small><strong>+2</strong></div><div class="result-tile"><small>Incorrect</small><strong>−0.667</strong></div></div><p class="muted">Answers and explanations remain hidden until you submit. You can move between questions. Unattempted questions score zero.</p><div class="actions"><button class="btn primary" id="startTest">Start test</button></div>':'<div class="empty">No questions match these filters. Clear a filter to begin a test.</div>';
+ $("questionArea").innerHTML=count?'<div class="qmeta"><span class="pill">Timed test</span><span>'+count+' questions in this selection</span></div><h2>Start a timed practice test</h2><p>This session includes the currently filtered question set. Timing is scaled at 72 seconds per question (100 questions = 120 minutes). Since the present question bank is incomplete, this is a <strong>partial PYQ test</strong>, not a complete UPSC paper.</p><div class="result-grid"><div class="result-tile"><small>Questions</small><strong>'+count+'</strong></div><div class="result-tile"><small>Scoreable</small><strong>'+arr.filter(q=>Number.isInteger(q.answer)).length+'</strong></div><div class="result-tile"><small>Time limit</small><strong>'+formatTime(count*72)+'</strong></div><div class="result-tile"><small>Incorrect</small><strong>−0.667</strong></div></div><p class="muted">Answers and explanations remain hidden until you submit. You can move between questions. Incorrect keyed answers lose ⅓ of the marks allotted to a question. Items without an unambiguous answer key are included for practice but excluded from scoring.</p><div class="actions"><button class="btn primary" id="startTest">Start test</button></div>':'<div class="empty">No questions match these filters. Clear a filter to begin a test.</div>';
  const start=$("startTest");if(start)start.onclick=startTest;
 }
 function formatTime(total){
@@ -161,10 +163,15 @@ function submitTest(auto=false){
  if(!auto&&!confirm("Submit this test and reveal the answer key?"))return;
  if(timerHandle){clearInterval(timerHandle);timerHandle=null;}
  const set=test.ids.map(id=>questions.find(q=>q.id===id)).filter(Boolean);
- let correct=0,incorrect=0,unanswered=0;
- for(const q of set){if(!Object.prototype.hasOwnProperty.call(test.answers,q.id))unanswered++;else if(test.answers[q.id]===q.answer)correct++;else incorrect++;}
- const score=correct*2-incorrect*(2/3),maxScore=set.length*2,attempted=correct+incorrect;
- const summary={date:new Date().toLocaleString(),total:set.length,correct,incorrect,unanswered,attempted,score,maxScore,accuracy:attempted?correct/attempted*100:0};
+ let correct=0,incorrect=0,unanswered=0,unkeyed=0;
+ for(const q of set){
+  if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length){unkeyed++;continue;}
+  if(!Object.prototype.hasOwnProperty.call(test.answers,q.id))unanswered++;
+  else if(test.answers[q.id]===q.answer)correct++;
+  else incorrect++;
+ }
+ const score=correct*2-incorrect*(2/3),maxScore=(set.length-unkeyed)*2,attempted=correct+incorrect;
+ const summary={date:new Date().toLocaleString(),total:set.length,scoredTotal:set.length-unkeyed,unkeyed,correct,incorrect,unanswered,attempted,score,maxScore,accuracy:attempted?correct/attempted*100:0};
  test.submitted=true;test.summary=summary;
  progress.testHistory.push(summary);progress.testHistory=progress.testHistory.slice(-30);saveProgress();
  $("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false;
@@ -175,19 +182,25 @@ function renderQuestion(q,arr){
  if(inTest){selected=Object.prototype.hasOwnProperty.call(test.answers,q.id)?test.answers[q.id]:null;isRevealed=submitted}
  else {const saved=progress.answers[q.id];selected=chosen!==null?chosen:(saved?saved.choice:null);isRevealed=revealed||(!!saved&&chosen===null)}
  const opts=["A","B","C","D","E"];
+ const hasKey=Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length;
  const testBanner=inTest?'<div class="explain"><strong>'+ (submitted?"Test submitted":'Time remaining: <span id="timerValue">'+formatTime(Math.ceil((test.endsAt-Date.now())/1000))+'</span>')+'</strong>'+(submitted&&test.summary?'<div class="result-grid"><div class="result-tile"><small>Score</small><strong>'+test.summary.score.toFixed(2)+'/'+test.summary.maxScore+'</strong></div><div class="result-tile"><small>Correct</small><strong>'+test.summary.correct+'</strong></div><div class="result-tile"><small>Incorrect</small><strong>'+test.summary.incorrect+'</strong></div><div class="result-tile"><small>Unanswered</small><strong>'+test.summary.unanswered+'</strong></div></div><p class="muted">Accuracy among attempted: '+test.summary.accuracy.toFixed(1)+'%. Review the questions below to inspect correct answers and explanations.</p>':'')+'</div>':'';
  const optionHtml=q.options.map((o,i)=>{
   let cls="";
   if(selected===i)cls+=" selected";
-  if(isRevealed&&i===q.answer)cls+=" correct";
-  if(isRevealed&&selected===i&&i!==q.answer)cls+=" wrong";
+  if(isRevealed&&hasKey&&i===q.answer)cls+=" correct";
+  if(isRevealed&&hasKey&&selected===i&&i!==q.answer)cls+=" wrong";
   if(submitted)cls+=" locked";
   return '<div class="option'+cls+'" data-option="'+i+'"><span class="letter">'+opts[i]+'.</span><span>'+esc(o)+'</span></div>';
  }).join("");
  let feedback="";
  if(isRevealed){
-  const correct=selected===q.answer;
-  feedback='<div class="explain '+(correct?"good":"bad")+'"><strong>'+(correct?"Correct.":"Incorrect.")+'</strong> Correct answer: '+opts[q.answer]+'. '+esc(q.explanation||"No explanation has been added yet.")+'</div>'+linksFor(q);
+  if(!hasKey){
+   const reported=Array.isArray(q.reportedAnswerLetters)&&q.reportedAnswerLetters.length?(" The source listed: "+q.reportedAnswerLetters.join("/ ")+"."):"";
+   feedback='<div class="explain"><strong>Not scored: no unambiguous answer key.</strong> Your selection is saved, but this item does not affect accuracy or the timed-test score.'+esc(reported)+'</div>'+linksFor(q);
+  } else {
+   const correct=selected===q.answer;
+   feedback='<div class="explain '+(correct?"good":"bad")+'"><strong>'+(correct?"Correct.":"Incorrect.")+'</strong> Correct answer: '+opts[q.answer]+'. '+esc(q.explanation||"No explanation has been added yet.") +'</div>'+linksFor(q);
+  }
  }
  const practiceActions='<button class="btn primary" id="checkAnswer">Check answer</button><button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button>';
  const testActions=submitted?'<button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button>':(inTest?'<button class="btn" id="clearChoice">Clear answer</button><button class="btn" id="bookmark">'+(progress.bookmarks.includes(q.id)?"★ Bookmarked":"☆ Bookmark")+'</button><button class="btn primary" id="submitTest">Submit test</button>':'');
@@ -202,6 +215,11 @@ function renderQuestion(q,arr){
  const check=$("checkAnswer");
  if(check)check.onclick=()=>{
   if(chosen===null){const saved=progress.answers[q.id];if(!saved){$("feedback").innerHTML='<div class="explain">Select an answer first.</div>';return;}chosen=saved.choice;}
+  if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length){
+   progress.answers[q.id]={choice:chosen,correct:null,keyStatus:q.answerStatus||"Unkeyed",updatedAt:new Date().toISOString()};
+   progress.mistakes=progress.mistakes.filter(id=>id!==q.id);
+   saveProgress();revealed=true;render();return;
+  }
   progress.answers[q.id]={choice:chosen,correct:chosen===q.answer,updatedAt:new Date().toISOString()};
   if(chosen!==q.answer){if(!progress.mistakes.includes(q.id))progress.mistakes.push(q.id)}else progress.mistakes=progress.mistakes.filter(id=>id!==q.id);
   saveProgress();revealed=true;render();
@@ -229,7 +247,7 @@ async function loadBank(){
   const response=await fetch("./questions.json",{cache:"no-store"});
   if(!response.ok)throw new Error("Question bank request failed: "+response.status);
   const data=await response.json();
-  if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||!Number.isInteger(q.answer)))throw new Error("Question bank has an unexpected structure.");
+  if(!Array.isArray(data)||data.some(q=>!q.id||!q.question||!Array.isArray(q.options)||q.options.length!==4||!(q.answer===null||(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4))))throw new Error("Question bank has an unexpected structure.");
   questions=data;
   populateFilters();render();
  }catch(e){
