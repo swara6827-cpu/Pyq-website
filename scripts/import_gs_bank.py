@@ -497,13 +497,14 @@ def main() -> int:
 
             for record in year_records:
                 number = int(record["questionNumber"])
+                source_match_id = str(record.get("id"))
                 record["id"] = f"upsc-gs1-{year}-{number:03d}"
                 record["sourcePaperUrl"] = OFFICIAL_PAPERS
                 record["sourceKeyUrl"] = OFFICIAL_KEYS
                 record["transcriptionSourceUrl"] = used_url
                 record["sourceProvider"] = used_provider
                 record["explanationStatus"] = "Source explanation — verify disputed answers against the official key"
-                prior = matched_community.get(str(record.get("id")))
+                prior = matched_community.get(source_match_id)
                 if prior:
                     prior_explanation = str(prior.get("explanation", "")).strip()
                     prior_insight = str(prior.get("examInsight", prior.get("motivation", ""))).strip()
