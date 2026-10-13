@@ -1,0 +1,92 @@
+[
+  {
+    "id": "demo-001",
+    "year": "Demo",
+    "subject": "Polity",
+    "topic": "Constitution",
+    "question": "Which part of the Constitution of India contains the Directive Principles of State Policy?",
+    "options": [
+      "Part II",
+      "Part III",
+      "Part IV",
+      "Part IVA"
+    ],
+    "answer": 2,
+    "explanation": "The Directive Principles of State Policy are contained in Part IV (Articles 36–51). Illustrative demo question; not an official PYQ."
+  },
+  {
+    "id": "demo-002",
+    "year": "Demo",
+    "subject": "Geography",
+    "topic": "Earth",
+    "question": "Which of the following best explains why the Coriolis effect is zero at the Equator?",
+    "options": [
+      "Wind speed is always zero there",
+      "The horizontal component of Earth's rotation effect is zero there",
+      "Gravity is absent there",
+      "Earth does not rotate at the Equator"
+    ],
+    "answer": 1,
+    "explanation": "The Coriolis parameter is proportional to the sine of latitude, so it is zero at the Equator. Illustrative demo question."
+  },
+  {
+    "id": "demo-003",
+    "year": "Demo",
+    "subject": "Economy",
+    "topic": "National income",
+    "question": "GDP at market prices measures the value of final goods and services produced within a country during a period, before adjusting for which of the following?",
+    "options": [
+      "Geographical boundaries",
+      "Time period",
+      "Net factor income from abroad",
+      "Final-use classification"
+    ],
+    "answer": 2,
+    "explanation": "Net factor income from abroad is used to move from domestic product to national product. Illustrative demo question."
+  },
+  {
+    "id": "demo-004",
+    "year": "Demo",
+    "subject": "Environment",
+    "topic": "Biodiversity",
+    "question": "In ecology, a keystone species is best described as a species that:",
+    "options": [
+      "Has the largest population in every ecosystem",
+      "Has a disproportionately large effect on its ecosystem relative to its abundance",
+      "Is always an apex predator",
+      "Can survive only in one habitat"
+    ],
+    "answer": 1,
+    "explanation": "A keystone species has an ecological impact disproportionately large relative to its abundance. Illustrative demo question."
+  },
+  {
+    "id": "demo-005",
+    "year": "Demo",
+    "subject": "History",
+    "topic": "Ancient India",
+    "question": "Ashoka's major inscriptions were primarily issued to communicate his:",
+    "options": [
+      "Naval conquests",
+      "Dhamma and administrative messages",
+      "Treaties with European powers",
+      "Land revenue survey results"
+    ],
+    "answer": 1,
+    "explanation": "Ashokan edicts communicated Dhamma and several administrative and ethical messages. Illustrative demo question."
+  },
+  {
+    "id": "demo-006",
+    "year": "Demo",
+    "subject": "Science & Technology",
+    "topic": "Space",
+    "question": "A geostationary satellite appears stationary relative to an observer on Earth because it:",
+    "options": [
+      "Orbits over the poles once a day",
+      "Has an orbital period equal to Earth's rotation and orbits above the equator in the same direction",
+      "Does not experience gravity",
+      "Remains outside Earth's gravitational field"
+    ],
+    "answer": 1,
+    "explanation": "A geostationary satellite has an equatorial orbit whose period matches Earth's sidereal rotation. Illustrative demo question."
+  }
+]
