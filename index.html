@@ -136,7 +136,7 @@ function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&l
 function normText(v){return String(v??"").trim()}
 function isKeyed(q){return Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4}
 function sourceStatus(q){return String(q.explanationStatus||q.sourceStatus||"")}
-function hasReviewFlag(q){return /needs review|not available|not independently|verify disputed/i.test(sourceStatus(q))}
+function hasReviewFlag(q){return /needs review|not available|not independently fact-checked/i.test(sourceStatus(q))}
 function savedEntry(q){return store.notebook[q.id]||null}
 function isSaved(q){return !!savedEntry(q)}
 function makeOptionReview(q,index){
