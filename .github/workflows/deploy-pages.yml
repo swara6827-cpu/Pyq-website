@@ -5,7 +5,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Refresh GS PYQ source library"]
+    workflows: ["Import UPSC GS question bank"]
     types: [completed]
 
 permissions:
