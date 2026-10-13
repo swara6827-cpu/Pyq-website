@@ -18,8 +18,8 @@
 <div class="notice"><strong>GS Paper I PYQ Library · 2013–2026:</strong> Open existing year-wise question sets and answer explanations from the source websites below. This site links to those question banks rather than republishing entire third-party papers. <strong>CSAT is excluded.</strong> Answer keys from third-party pages should be cross-checked against the official UPSC archive, especially for recent exams.
  <div class="sourcebar"><a href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC question papers ↗</a><a href="https://www.upsc.gov.in/examinations/answer-key/archives" target="_blank" rel="noopener">Official UPSC answer keys ↗</a></div>
 </div>
-<section class="stats">
- <div class="stat"><small>Questions loaded</small><strong id="total">—</strong></div>
+<section class="stats" id="stats">
+ <div class="stat"><small>Sample questions</small><strong id="total">—</strong></div>
  <div class="stat"><small>Practice attempted</small><strong id="attempted">0</strong></div>
  <div class="stat"><small>Practice accuracy</small><strong id="accuracy">—</strong></div>
  <div class="stat"><small>Bookmarks</small><strong id="bookmarkCount">0</strong></div>
@@ -42,7 +42,7 @@
  </div>
  <div id="questionArea"><div class="empty">Loading the question bank…</div></div>
 </section>
-<aside class="panel side">
+<aside class="panel side" id="sidebar">
  <h2>Session overview</h2>
  <div class="side-row"><span class="muted">Mode</span><strong id="modeLabel">Practice</strong></div>
  <div class="side-row"><span class="muted">Visible questions</span><strong id="viewCount">0</strong></div>
@@ -241,8 +241,12 @@ function renderLibrary(){
  $("questionArea").innerHTML='<div class="qmeta"><span class="pill">GS Paper I only</span><span>'+sourceYears.length+' exam years</span><span>2013–2026</span></div><h2>Year-wise Previous Year Questions</h2><p class="muted">Choose a year to open existing question sets and explanations. Recent answer keys may be provisional until UPSC publishes its official key; use the official archive to verify disputed answers.</p><div class="source-library">'+cards+'</div>';
 }
 function render(){
- $("filters").style.display=mode==="library"?"none":"grid";
- const arr=mode==="library"?[]:activeQuestions();
+ const isLibrary=mode==="library";
+ $("filters").style.display=isLibrary?"none":"grid";
+ $("stats").style.display=isLibrary?"none":"grid";
+ $("sidebar").style.display=isLibrary?"none":"block";
+ document.querySelector(".layout").style.gridTemplateColumns=isLibrary?"1fr":"";
+ const arr=isLibrary?[]:activeQuestions();
  updateStats(arr);
  if(current>=arr.length)current=Math.max(0,arr.length-1);
  if(mode!=="test"){$("subject").disabled=$("year").disabled=$("topic").disabled=$("search").disabled=false}
