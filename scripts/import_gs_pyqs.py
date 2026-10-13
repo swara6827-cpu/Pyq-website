@@ -66,7 +66,7 @@ DIFFICULTY_LINE_RE = re.compile(
     r"^\s*(.+?)\s*[·•]\s*(?:easy|medium|hard)\s*$", re.IGNORECASE
 )
 ANSWER_CHECK_HEADER_RE = re.compile(
-    r"^\s*(\d{1,3})\s*[.)]\s*Q\s*(\d{1,3})\b\s*(.*?)\s*$",
+    r"^\s*(?:(\d{1,3})\s*[.)]\s*)?Q\s*(\d{1,3})\b\s*(.*?)\s*$",
     re.IGNORECASE,
 )
 OLD_HEADER_RE = re.compile(r"^\s*(\d{1,3})\s*\.\)\s*(.*?)\s*$")
@@ -111,8 +111,11 @@ def join_text(lines: list[str]) -> str:
 def clean_question_header(lines: list[str], index: int) -> tuple[int, str] | None:
     line = lines[index]
     match = ANSWER_CHECK_HEADER_RE.match(line)
-    if match and int(match.group(1)) == int(match.group(2)):
-        return int(match.group(2)), match.group(3).strip()
+    if match:
+        displayed_number = int(match.group(1) or match.group(2))
+        question_number = int(match.group(2))
+        if displayed_number == question_number:
+            return question_number, match.group(3).strip()
     match = OLD_HEADER_RE.match(line)
     if match:
         return int(match.group(1)), match.group(2).strip()
@@ -287,8 +290,8 @@ def parse_answercheck(lines: list[str], year: int, url: str) -> list[dict[str, A
             result.append(q)
     return result
 
-def parse_2013(lines: list[str], url: str) -> list[dict[str, Any]]:
-    # UPSCprep's 2013 page numbers question headers as “1.)”, “2.)”, etc.
+def parse_upscprep(lines: list[str], year: int, url: str) -> list[dict[str, Any]]:
+    # Older UPSCprep pages number question headers as “1.)”, “2.)”, etc.
     headers: list[tuple[int, int, str]] = []
     for i, line in enumerate(lines):
         m = OLD_HEADER_RE.match(line)
@@ -317,7 +320,7 @@ def parse_2013(lines: list[str], url: str) -> list[dict[str, Any]]:
         block = lines[line_i + 1:end]
         if tail:
             block.insert(0, tail)
-        q = parse_question_block(2013, number, block, url, "UPSCprep")
+        q = parse_question_block(year, number, block, url, "UPSCprep")
         if q:
             result.append(q)
     return result
@@ -330,7 +333,7 @@ def main() -> int:
         try:
             lines = article_lines(fetch_html(url))
             if year == 2013:
-                records = parse_2013(lines, url)
+                records = parse_upscprep(lines, year, url)
             else:
                 records = parse_answercheck(lines, year, url)
             used_url = url
@@ -339,7 +342,7 @@ def main() -> int:
                 fallback_url = FALLBACKS[year]
                 print(f"  Primary parsing yielded {len(records)} questions; trying fallback {fallback_url}", flush=True)
                 fallback_lines = article_lines(fetch_html(fallback_url))
-                records = parse_2013(fallback_lines, fallback_url) if year == 2013 else parse_answercheck(fallback_lines, year, fallback_url)
+                records = parse_upscprep(fallback_lines, year, fallback_url)
                 # Fallback pages use a different markup. If generic parsing failed, parse source-separated blocks.
                 if len(records) < 70:
                     records = parse_fallback_blocks(fallback_lines, year, fallback_url)
