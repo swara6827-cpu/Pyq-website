@@ -546,6 +546,92 @@ def main() -> int:
                     for idx, option in enumerate(record.get("options", []))
                 ]
                 record["attribution"] = "Question/answer transcribed from a public PYQ source. Explanations are sourced or relevance-screened; verify against the official UPSC key."
+            # Fill gaps left by unsupported question-page markup with only
+            # complete, keyed, non-duplicate rows from the community dataset.
+            # Supplemental numbering is explicit because some sources use another set order.
+            existing_ids = {str(r.get("id")) for r in year_records}
+            matched_source_ids = {str(r.get("id")) for r in matched_community.values() if r.get("id") is not None}
+            supplement_candidates = []
+            for source_idx, source in enumerate(community_rows):
+                source_id = str(source.get("id", source_idx + 1))
+                if source_id in matched_source_ids:
+                    continue
+                stem = clean_community_stem(str(source.get("question", "")))
+                options = community_options(source)
+                answer = community_answer_index(source)
+                if len(stem) < 18 or any(not option for option in options) or answer is None:
+                    continue
+                similarity = max(
+                    (question_similarity(stem, str(r.get("question", ""))) for r in year_records),
+                    default=0.0
+                )
+                if similarity >= 0.48:
+                    continue
+                supplement_candidates.append((source_idx, source, stem, options, answer, similarity))
+            needed = max(0, 100 - len(year_records))
+            added = 0
+            for source_idx, source, stem, options, answer, similarity in supplement_candidates:
+                if added >= needed:
+                    break
+                source_id = str(source.get("id", source_idx + 1))
+                supplement_id = f"upsc-gs1-{year}-supp-{source_id}"
+                if supplement_id in existing_ids:
+                    continue
+                explanation = str(source.get("explanation", "")).strip()
+                if not explanation_is_relevant(explanation, stem, options):
+                    explanation = (
+                        "The source explanation did not pass the question-relevance check. "
+                        "Use the linked question source and official UPSC key to verify the concept before relying on a rationale."
+                    )
+                    explanation_status = "Detailed explanation needs review"
+                else:
+                    explanation_status = "Community explanation; relevance-screened but not independently fact-checked"
+                answer_review = [
+                    {
+                        "label": chr(65 + idx),
+                        "text": option,
+                        "isCorrect": idx == answer,
+                        "review": (
+                            "Keyed answer. Read the explanation below for the governing concept."
+                            if idx == answer else
+                            "Not the keyed answer. Compare this choice against the question's conditions and the explanation below."
+                        )
+                    }
+                    for idx, option in enumerate(options)
+                ]
+                filename = COMMUNITY_FILES.get(year, "")
+                community_page = COMMUNITY_BASE_URL + filename if filename else "https://github.com/mailmeatdarshan/UPSC---TestBook"
+                year_records.append({
+                    "id": supplement_id,
+                    "year": year,
+                    "paper": "GS Paper I",
+                    "questionNumber": f"SUPP-{source_id}",
+                    "sourceQuestionNumber": source_id,
+                    "supplementalSource": True,
+                    "subject": str(source.get("section") or "Supplemental GS").strip(),
+                    "topic": str(source.get("section") or "Supplemental GS").strip(),
+                    "question": stem,
+                    "options": options,
+                    "answer": answer,
+                    "answerLabel": chr(65 + answer),
+                    "answerStatus": "Answer from community dataset; verify against official UPSC key",
+                    "explanation": explanation,
+                    "explanationStatus": explanation_status,
+                    "examInsight": str(source.get("motivation", "")).strip(),
+                    "difficulty": source.get("difficulty"),
+                    "sourceName": "UPSC—TestBook community dataset (supplement)",
+                    "sourceProvider": "Community dataset supplement",
+                    "sourceFileUrl": f"https://github.com/mailmeatdarshan/UPSC---TestBook/blob/main/web-app/public/upsc_jsons/{filename}" if filename else community_page,
+                    "sourcePaperUrl": OFFICIAL_PAPERS,
+                    "sourceKeyUrl": OFFICIAL_KEYS,
+                    "transcriptionSourceUrl": community_page,
+                    "optionReview": answer_review,
+                    "attribution": "Supplemental question and explanation adapted from the public UPSC—TestBook community dataset; verify answer against official UPSC material."
+                })
+                existing_ids.add(supplement_id)
+                added += 1
+            if added:
+                print(f"  Added {added} complete unmatched supplemental questions", flush=True)
             parsed_by_year[year] = year_records
             report.append((year, len(year_records), used_provider))
             print(f"  Parsed {len(year_records)} complete GS questions ({used_provider})", flush=True)
