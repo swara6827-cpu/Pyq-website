@@ -325,6 +325,115 @@ def parse_upscprep(lines: list[str], year: int, url: str) -> list[dict[str, Any]
             result.append(q)
     return result
 
+COMMUNITY_BASE_URL = "https://raw.githubusercontent.com/mailmeatdarshan/UPSC---TestBook/main/web-app/public/upsc_jsons/"
+COMMUNITY_FILES = {
+    2013: "upsc2013.json", 2014: "gs_prelims_2014.json", 2015: "upsc2015.json",
+    2016: "upsc2016.json", 2017: "upsc2017.json", 2018: "upsc2018.json",
+    2019: "GS_Prelims_2019_Questions.json", 2020: "GS_Prelims_2020_Questions.json",
+    2021: "GS_Prelims_2021_Questions.json", 2022: "upsc2022.json",
+    2023: "GS_Prelims_2023_Questions.json", 2024: "upsc2024.json",
+    2025: "GS_Prelims_2025_Questions.json",
+}
+MATCH_STOP_WORDS = {
+    "this", "that", "these", "those", "with", "from", "into", "which", "what",
+    "when", "where", "while", "were", "been", "being", "have", "has", "had",
+    "they", "them", "their", "there", "then", "than", "only", "above", "below",
+    "following", "correct", "incorrect", "statement", "statements", "option",
+    "answer", "question", "given", "using", "about", "india", "indian",
+    "government", "according", "hence", "therefore", "thus", "some", "most",
+    "many", "also", "such", "often", "will", "would", "could", "should",
+    "does", "did", "not", "are", "and", "for", "the", "was", "but", "its",
+    "can", "may", "because", "who", "how", "why", "among", "select", "under"
+}
+def clean_community_stem(value: str) -> str:
+    lines = str(value or "").replace("\r", "").splitlines()
+    cut = len(lines)
+    for idx, line in enumerate(lines):
+        match = OPTION_RE.match(line.strip())
+        if not match:
+            continue
+        label = (match.group(1) or match.group(2) or "").upper()
+        if label != "A":
+            continue
+        following = []
+        for item in lines[idx:idx + 8]:
+            option = OPTION_RE.match(item.strip())
+            if option:
+                following.append((option.group(1) or option.group(2) or "").upper())
+        if "B" in following and "C" in following and "D" in following:
+            cut = idx
+            break
+    return join_text(lines[:cut])
+def question_tokens(value: str) -> set[str]:
+    import re
+    return {
+        token.lower() for token in re.findall(r"[A-Za-z]{3,}", clean_community_stem(value))
+        if token.lower() not in MATCH_STOP_WORDS
+    }
+def question_similarity(left: str, right: str) -> float:
+    a, b = question_tokens(left), question_tokens(right)
+    if not a or not b:
+        return 0.0
+    intersection = len(a & b)
+    jaccard = intersection / max(1, len(a | b))
+    containment = intersection / max(1, min(len(a), len(b)))
+    return 0.7 * jaccard + 0.3 * containment
+def community_options(item: dict[str, Any]) -> list[str]:
+    raw = item.get("options")
+    if isinstance(raw, dict):
+        return [str(raw.get(k, raw.get(k.upper(), ""))).strip() for k in "abcd"]
+    if isinstance(raw, list):
+        return [str(raw[idx]).strip() if idx < len(raw) else "" for idx in range(4)]
+    return ["", "", "", ""]
+def community_answer_index(item: dict[str, Any]) -> int | None:
+    value = item.get("answer")
+    if isinstance(value, int):
+        return value if 0 <= value < 4 else None
+    letters = parse_answer_letters(str(value or ""))
+    if len(letters) == 1:
+        return ord(letters[0]) - ord("A")
+    return None
+def load_community_rows(year: int) -> list[dict[str, Any]]:
+    filename = COMMUNITY_FILES.get(year)
+    if not filename:
+        return []
+    try:
+        response = SESSION.get(COMMUNITY_BASE_URL + filename, timeout=35)
+        response.raise_for_status()
+        result = response.json()
+        if isinstance(result, list):
+            return [x for x in result if isinstance(x, dict)]
+    except Exception as exc:
+        print(f"  Note: community explanations unavailable for {year}: {exc}", flush=True)
+    return []
+def match_community_questions(records: list[dict[str, Any]], community: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    # Match question text, not question number, because public sources may reorder a paper.
+    candidates = []
+    for record_idx, record in enumerate(records):
+        for source_idx, source in enumerate(community):
+            score = question_similarity(str(record.get("question", "")), str(source.get("question", "")))
+            if score >= 0.43:
+                candidates.append((score, record_idx, source_idx))
+    candidates.sort(reverse=True)
+    used_records: set[int] = set()
+    used_sources: set[int] = set()
+    result: dict[str, dict[str, Any]] = {}
+    for score, record_idx, source_idx in candidates:
+        if record_idx in used_records or source_idx in used_sources or score < 0.48:
+            continue
+        record, source = records[record_idx], community[source_idx]
+        current_ans, source_ans = record.get("answer"), community_answer_index(source)
+        current_options, source_options = record.get("options", []), community_options(source)
+        # Where keys differ, require the actual keyed option wording to match.
+        if isinstance(current_ans, int) and source_ans is not None and source_ans < len(source_options) and current_ans < len(current_options):
+            if source_ans != current_ans:
+                if question_similarity(str(current_options[current_ans]), str(source_options[source_ans])) < 0.45:
+                    continue
+        used_records.add(record_idx)
+        used_sources.add(source_idx)
+        result[str(record.get("id"))] = dict(source)
+    return result
+
 def explanation_is_relevant(explanation: str, question: str, options: list[str]) -> bool:
     """Reject obviously mismatched imported explanations before displaying them."""
     import re
@@ -347,7 +456,7 @@ def explanation_is_relevant(explanation: str, question: str, options: list[str])
         token.lower() for token in re.findall(r"[A-Za-z]{4,}", explanation)
         if token.lower() not in stop
     }
-    return len(q_terms & e_terms) >= 1 and len(explanation.strip()) >= 45
+    return len(q_terms & e_terms) >= 2 and len(explanation.strip()) >= 45
 
 
 def main() -> int:
@@ -381,20 +490,10 @@ def main() -> int:
             if len(year_records) < 70:
                 raise RuntimeError(f"Only {len(year_records)} unique questions for {year}; refusing to replace the current bank.")
 
-            # Merge community-written explanations and study notes only when their
-            # wording is plausibly connected to the matched question.
-            community_records: dict[int, dict[str, Any]] = {}
-            community_path = ROOT / "data" / "gs" / f"{year}.json"
-            if community_path.exists():
-                try:
-                    prior = json.loads(community_path.read_text(encoding="utf-8"))
-                    for item in prior if isinstance(prior, list) else []:
-                        try:
-                            community_records[int(item.get("questionNumber", item.get("id", 0)))] = item
-                        except (TypeError, ValueError):
-                            continue
-                except Exception as exc:
-                    print(f"  Note: could not read community explanations for {year}: {exc}", flush=True)
+            # Match explanations by question text instead of question number.
+            community_rows = load_community_rows(year)
+            matched_community = match_community_questions(year_records, community_rows)
+            print(f"  Matched {len(matched_community)} community explanation records by question wording", flush=True)
 
             for record in year_records:
                 number = int(record["questionNumber"])
@@ -404,7 +503,7 @@ def main() -> int:
                 record["transcriptionSourceUrl"] = used_url
                 record["sourceProvider"] = used_provider
                 record["explanationStatus"] = "Source explanation — verify disputed answers against the official key"
-                prior = community_records.get(number)
+                prior = matched_community.get(str(record.get("id")))
                 if prior:
                     prior_explanation = str(prior.get("explanation", "")).strip()
                     prior_insight = str(prior.get("examInsight", prior.get("motivation", ""))).strip()
